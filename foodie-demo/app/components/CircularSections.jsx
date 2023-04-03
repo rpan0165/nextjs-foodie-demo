@@ -31,7 +31,7 @@ function CircularSection() {
         </div>
         <div class="row">
           <div class="col">
-           <img src="https://foodie.sysco.com/wp-content/uploads/2020/06/Circle-Images-for-Foodie-1.png"></img>
+           <img className="" src="https://foodie.sysco.com/wp-content/uploads/2020/06/Circle-Images-for-Foodie-1.png"></img>
             <h3>Tips & Trends</h3>
           </div>
         </div>

@@ -10,6 +10,7 @@ import Navigation from './components/Navigation'
 import CircularSection from './components/CircularSections'
 import Updates from './components/Updates'
 import Community from './components/Community'
+import Footer from './components/Footer'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -85,6 +86,7 @@ export default function Home() {
       <br/>
       <br/>
       <br/>
+      <Footer/>
     </>
   )
 }
