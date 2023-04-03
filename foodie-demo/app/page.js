@@ -1,91 +1,90 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Header from './components/Header'
+import HeroSlider from './components/HeroSlider'
+// import { Inter } from 'next/font/google'
 import styles from './page.module.css'
+import Head from 'next/head'
+import Link from 'next/link'
+import TopNav from './components/TopNav'
+import Navigation from './components/Navigation'
+import CircularSection from './components/CircularSections'
+import Updates from './components/Updates'
+import Community from './components/Community'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <Head>
+        <title>Sysco-Foodie</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta charset="utf-8" />
+        <meta name="keywords" content="${content.keywords}" />
+        <meta name="description" content="${content.description!'Sysco lives at the heart of food and service. We are passionately committed to the success of every customer, supplier partner, community and associate.'}" />
+        <meta name="robots" content="all" />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <Link rel="apple-touch-icon" href="assets/images/Sysco-Logo-Color1.png" />
+        <Link rel="shortcut icon" href="assets/images/Sysco-Logo-Color1.png" />
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossOrigin="anonymous"
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+        <Link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <Link rel="stylesheet" href="assets/css/templatemo.css" />
+        <Link rel="stylesheet" href="assets/css/custom.css" />
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        {/* Load fonts style after rendering the layout styles */}
+        <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+        <Link rel="stylesheet" href="assets/css/fontawesome.min.css" />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        {/* FAVICONS */}
+
+        {/* MOBILE SPECIFIC META */}
+
+        {/* Icons */}
+        <script src="https://kit.fontawesome.com/5a65935042.js" crossorigin="anonymous"></script>
+
+        {/* Styles */}
+
+        {/* Scripts */}
+        <script type="text/javascript" src="../scripts/contentstack.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossOrigin="anonymous"
+        />
+
+        {/* Cookie Consent */}
+      </Head>
+      <Header />
+
+      <Navigation/>
+      <HeroSlider />
+      <br/>      <br/>
+      <CircularSection/>
+      <br/>      <br/>
+      <Updates/>
+
+      <br/>
+      <br/>
+      <Community/>
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </>
   )
 }
