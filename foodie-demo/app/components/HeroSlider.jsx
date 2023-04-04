@@ -33,8 +33,8 @@ function HeroSlider() {
           <SwiperSlide>
             <div className="swiper-slide-container bg-white">
               <div className="text-container">
-                <h2 className='text-3xl'>Slide 1 Title</h2>
-                <button>Learn More</button>
+                <h2 className='text-3xl font-extrabold font-serif'>Mother's Day <br/> Menu Ideas</h2>
+                <button className='learn-btn'>Learn More</button>
               </div>
               <div className="image-container">
                 <img src="https://foodie.sysco.com/wp-content/uploads/2023/03/Mothers-Day-2023-Banners-3989559-Corporate-v2.jpg" alt="Slide 1 Image" />
@@ -44,7 +44,7 @@ function HeroSlider() {
           <SwiperSlide>
             <div className="swiper-slide-container">
               <div className="text-container">
-                <h2>Slide 2 Title</h2>
+                <h2 className='text-3xl font-extrabold'>Plant Based <br/> Menu Ideas</h2>
                 <button>Learn More</button>
               </div>
               <div className="image-container">

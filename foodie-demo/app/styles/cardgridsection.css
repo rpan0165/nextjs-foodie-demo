@@ -1,0 +1,36 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.5rem;
+    margin: 2rem 10rem;
+  }
+  
+  .card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .card .view {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .card:hover .view {
+    opacity: 1;
+  }
+  
