@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 // import { Button } from 'react-bootstrap'
 // import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';

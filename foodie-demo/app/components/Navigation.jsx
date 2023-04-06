@@ -2,8 +2,11 @@
 import React from 'react';
 import { useState } from "react";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes, faCartShopping, faSearch, faCircleXmark, faBookmark } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaBars, faTimes, FaShoppingCart } from "react-icons/fa";
+import { IoSearch } from 'react-icons/io5'
+import { BsBookmarkFill } from 'react-icons/bs'
+import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
 import Dropdown from 'react-bootstrap/Dropdown';
 import '../styles/navigation.css';
@@ -19,7 +22,7 @@ function Navigation() {
         <>
             <Navbar bg="light" expand="lg" sticky="top" width="100%">
                 <Navbar.Brand>
-                    <FontAwesomeIcon icon={faBars} className='mt-3 ml-4 mr-3 text-gray-500' />
+                    <FaBars className='d-inline-block mt-3 ml-4 mr-3 text-gray-500' />
                     <Link href="/">
                         <img
                             src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
@@ -46,15 +49,15 @@ function Navigation() {
                         {/* <FormControl type="text" placeholder="Search for recipes, ingredients and more" className="mr-sm-2 " /> */}
                         {/* <Button variant="outline-success">Search</Button> */}
                         <div class="form-group has-search">
-                            <span className="fa fa-search form-control-feedback"> <FontAwesomeIcon icon={faSearch} /></span>
-                            <input type="text" className="form-control" placeholder="Search for recipes, ingredients and more" width="" />
+                            <span className="fa fa-search form-control-feedback p-2 text-xl font-bold"> <IoSearch /></span>
+                            <input type="text" className="form-control mt-1" placeholder="Search for recipes, ingredients and more" width="" />
                         </div>
                     </Form>
 
-                    <Nav className="mr-auto align-right">
-                        <FontAwesomeIcon icon={faBookmark} className='mt-2 ml-4 mr-3 pt-1 text-sky-600' />
+                    <Nav className="mr-auto ">
+                        <BsBookmarkFill className='mt-2 ml-4 mr-3 pt-1 text-sky-600 text-xl' />
                         <span className='font-bold text-sky-600 text-md mt-2 '>0</span>
-                        <FontAwesomeIcon icon={faCartShopping} className="d-inline-block align-right mt-2 ml-5 pt-1" style={{ color: "#0781C5" }} />
+                        <HiOutlineShoppingCart className="d-inline-block mt-2 ml-5 pt-1 text-2xl" style={{ color: "#0781C5" }} />
                         <Nav.Link href="/my-basket" className='font-bold text-end' style={{ color: "#0781C5" }} >My basket</Nav.Link>
                     </Nav>
 
@@ -62,9 +65,9 @@ function Navigation() {
                 </Navbar.Collapse>
             </Navbar>
 
-            <Navbar bg="light" expand="lg" className="border-top navbar-bottom flex-row content-center">
+            <Navbar bg="light" expand="lg" className="border-top navbar-bottom ">
                 <Navbar.Collapse id="basic-navbar-nav ">
-                    <Nav className="pl-4 pr-5">
+                    <Nav className="pl-4 pr-5 flex justify-center">
 
                         <Link href="/category1">
                             <NavDropdown title="Publications" id="basic-nav-dropdown">
