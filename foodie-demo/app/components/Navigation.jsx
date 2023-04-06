@@ -49,8 +49,8 @@ function Navigation() {
                         {/* <FormControl type="text" placeholder="Search for recipes, ingredients and more" className="mr-sm-2 " /> */}
                         {/* <Button variant="outline-success">Search</Button> */}
                         <div class="form-group has-search">
-                            <span className="fa fa-search form-control-feedback p-2 text-xl font-bold"> <IoSearch /></span>
-                            <input type="text" className="form-control mt-1" placeholder="Search for recipes, ingredients and more" width="" />
+                            <span className="fa fa-search form-control-feedback p-2 ml-2 text-xl font-bold"> <IoSearch /></span>
+                            <input type="text" className="form-control mt-1 ml-2" placeholder="Search for recipes, ingredients and more" width="" />
                         </div>
                     </Form>
 
@@ -58,6 +58,7 @@ function Navigation() {
                         <BsBookmarkFill className='mt-2 ml-4 mr-3 pt-1 text-sky-600 text-xl' />
                         <span className='font-bold text-sky-600 text-md mt-2 '>0</span>
                         <HiOutlineShoppingCart className="d-inline-block mt-2 ml-5 pt-1 text-2xl" style={{ color: "#0781C5" }} />
+                        <div className=''><span className='font-bold bg-sky-600 text-white rounded-xl h-5 px-2 pb-1 z-2'>0</span></div>
                         <Nav.Link href="/my-basket" className='font-bold text-end' style={{ color: "#0781C5" }} >My basket</Nav.Link>
                     </Nav>
 
