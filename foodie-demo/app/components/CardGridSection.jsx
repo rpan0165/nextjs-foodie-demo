@@ -51,7 +51,6 @@ const CardGridSection = () => {
             <span>
                 <p className="text-center text-lg">LIVE
                     Real-time updates and fresh content | </p>
-                <FontAwesomeIcon icon={faInstagram} />
             </span>
             <div className="card-grid">
 

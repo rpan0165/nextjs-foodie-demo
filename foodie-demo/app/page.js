@@ -13,6 +13,7 @@ import Community from './components/Community'
 import Footer from './components/Footer'
 import CardGridSection from './components/CardgridSection'
 import Solutions from './components/Solutions'
+import BottomCards from './components/BottomCards'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -74,9 +75,11 @@ export default function Home() {
       <br/>      <br/>
       <CircularSection/>
       <br/>      <br/>
+      <br/>      <br/>
     
 
       <Updates/>
+      <br/>      <br/>
       <br/>      <br/>
       <Solutions/>
 
@@ -90,6 +93,7 @@ export default function Home() {
       <CardGridSection/>
       <br/>
       <br/>
+      <BottomCards/>
       <br/>
       <br/>
       <br/>
