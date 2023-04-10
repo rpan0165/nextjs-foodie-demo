@@ -15,6 +15,18 @@
     color: #aaa;
 }
 
+#basic-nav-dropdown{
+  font-weight: 400;
+  color: rgb(86, 85, 85);
+  font-size: large;
+  text-decoration: none;
+}
+
+#basic-nav-dropdown:hover{
+  color: #008cd2 ;
+  text-decoration: none;
+}
+
 .navbar-bottom{
     text-align: center;
     display: flex;

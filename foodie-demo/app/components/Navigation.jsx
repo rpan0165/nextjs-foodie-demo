@@ -62,9 +62,9 @@ function Navigation() {
 
             <Navbar bg="light" expand="lg" className="border-top navbar-bottom ">
                 <Navbar.Collapse id="basic-navbar-nav ">
-                    <Nav className="pl-4 pr-5 flex justify-center">
+                    <Nav className="mx-auto space-x-2">
 
-                        <Link href="/category1">
+                        <Link href="/category1" className=''>
                             <NavDropdown title="Publications" id="basic-nav-dropdown">
                                 <Link href="/category1">
                                     <NavDropdown.Item>Latest Foodie Magazine</NavDropdown.Item>
@@ -103,12 +103,12 @@ function Navigation() {
                         </Link>
 
                         <Link href="/" className="pl-4 pr-4">
-                            <Nav.Link>Recipes</Nav.Link>
+                            <Nav.Link id='basic-nav-dropdown'>Recipes</Nav.Link>
                         </Link>
 
 
                         <Link href="/category3" className="pr-4">
-                            <Nav.Link>Tips & Trends</Nav.Link>
+                            <Nav.Link id='basic-nav-dropdown'>Tips & Trends</Nav.Link>
                         </Link>
 
                         <Link href="/category3" className="pr-4">

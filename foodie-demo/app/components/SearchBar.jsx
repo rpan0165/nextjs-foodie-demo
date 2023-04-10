@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
-import axios from "axios";
 import { IoSearch } from 'react-icons/io5'
 import Image from 'next/image';
 
