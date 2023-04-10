@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import '../styles/cardgridsection.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faInstagram } from "@fortawesome/free-solid-svg-icons";
+// import { GoSearch } from 'react-icons/go';
+// import { FaRegDotCircle } from 'react-icons/fa';
+// import { AiOutlineInstagram } from 'react-icons/io5';
 
 
 const images = [
@@ -31,7 +32,9 @@ const Card = ({ id, url }) => {
             onMouseLeave={() => setHovered(false)}
         >
             <img src={url} alt={`Image ${id}`} />
-            {hovered && <span className="view"> <FontAwesomeIcon icon={faSearch} /> View</span>}
+            {hovered && <span className="view"> 
+             View
+            </span>}
         </div>
     );
 };
@@ -49,8 +52,13 @@ const CardGridSection = () => {
                 margin: "auto",
             }}></div>
             <span>
-                <p className="text-center text-lg">LIVE
-                    Real-time updates and fresh content | </p>
+                <p className="text-center text-lg"> 
+                <span>
+                #syscofoodie
+                </span> LIVE
+                    Real-time updates and fresh content |<span>  </span> 
+                    #syscofoodie
+                    </p>
             </span>
             <div className="card-grid">
 
