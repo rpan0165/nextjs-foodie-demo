@@ -1,6 +1,8 @@
+'use client';
 import Image from 'next/image'
 import Header from './components/Header'
 import HeroSlider from './components/HeroSlider'
+import { useState, useEffect, createElement  } from 'react'
 // import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import Head from 'next/head'
@@ -13,87 +15,106 @@ import Community from './components/Community'
 import Footer from './components/Footer'
 import CardGridSection from './components/CardgridSection'
 import Solutions from './components/Solutions'
+import axios from "axios";
+import dynamic from 'next/dynamic';
+
 
 // const inter = Inter({ subsets: ['latin'] })
 
+// to generate dynamic components from recieved list
+function ComponentList(props) {
+  const components = props.componentNames.map((name, index) => {
+    const DynamicComponent = dynamic(() => import(`./components/${name}`));
+    return <DynamicComponent key={index} props={props.compData[index] } />;
+  });
+  return <div>{components}</div>;
+}
+
 export default function Home() {
+
+  const [data, setData] = useState(null);
+const [isLoading, setLoading] = useState(true);
+const [componentData, setComponentData] = useState([]);
+const [componentList, setComponentList] = useState([]);
+const [componentArray, setComponentArray] = useState([]);
+  
+// custom constants to match components due to naming limitations in CS 
+const matchingComponents = ['header', 'hero_slider', 'feature_section', 'feature_callout', 'footer']
+const realComponents = ['Header', 'HeroSlider', 'FeatureSection', 'FeatureCallout', 'Footer']
+
+// required arrays to filter the list
+var titleArray; //grab the titles list from the incoming data object
+var identifiedComponentsArray; //intermidiate array to get the incoming component indexes using solid name list
+var Components = []; //Identified components
+var fullComponents = []; //components list with inside data
+
+const fetchData = async () => {
+  setLoading(true)
+  let res = await axios.get('https://cdn.contentstack.io/v3/content_types/homepage_test/entries?environment=development',
+    {
+      headers: {
+        'api_key': 'blt16b29db83ad01635',
+        'access_token': 'cse3066d807437d70a5cc6bee6',
+        'Content-Type': 'application/json',
+      }
+    }
+  );
+  setData(res.data);
+
+  //logic to grab the component details from response
+  titleArray = res.data.entries[0].modular_blocks.map((component, index) => {
+    fullComponents.push(component)
+    return Object.keys(component)
+  })
+
+  //save the component data into state
+  setComponentData(fullComponents);
+
+  identifiedComponentsArray = titleArray.map((title) => {
+    var recivedName = title[0]
+    return matchingComponents.indexOf(recivedName)
+  })
+
+  Components = identifiedComponentsArray.map((component) => {
+    return (realComponents[component])
+  })
+
+  //save the component names list into state
+  setComponentList(Components)
+  setLoading(false)
+}
+
+useEffect(() => {    
+  // onEntryChange(fetchData)
+  fetchData();
+}, [])
+  
+  
   return (
     <>
-      <Head>
-        <title>Sysco-Foodie</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta charset="utf-8" />
-        <meta name="keywords" content="${content.keywords}" />
-        <meta name="description" content="${content.description!'Sysco lives at the heart of food and service. We are passionately committed to the success of every customer, supplier partner, community and associate.'}" />
-        <meta name="robots" content="all" />
-
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <Link rel="apple-touch-icon" href="assets/images/Sysco-Logo-Color1.png" />
-        <Link rel="shortcut icon" href="assets/images/Sysco-Logo-Color1.png" />
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-          crossOrigin="anonymous"
-        />
-        <Link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-        <Link rel="stylesheet" href="assets/css/templatemo.css" />
-        <Link rel="stylesheet" href="assets/css/custom.css" />
-
-        {/* Load fonts style after rendering the layout styles */}
-        <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
-        <Link rel="stylesheet" href="assets/css/fontawesome.min.css" />
-
-
-        {/* FAVICONS */}
-
-        {/* MOBILE SPECIFIC META */}
-
-        {/* Icons */}
-        <script src="https://kit.fontawesome.com/5a65935042.js" crossorigin="anonymous"></script>
-
-        {/* Styles */}
-
-        {/* Scripts */}
-        <script type="text/javascript" src="../scripts/contentstack.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossOrigin="anonymous"
-        />
-
-        {/* Cookie Consent */}
-      </Head>
-      <Header />
-
       <Navigation/>
       <HeroSlider />
-      <br/>      <br/>
+        <br />
+        <br />
       <CircularSection/>
-      <br/>      <br/>
-    
-
-      <Updates/>
-      <br/>      <br/>
+        <br />
+        <br />
+      <Updates />
+        <br />
+        <br />
       <Solutions/>
-
-      <br/>
-
-      <br/>
+        <br/>
+        <br/>
       <Community/>
-
-      <br/>
-      <br/>
+        <br/>
+        <br/>
       <CardGridSection/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       <Footer/>
     </>
   )

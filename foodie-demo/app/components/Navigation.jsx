@@ -10,6 +10,7 @@ import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
 import Dropdown from 'react-bootstrap/Dropdown';
 import '../styles/navigation.css';
+import SearchBar from './SearchBar';
 
 
 
@@ -45,14 +46,7 @@ function Navigation() {
                 <Navbar.Collapse id="basic-navbar-nav">
 
 
-                    <Form inline >
-                        {/* <FormControl type="text" placeholder="Search for recipes, ingredients and more" className="mr-sm-2 " /> */}
-                        {/* <Button variant="outline-success">Search</Button> */}
-                        <div class="form-group has-search">
-                            <span className="fa fa-search form-control-feedback p-2 ml-2 text-xl font-bold"> <IoSearch /></span>
-                            <input type="text" className="form-control mt-1 ml-2" placeholder="Search for recipes, ingredients and more" width="" />
-                        </div>
-                    </Form>
+                    <SearchBar/>
 
                     <Nav className="mr-auto ">
                         <BsBookmarkFill className='mt-2 ml-4 mr-3 pt-1 text-sky-600 text-xl' />
