@@ -113,6 +113,7 @@ return (
     <br />
     <br />
     <br />
+    <BottomCards/>
     <br />
     <br />
     <br />

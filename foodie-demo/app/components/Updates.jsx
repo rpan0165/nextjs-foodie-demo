@@ -18,7 +18,7 @@ function Updates() {
                 'https://foodie.sysco.com/wp-content/uploads/2020/12/Market-Corner-Image-300x415-1.jpg',
         },
         {
-            id: 1,
+            id: 2,
             title: 'Inflation Buster',
             subtitle: 'FOOD SERVICE UPDATE',
             href: '#',
@@ -29,7 +29,7 @@ function Updates() {
                 'https://foodie.sysco.com/wp-content/uploads/2021/06/Inflation-Busters-300x415-with-title-and-border.png',
         },
         {
-            id: 1,
+            id: 3,
             title: 'Recipes and Resources',
             subtitle: 'AMERICAN RESTAURANT',
             href: '#',
@@ -40,7 +40,7 @@ function Updates() {
                 'https://foodie.sysco.com/wp-content/uploads/2022/08/Untitled-design-61.png',
         },
         {
-            id: 1,
+            id: 4,
             title: 'Hinded Foam Containers',
             subtitle: 'FOOD SERVICE UPDATE',
             href: '#',

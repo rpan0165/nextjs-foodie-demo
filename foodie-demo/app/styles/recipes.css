@@ -1,0 +1,124 @@
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+#recipe-nav-dropdown{
+  font-weight: 400;
+  color: rgb(242, 242, 242);
+  font-size: medium;
+  text-decoration: none;
+}
+
+#recipe-nav-dropdown:hover{
+  color: #008cd2 ;
+  text-decoration: none;
+}
+
+.navbar-bottom{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.NavDropdown.Item{
+    text-decoration: none;
+    width: 50%;
+
+}
+
+/* Hide product list by default */
+.product-list {
+    display: none;
+  }
+  
+  #backdrop-img{
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://foodie.sysco.com/wp-content/uploads/2019/06/Recipe_header_1400x460-1400x460.jpg');
+    background-size: 100%;
+  }
+
+  /* style={{ backgroundImage: "url('https://foodie.sysco.com/wp-content/uploads/2019/06/Recipe_header_1400x460-1400x460.jpg')", backgroundSize:"100%", backgroundBlendMode:"darken"}} */
+
+
+  .container-for-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-for-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-for-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-for-checkbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-for-checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-for-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
