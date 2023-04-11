@@ -3,52 +3,57 @@ import React, { useState, useEffect } from "react";
 import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
 import { IoSearch } from 'react-icons/io5'
 import Image from 'next/image';
+import axios from 'axios';
+
 
 const SearchBar = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchQuery, setSearchQuery] = useState('');
-//   const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [visible, setVisible] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [noResults, setNoResults] = useState(true);
 
-//   useEffect(() => {
-//     const fetchProducts = async () => {
-//       const response = await axios.get("https://exampleapi.com/products");
-//       setProducts(response.data);
-//     };
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true);
+      const response = await axios.get('https://cdn.contentstack.io/v3/content_types/foodie_products/entries?environment=development',
+      {
+        headers: {
+          'api_key': 'blt16b29db83ad01635',
+          'access_token': 'cse3066d807437d70a5cc6bee6',
+          'Content-Type': 'application/json',
+        }
+      }
+    );
+      setProducts(response.data.entries[0].products);
+      setLoading(false);
+    };
 
-//     fetchProducts();
-//   }, []);
+  // Only fetch results if searchQuery has a non-empty value
+    if (searchQuery.trim() !== '') {
+      setVisible(true);
+      fetchProducts();
+    } else {
+      setVisible(false);
+      setProducts([]);
+    }
     
-    const products = [
-          {
-            "name": "Product 1",
-            "price": 10.99,
-            "imageUrl":"/food-1.jpg"
-          },
-          {
-            "name": "Product 2",
-              "price": 24.99,
-              "imageUrl":"/food-2.jpg"
-          },
-          {
-            "name": "Product 3",
-              "price": 15.49,
-              "imageUrl":"/food-3.jpg"
-          },
-          {
-            "name": "Product 4",
-              "price": 7.99,
-              "imageUrl":"/food-4.jpg"
-          }
-        ]
-
+  }, [searchQuery]);
+    
     function handleSearchInput(event) {
         setSearchQuery(event.target.value.toLowerCase().trim());
       }
 
       const filteredProducts = products.filter(product => {
-        const name = product.name.toLowerCase();
+        const name = product.title.toLowerCase();
         return name.includes(searchQuery);
       });
+  
+      const handleItemClick = (product) => {
+        // Handle click event for item
+        console.log(`Clicked item: ${product.title}`);
+      };
 
   return (
       <div>
@@ -63,27 +68,38 @@ const SearchBar = () => {
                   placeholder="Search for recipes, ingredients and more"
                   width=""
                   onChange={handleSearchInput}
-                  />
-                  
-                  {searchQuery !== '' && (
+                />         
+                  {visible && searchQuery !== '' && (
                     <div className="search-popup">
-                      {filteredProducts.map(product => (
-                          <div key={product.id} className="product-card">
+                      { loading && filteredProducts.length === 0 && (
+                          <div className="searching-gif">
+                            <Image src="/cooking.gif" alt="still searching" width={150} height={150} />
+                            <h2 className="product-title">Finding Recipes and Posts</h2>
+                          </div>
+                      )}
+                      { filteredProducts.length === 0 && loading == false ? (
+                        <div className="searching-gif">
+                          <Image src="/no-content.png" alt="still searching" width={150} height={150} />
+                          <h2 className="product-title">Np Results Found</h2>
+                        </div>
+                      ) : (
+                        filteredProducts.map(product => (
+                          <div key={product.id} className="product-card" onClick={() => handleItemClick(product)}>
                             <div className="product-image">
                                 <Image
-                                   src={product.imageUrl}
+                                   src={product.image.url}
                                    alt="My Image"
                                    width={150}
                                    height={150}
                                    />
                             </div>
                           <div className="product-details">
-                                <h2 className="product-title">{product.name}</h2>
-                                <p className="product-price">{product.price}</p>
+                                <h2 className="product-title">{product.title}</h2>
+                                <p className="product-price">{product.sub_header}</p>
                             </div>
                             
                         </div>
-                      ))}
+                      )))} 
                     </div>
                   )}
                   
@@ -92,15 +108,15 @@ const SearchBar = () => {
                       <div key={product.id} className="product-card" style={{ display: filteredProducts.includes(product) ? 'block' : 'none' }}>
                             <div className="product-image">
                                 <Image
-                                   src={product.imageUrl}
+                                   src={product.image.url}
                                    alt="My Image"
                                    width={150}
                                    height={150}
                                    />
                             </div>
                             <div className="product-details">
-                                <h2 className="product-title">{product.name}</h2>
-                                <p className="product-price">{product.price}</p>
+                                <h2 className="product-title">{product.title}</h2>
+                                <p className="product-price">{product.sub_header}</p>
                             </div>
                       </div>
                     ))}

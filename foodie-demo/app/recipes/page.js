@@ -79,7 +79,6 @@ function RecipesHome() {
 
   return (
     <div className='bg-slate-100'>
-      <Navigation />
       <div className='bg-blend-darken' id="backdrop-img" >
         <br /><br /><br /><br />
         <h1 className="text-center font-bold text-5xl text-white" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Professional Chef Recipes & Dishes</h1>
@@ -349,7 +348,6 @@ function RecipesHome() {
       <div className='' style={{backgroundColor:"#2A2F33", backgroundSize:""}}>
         <BottomCards />
       </div>
-      <Footer />
     </div>
   )
 }

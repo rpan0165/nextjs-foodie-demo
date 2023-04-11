@@ -8,11 +8,11 @@ import styles from './page.module.css'
 import Head from 'next/head'
 import Link from 'next/link'
 import TopNav from './components/TopNav'
-import Navigation from './components/Navigation'
+
 import CircularSection from './components/CircularSections'
 import Updates from './components/Updates'
 import Community from './components/Community'
-import Footer from './components/Footer'
+
 import CardGridSection from './components/CardgridSection'
 import Solutions from './components/Solutions'
 import axios from 'axios';
@@ -34,14 +34,14 @@ function ComponentList(props) {
 export default function Home() {
 
   const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-  const [componentData, setComponentData] = useState([]);
-  const [componentList, setComponentList] = useState([]);
-  const [componentArray, setComponentArray] = useState([]);
-
-  // custom constants to match components due to naming limitations in CS 
-  const matchingComponents = ['header', 'hero_slider', 'feature_section', 'feature_callout', 'footer']
-  const realComponents = ['Header', 'HeroSlider', 'FeatureSection', 'FeatureCallout', 'Footer']
+const [isLoading, setLoading] = useState(true);
+const [componentData, setComponentData] = useState([]);
+const [componentList, setComponentList] = useState([]);
+const [componentArray, setComponentArray] = useState([]);
+  
+// custom constants to match components due to naming limitations in CS 
+const matchingComponents = ['hero_slider', 'tile_section', 'card_section', 'recipe_section', 'community_section', 'magazine_section','insta_section', 'footer_spotlight_section']
+const realComponents = ['HeroSlider', 'CircularSection', 'Updates', 'Solutions','Community','CardGridSection']
 
   // required arrays to filter the list
   var titleArray; //grab the titles list from the incoming data object
@@ -89,35 +89,35 @@ useEffect(() => {
   // onEntryChange(fetchData)
   fetchData();
 }, [])
-
-
-return (
-  <>
-    <Navigation />
-    <HeroSlider />
-    <br />
-    <br />
-    <CircularSection />
-    <br />      <br />
-
-
-    <Updates />
-    <br />      <br />
-    <Solutions />
-    <br />
-    <br />
-    <Community />
-    <br />
-    <br />
-    <CardGridSection />
-    <br />
-    <br />
-    <br />
-    <BottomCards/>
-    <br />
-    <br />
-    <br />
-    <Footer />
-  </>
-);
+  
+  
+  return (
+    <>
+      
+      <HeroSlider />
+        <br />
+        <br />
+      <CircularSection/>
+        <br />
+        <br />
+      <Updates />
+        <br />
+        <br />
+      <Solutions/>
+        <br/>
+        <br/>
+      <Community/>
+        <br/>
+        <br/>
+      <CardGridSection/>
+        <br/>
+        <br/>
+        <br/>
+      <BottomCards/>
+        <br/>
+        <br/>
+        <br/>
+      
+    </>
+  )
 }

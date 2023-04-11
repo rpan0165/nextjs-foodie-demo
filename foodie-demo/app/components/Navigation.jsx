@@ -11,19 +11,49 @@ import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from "react-boots
 import Dropdown from 'react-bootstrap/Dropdown';
 import '../styles/navigation.css';
 import SearchBar from './SearchBar';
+import PopupCart from './PopupCart';
+import Image from 'next/image'
+import CartItem from './CartItem';
+
+import { useSelector, useDispatch } from 'react-redux'
+import { addProduct, removeProduct } from '../redux/cartSlice'
 
 
 
 function Navigation() {
     const [showSidebar, setShowSidebar] = useState(false);
+    const [isCartOpen, setIsCartOpen] = useState(false);
 
     const toggleSidebar = () => setShowSidebar(!showSidebar);
 
+    const handleCartToggle = () => {
+        setIsCartOpen(!isCartOpen);
+        console.log(isCartOpen)
+    };
+    
+    const itemsInCart = useSelector((state) => state.cart.itemsInCart)
+    const dispatch = useDispatch()
+
     return (
         <>
-            <Navbar bg="light" expand="lg" sticky="top" width="100%">
-                <Navbar.Brand>
+            {/* cart */}
+            <div className={`cart-popup ${isCartOpen ? "open" : ""}`}>
+                <div className='cart-close-btn'>
+                    <Image className="close-button" onClick={handleCartToggle} src="/close.png" alt="still searching" width={30} height={30} />
+                </div>
+                <div className="cart-items">
+                    {itemsInCart.map(product => (  
+                        <CartItem props={product} />
+                    ))}
+               </div>
+            </div>
+
+            {/* whole navbar */}
+            <Navbar bg="light" expand="lg" sticky="top" width="100%" className="top-navbar-container">
+                <div className="navbar-hamburger-menu-icon">
+                    {/* hamburger menu */}
                     <FaBars className='d-inline-block mt-3 ml-4 mr-3 text-gray-500' />
+                    {/* sysco logo */}
                     <Link href="/">
                         <img
                             src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
@@ -33,7 +63,7 @@ function Navigation() {
                             alt="Foodie-Logo"
                         />
                     </Link>
-                </Navbar.Brand>
+                </div>
 
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav">
                     {showSidebar ? (
@@ -43,21 +73,28 @@ function Navigation() {
                     )}
                 </Navbar.Toggle> */}
 
-                <Navbar.Collapse id="basic-navbar-nav">
+                <div id="basic-navbar-nav" className="navbar-searchbar">
+                    {/* serach bar */}
+                    <SearchBar />
+                </div>
 
-
-                    <SearchBar/>
-
-                    <Nav className="mr-auto ">
+                <div className="navbar-icons-set">                    
+                    {/* bookmark and cart icons, BAC button */}
+                    <Nav className="mr-auto">
+                        {/* bookmark area */}
                         <BsBookmarkFill className='mt-2 ml-4 mr-3 pt-1 text-sky-600 text-xl' />
                         <span className='font-bold text-sky-600 text-md mt-2 '>0</span>
-                        <HiOutlineShoppingCart className="d-inline-block mt-2 ml-5 pt-1 text-2xl" style={{ color: "#0781C5" }} />
-                        <div className=''><span className='font-bold bg-sky-600 text-white rounded-xl h-5 px-2 pb-1 z-2'>0</span></div>
-                        <Nav.Link href="/my-basket" className='font-bold text-end' style={{ color: "#0781C5" }} >My basket</Nav.Link>
+                        
+                        <HiOutlineShoppingCart onClick={handleCartToggle} className="d-inline-block mt-2 ml-5 pt-1 text-2xl cursor-pointer" style={{ color: "#0781C5" }} />
+                        <div className=''>
+                            <span className='font-bold bg-sky-600 text-white rounded-xl h-5 px-2 pb-1 z-2'>{itemsInCart.length}</span>
+                        </div>
+                        <Nav.Link onClick={handleCartToggle} className='font-bold text-end' style={{ color: "#0781C5" }} >My basket</Nav.Link>
                     </Nav>
-
+                </div>
+                <div className="navbar-BAC-button">
                     <Button type="button" className="btn mr-4 pl-4 pr-4 bg-sky-600 text-white font-bold">Become a Customer</Button>
-                </Navbar.Collapse>
+                </div>
             </Navbar>
 
             <Navbar bg="light" expand="lg" className="border-top navbar-bottom ">
@@ -237,6 +274,8 @@ function Navigation() {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+
+            
         </>
     )
 }
