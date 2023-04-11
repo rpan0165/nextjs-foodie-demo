@@ -46,12 +46,11 @@ function IndividualRecipe(params) {
   console.log("Parameters: "+params);
 
   const router = useRouter()
-  const {individualRecipe} = router.query;
 
 
   return (
     <div>
-      <h1>Recipe {individualRecipe}  Details</h1>
+      <h1>Recipe  Details</h1>
 
     </div>
   )
