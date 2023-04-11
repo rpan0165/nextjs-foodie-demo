@@ -33,7 +33,7 @@ function RecipesHome() {
       id: 1,
       title: 'Recipe by Sysco Culinary Team',
       subtitle: 'Shrimp Tostadas',
-      href: '#',
+      href: '/recipes/recipeone',
       description:
         'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
 
@@ -44,7 +44,7 @@ function RecipesHome() {
       id: 2,
       title: 'Recipe by Sysco Culinary Team',
       subtitle: 'Shredded Chicken Lemon Orzo Soup',
-      href: '#',
+      href: '/recipes/recipetwo',
       description:
         'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
 
@@ -55,7 +55,7 @@ function RecipesHome() {
       id: 3,
       title: 'Recipe by Sysco Culinary Team',
       subtitle: 'Truck Stop Breakfast',
-      href: '#',
+      href: '/recipes/recipethree',
       description:
         'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
 
@@ -66,7 +66,7 @@ function RecipesHome() {
       id: 4,
       title: 'Recipe by GSC Culinary Team',
       subtitle: 'Apple Caramel Basque Cheesecake',
-      href: '#',
+      href: '/recipes/recipefour',
       description:
         'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
 
@@ -247,15 +247,17 @@ function RecipesHome() {
         {
           posts.map(post => (
             <div className="px-3">
-              <Card style={{}} className=''>
-                <Card.Img variant="top" src={post.imageUrl} />
-                <Card.Body>
-                  <Card.Title className="text-sm text-center text-sky-500">{post.subtitle}</Card.Title>
-                  <Card.Text className="text-center pt-0 font-bold">
-                    {post.title}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+              <Link href={post.href}>
+                <Card style={{}} className=''>
+                  <Card.Img variant="top" src={post.imageUrl} />
+                  <Card.Body>
+                    <Card.Title className="text-sm text-center text-sky-500">{post.subtitle}</Card.Title>
+                    <Card.Text className="text-center pt-0 font-bold">
+                      {post.title}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Link>
             </div>
           ))
         }
@@ -344,8 +346,9 @@ function RecipesHome() {
         margin: "auto",
       }}></div>
 
-      <BottomCards />
-      <br />
+      <div className='' style={{backgroundColor:"#2A2F33", backgroundSize:""}}>
+        <BottomCards />
+      </div>
       <Footer />
     </div>
   )
