@@ -78,8 +78,8 @@ function CircularSection() {
       <br />
       <br />
 
-      <Container fluid className=''>
-        <Row className="justify-content-md-center mx-10 ">
+      <Container className='max-w-8xl '>
+        <Row className="justify-content-md-center ">
           {
             circles1.map(circle => (
               <Col sm md="2" className='p-3'>
