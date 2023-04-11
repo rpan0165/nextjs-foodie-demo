@@ -41,11 +41,11 @@
     top: calc(100% + 10px);
     left: 20%;
     transform: translateX(-50%);
-    background-color: #fbfbfb;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     padding: 20px;
     z-index: 1000;
-    display: none;
+    /* display: none; */
     width: 500px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     max-height: 300px;
@@ -53,9 +53,9 @@
   }
   
   /* Show search popup when search input is focused */
-  .search-input:focus + .search-popup {
+  /* .search-input:focus + .search-popup {
     display: block;
-  }
+  } */
 
 
 
@@ -126,3 +126,94 @@
       flex-basis: auto;
     }
   }
+
+  .searching-gif{
+    margin-left: 30%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+  }
+
+  .top-navbar-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .navbar-hamburger-menu-icon {
+    flex-basis: 10%;
+  }
+
+  .navbar-searchbar {
+    flex-basis: 40%;
+  }
+
+  .navbar-icons-set {
+    flex-basis: 40%;
+  }
+
+  .navbar-BAC-button {
+    flex-basis: 10%;
+  }
+
+  .products-header-image{
+
+    background-image: url('/sysco-products-hero-banner.png');
+    background-size: cover;
+    height: 40vh;
+    position: relative;
+  }
+
+  .header-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .product-header-p{
+    font-family: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+    color: #fff;
+    margin: auto;
+    font-size: 3rem;
+    z-index: 1000;
+  }
+
+  .product-page-title{
+    margin-block: 50px;
+  }
+
+  /* css for cart pop up */
+  .cart-popup {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    transition: right 0.5s ease-out;
+    z-index: 2000;
+  }
+  
+  .cart-popup.open {
+    right: 0;
+  }
+  
+  .close-button {
+    /* position: absolute; */
+    display: block;
+       
+  }
+
+  .close-button:hover {
+    cursor: pointer;
+  }
+
+  .cart-close-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  /* cart card css */
+ 
