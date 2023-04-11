@@ -52,9 +52,9 @@ const Cheese = () => {
 
         </div> */}
         <div className="products-header-image d-flex text-center mx-auto" style={{ width: "100%" }}>
-          <br/>
+          <br />
           <p className="font-bold product-header-p text-5xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Sysco Products</p>
-          <br/>
+          <br />
           <div class="header-overlay"></div>
         </div>
 
@@ -67,14 +67,14 @@ const Cheese = () => {
             margin: "auto",
           }}></div>
         </div>
-y
+        y
         {/* previous content */}
         <div class="grid grid-cols-2 max-w-7xl mx-auto sm:grid-col-1">
           {
             products.map((product) => (
               <div class="">
-                <div class="flex flex-row justify-between bg-white m-2 p-3" style={{height:"90%"}}>
-                  
+                <div class="flex flex-row justify-between bg-white m-2 p-3" style={{ height: "90%" }}>
+
                   <div class="basis-1/3 align-middle">
                     <img
                       src={product.image.url}
@@ -89,7 +89,7 @@ y
 
                     <div className="flex flex-row justify-between align-bottom ml-2">
                       <a className="font-bold text-lg text-sky-600 underline mt-1" href={`/sysco-products/${product.title}`}>See Details</a>
-                      <a class="bg-sky-600  text-white font-bold rounded-3xl px-4 py-2 hover:bg-sky-500 cursor-pointer" style={{textDecoration:"none"}} onClick={() => {
+                      <a class="bg-sky-600  text-white font-bold rounded-3xl px-4 py-2 hover:bg-sky-500 cursor-pointer" style={{ textDecoration: "none" }} onClick={() => {
                         dispatch(addProduct({
                           "name": product.title,
                           "price": product.sub_header,
@@ -101,12 +101,19 @@ y
 
                   </div>
 
-                </div>  
+                </div>
               </div>
             ))
           }
         </div>
-        <br/> <br/>
+        <br />
+        <p className="text-center pb-1 text-md font-bold" >LOAD MORE</p>
+        <div class="h_line mb-3 pt-0 " style={{
+          color: "#", borderBottom: "3px solid #56B146",
+          width: "6%",
+          margin: "auto",
+        }}></div>
+        <br /> <br />
       </div>
       {/* onClick={() => dispatch(addProduct())} */}
       {/* content */}

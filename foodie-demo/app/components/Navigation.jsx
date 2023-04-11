@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaBars, faTimes, FaShoppingCart } from "react-icons/fa";
+import { GrClose } from "react-icons/gr";
 import { IoSearch } from 'react-icons/io5'
 import { BsBookmarkFill } from 'react-icons/bs'
 import { HiOutlineShoppingCart } from 'react-icons/hi'
@@ -30,7 +31,7 @@ function Navigation() {
         setIsCartOpen(!isCartOpen);
         console.log(isCartOpen)
     };
-    
+
     const itemsInCart = useSelector((state) => state.cart.itemsInCart)
     const dispatch = useDispatch()
 
@@ -38,26 +39,35 @@ function Navigation() {
         <>
             {/* cart */}
             <div className={`cart-popup ${isCartOpen ? "open" : ""}`}>
-                <div className='cart-close-btn'>
-                    <Image className="close-button" onClick={handleCartToggle} src="/close.png" alt="still searching" width={30} height={30} />
+                <div className='flex flex-row justify-between py-2'>
+                    <h3 className='mt-2 ml-1 pt-2 pb-3 font-bold text-xl'>My Basket</h3>
+                    <span className=''>
+                        {/* <Image className="close-button" onClick={handleCartToggle} src="/close.png" alt="still searching" width={30} height={30} /> */}
+                        <GrClose onClick={handleCartToggle} className='mt-3 mr-3 text-2xl text-sky-600 hover:text-sky-500' />
+                    </span>
                 </div>
                 <div className="cart-items">
-                    {itemsInCart.map(product => (  
+                    {itemsInCart.map(product => (
                         <CartItem props={product} />
                     ))}
-               </div>
+                </div>
+                <div className='mx-auto text-center mt-3  align-bottom'>
+                    <button className='border border-2 rounded-3xl py-2 px-4 text-sky-600 font-bold'>Review Shopping List</button>
+                    <p>or</p>
+                    <button className='border border-2 rounded-3xl py-2 px-4 bg-sky-600 text-white font-bold'>Proceed to Sysco Shop</button>
+                </div>
             </div>
 
             {/* whole navbar */}
-            <Navbar bg="light" expand="lg" sticky="top" width="100%" className="top-navbar-container">
-                <div className="navbar-hamburger-menu-icon">
+            <Navbar bg="light" expand="lg" sticky="top" width="100%" className="top-navbar-container grid grid-flow-col justify-between">
+                <div className="navbar-hamburger-menu-icon flex flex-row">
                     {/* hamburger menu */}
                     <FaBars className='d-inline-block mt-3 ml-4 mr-3 text-gray-500' />
                     {/* sysco logo */}
-                    <Link href="/">
+                    <Link href="/" className='d-inline-block'>
                         <img
                             src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
-                            width="130"
+                            width="140"
                             height="60"
                             className="d-inline-block align-top"
                             alt="Foodie-Logo"
@@ -73,18 +83,19 @@ function Navigation() {
                     )}
                 </Navbar.Toggle> */}
 
-                <div id="basic-navbar-nav" className="navbar-searchbar">
-                    {/* serach bar */}
+                <div id="basic-navbar-nav" className="navbar-searchbar col-span-4" style={{}}>
+                    {/* search bar */}
                     <SearchBar />
                 </div>
 
-                <div className="navbar-icons-set">                    
+
+                <div className="navbar-icons-set">
                     {/* bookmark and cart icons, BAC button */}
                     <Nav className="mr-auto">
                         {/* bookmark area */}
                         <BsBookmarkFill className='mt-2 ml-4 mr-3 pt-1 text-sky-600 text-xl' />
                         <span className='font-bold text-sky-600 text-md mt-2 '>0</span>
-                        
+
                         <HiOutlineShoppingCart onClick={handleCartToggle} className="d-inline-block mt-2 ml-5 pt-1 text-2xl cursor-pointer" style={{ color: "#0781C5" }} />
                         <div className=''>
                             <span className='font-bold bg-sky-600 text-white rounded-xl h-5 px-2 pb-1 z-2'>{itemsInCart.length}</span>
@@ -92,8 +103,9 @@ function Navigation() {
                         <Nav.Link onClick={handleCartToggle} className='font-bold text-end' style={{ color: "#0781C5" }} >My basket</Nav.Link>
                     </Nav>
                 </div>
-                <div className="navbar-BAC-button">
-                    <Button type="button" className="btn mr-4 pl-4 pr-4 bg-sky-600 text-white font-bold">Become a Customer</Button>
+
+                <div className="">
+                    <Button type="button" className="mr-4 pl-4 pr-4 bg-sky-600 text-white font-bold hover:bg-sky-500">Become a Customer</Button>
                 </div>
             </Navbar>
 
@@ -275,7 +287,7 @@ function Navigation() {
                 </Navbar.Collapse>
             </Navbar>
 
-            
+
         </>
     )
 }
