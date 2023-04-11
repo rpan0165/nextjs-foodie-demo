@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Nav, Navbar, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
 import { IoSearch } from 'react-icons/io5'
 import Image from 'next/image';
+import axios from 'axios';
 
 
 const SearchBar = () => {
@@ -67,9 +68,7 @@ const SearchBar = () => {
                   placeholder="Search for recipes, ingredients and more"
                   width=""
                   onChange={handleSearchInput}
-          />
-          
-                                    
+                />         
                   {visible && searchQuery !== '' && (
                     <div className="search-popup">
                       { loading && filteredProducts.length === 0 && (

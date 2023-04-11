@@ -113,6 +113,7 @@ useEffect(() => {
         <br/>
         <br/>
         <br/>
+      <BottomCards/>
         <br/>
         <br/>
         <br/>
