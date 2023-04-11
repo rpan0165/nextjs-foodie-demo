@@ -18,7 +18,7 @@ function Updates() {
                 'https://foodie.sysco.com/wp-content/uploads/2020/12/Market-Corner-Image-300x415-1.jpg',
         },
         {
-            id: 1,
+            id: 2,
             title: 'Inflation Buster',
             subtitle: 'FOOD SERVICE UPDATE',
             href: '#',
@@ -29,7 +29,7 @@ function Updates() {
                 'https://foodie.sysco.com/wp-content/uploads/2021/06/Inflation-Busters-300x415-with-title-and-border.png',
         },
         {
-            id: 1,
+            id: 3,
             title: 'Recipes and Resources',
             subtitle: 'AMERICAN RESTAURANT',
             href: '#',
@@ -40,7 +40,7 @@ function Updates() {
                 'https://foodie.sysco.com/wp-content/uploads/2022/08/Untitled-design-61.png',
         },
         {
-            id: 1,
+            id: 4,
             title: 'Hinded Foam Containers',
             subtitle: 'FOOD SERVICE UPDATE',
             href: '#',
@@ -66,11 +66,11 @@ function Updates() {
                 }}></div>
                 {/* <div className='green-line text-center pb-3 content-center text-green-500'><hr width="20%" ></hr></div> */}
 
-                <div class="row mr-5 ml-5 pr-8 pl-8">
+                <div class="row mx-auto pr-8 pl-8 pt-4 max-w-7xl">
                     {
                         posts.map(post => (
                             <div class="col">
-                                <Card style={{ width: '20rem' }}>
+                                <Card style={{ }}>
                                     <Card.Img variant="top" src={post.imageUrl} />
                                     <Card.Body>
                                         <Card.Title className="text-sm text-center text-sky-500">{post.subtitle}</Card.Title>

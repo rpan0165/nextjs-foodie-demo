@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Header from './components/Header'
 import HeroSlider from './components/HeroSlider'
-import { useState, useEffect, createElement  } from 'react'
+import { useState, useEffect, createElement } from 'react'
 // import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import Head from 'next/head'
@@ -15,9 +15,10 @@ import Community from './components/Community'
 
 import CardGridSection from './components/CardgridSection'
 import Solutions from './components/Solutions'
-import axios from "axios";
+import axios from 'axios';
 import dynamic from 'next/dynamic';
 
+import BottomCards from './components/BottomCards'
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +26,7 @@ import dynamic from 'next/dynamic';
 function ComponentList(props) {
   const components = props.componentNames.map((name, index) => {
     const DynamicComponent = dynamic(() => import(`./components/${name}`));
-    return <DynamicComponent key={index} props={props.compData[index] } />;
+    return <DynamicComponent key={index} props={props.compData[index]} />;
   });
   return <div>{components}</div>;
 }
@@ -42,24 +43,24 @@ const [componentArray, setComponentArray] = useState([]);
 const matchingComponents = ['hero_slider', 'tile_section', 'card_section', 'recipe_section', 'community_section', 'magazine_section','insta_section', 'footer_spotlight_section']
 const realComponents = ['HeroSlider', 'CircularSection', 'Updates', 'Solutions','Community','CardGridSection']
 
-// required arrays to filter the list
-var titleArray; //grab the titles list from the incoming data object
-var identifiedComponentsArray; //intermidiate array to get the incoming component indexes using solid name list
-var Components = []; //Identified components
-var fullComponents = []; //components list with inside data
+  // required arrays to filter the list
+  var titleArray; //grab the titles list from the incoming data object
+  var identifiedComponentsArray; //intermidiate array to get the incoming component indexes using solid name list
+  var Components = []; //Identified components
+  var fullComponents = []; //components list with inside data
 
-const fetchData = async () => {
-  setLoading(true)
-  let res = await axios.get('https://cdn.contentstack.io/v3/content_types/homepage_test/entries?environment=development',
-    {
-      headers: {
-        'api_key': 'blt16b29db83ad01635',
-        'access_token': 'cse3066d807437d70a5cc6bee6',
-        'Content-Type': 'application/json',
+  const fetchData = async () => {
+    setLoading(true)
+    let res = await axios.get('https://cdn.contentstack.io/v3/content_types/homepage_test/entries?environment=development',
+      {
+        headers: {
+          'api_key': 'blt16b29db83ad01635',
+          'access_token': 'cse3066d807437d70a5cc6bee6',
+          'Content-Type': 'application/json',
+        }
       }
-    }
-  );
-  setData(res.data);
+    );
+    setData(res.data);
 
   //logic to grab the component details from response
   titleArray = res.data.entries[0].modular_blocks.map((component, index) => {
@@ -84,7 +85,7 @@ const fetchData = async () => {
   setLoading(false)
 }
 
-useEffect(() => {    
+useEffect(() => {
   // onEntryChange(fetchData)
   fetchData();
 }, [])

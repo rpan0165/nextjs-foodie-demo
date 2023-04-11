@@ -8,7 +8,7 @@ function Footer() {
             <div className='row'>
             <div className='column col-4'>
                 {/* Column 1 content */}
-                <img src='https://sysco.com/dam/jcr:d604081f-3334-4d87-93bb-a1f2c4c07731/Sysco-Logo-White_GreenLeaf.png'></img>
+                <img className='ml-4' src='https://sysco.com/dam/jcr:d604081f-3334-4d87-93bb-a1f2c4c07731/Sysco-Logo-White_GreenLeaf.png'></img>
                 <br></br>
                 <p className='text-sm'>Sysco is the global leader in selling, marketing and distributing food products to restaurants, healthcare and educational facilities, lodging establishments and other customers who prepare meals away from home. Its family of products also includes equipment and supplies for the foodservice and hospitality industries. With more than 58,000 associates, the company operates 343 distribution facilities worldwide and serves more than 650,000 customer locations. For fiscal 2021 that ended July 3, 2021, the company generated sales of more than $51 billion. Information about our CSR program, including Sysco’s 2020 Corporate Social Responsibility Report, can be found at <Link href="#" className='links'>sysco.com/csr2020report</Link></p>
                 <br></br>
