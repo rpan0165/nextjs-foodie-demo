@@ -80,11 +80,11 @@ function Updates() {
                  <br></br>
 
 
-                <div class="row mr-5 ml-5 pr-8 pl-8">
+                <div class="row mx-auto pr-8 pl-8 pt-3 max-w-7xl">
                     {
                         posts.map(post => (
                             <div class="col">
-                                <Card style={{ width: '20rem' }}>
+                                <Card style={{ }}>
                                     <Card.Img variant="top" src={post.imageUrl} />
                                     <Card.Body>
                                         <Card.Title className="text-sm text-center text-sky-500">{post.subtitle}</Card.Title>
