@@ -56,7 +56,7 @@ const SearchBar = () => {
             {/* <FormControl type="text" placeholder="Search for recipes, ingredients and more" className="mr-sm-2 " /> */}
             {/* <Button variant="outline-success">Search</Button> */}
             <div class="form-group has-search">
-                <span className="fa fa-search form-control-feedback p-2 ml-2 text-xl font-bold"> <IoSearch /></span>
+                <span className="fa fa-search form-control-feedback p-2 ml-2 text-xl"> <IoSearch className="font-bold font-gray-700"/></span>
                 <input
                   type="text"
                   className="search-input form-control mt-1 ml-2"

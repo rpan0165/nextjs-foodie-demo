@@ -102,12 +102,12 @@ function Navigation() {
                             </NavDropdown>
                         </Link>
 
-                        <Link href="/" className="pl-4 pr-4">
-                            <Nav.Link id='basic-nav-dropdown'>Recipes</Nav.Link>
+                        <Link href="/recipes" className="pl-4 pr-4">
+                            <Nav.Link id='basic-nav-dropdown' href='/recipes'>Recipes</Nav.Link>
                         </Link>
 
 
-                        <Link href="/category3" className="pr-4">
+                        <Link href="/recipes" className="pr-4">
                             <Nav.Link id='basic-nav-dropdown'>Tips & Trends</Nav.Link>
                         </Link>
 
