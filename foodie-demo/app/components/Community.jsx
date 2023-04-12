@@ -17,7 +17,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 SwiperCore.use([Navigation, Pagination]);
 
 
-function Updates() {
+function Updates(communityContent) {
+
+    const communityCards = communityContent.props.community_section.slides;
 
     const posts = [
         {
@@ -82,15 +84,20 @@ function Updates() {
 
                 <div class="row mx-auto pr-8 pl-8 pt-3 max-w-7xl">
                     {
-                        posts.map(post => (
+                        communityCards.map(communityCard => (
                             <div class="col">
                                 <Card style={{ }}>
-                                    <Card.Img variant="top" src={post.imageUrl} />
+                                    <Card.Img variant="top" src={communityCard.image.url} />
                                     <Card.Body>
-                                        <Card.Title className="text-sm text-center text-sky-500">{post.subtitle}</Card.Title>
-                                        <Card.Text className="text-center pt-0 font-bold">
-                                            {post.title}
-                                        </Card.Text>
+                                        <Card.Title className="text-sm text-center text-sky-500">{communityCard.link[0].title}</Card.Title>
+                                        {communityCard.link.length == 2 ? (
+                                                <Card.Text className="text-center pt-0 font-bold">
+                                                    {communityCard.link[1].title}
+                                                </Card.Text>
+                                        ) : (
+                                                <div></div>
+                                            )
+                                        }                                        
                                     </Card.Body>
                                 </Card>
                             </div>

@@ -3,56 +3,9 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function Updates() {
+function Updates(cardContent) {
 
-    const posts = [
-        {
-            id: 1,
-            title: 'Market Corner',
-            subtitle: 'OPERATIONS & RESOURCES',
-            href: '#',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2020/12/Market-Corner-Image-300x415-1.jpg',
-        },
-        {
-            id: 2,
-            title: 'Inflation Buster',
-            subtitle: 'FOOD SERVICE UPDATE',
-            href: '#',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/06/Inflation-Busters-300x415-with-title-and-border.png',
-        },
-        {
-            id: 3,
-            title: 'Recipes and Resources',
-            subtitle: 'AMERICAN RESTAURANT',
-            href: '#',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/08/Untitled-design-61.png',
-        },
-        {
-            id: 4,
-            title: 'Hinded Foam Containers',
-            subtitle: 'FOOD SERVICE UPDATE',
-            href: '#',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/05/Foam-Containers-300x415-with-title-and-border-1.png',
-        },
-        // More posts...
-    ];
-
+    const cards = cardContent.props.card_section.card_section;
 
     return (
         <div>
@@ -68,14 +21,14 @@ function Updates() {
 
                 <div class="row mx-auto pr-8 pl-8 pt-4 max-w-7xl">
                     {
-                        posts.map(post => (
+                        cards.map(card => (
                             <div class="col">
                                 <Card style={{ }}>
-                                    <Card.Img variant="top" src={post.imageUrl} />
+                                    <Card.Img variant="top" src={card.image.url} />
                                     <Card.Body>
-                                        <Card.Title className="text-sm text-center text-sky-500">{post.subtitle}</Card.Title>
+                                        <Card.Title className="text-sm text-center text-sky-500">{card.link[0].title}</Card.Title>
                                         <Card.Text className="text-center pt-0 font-bold">
-                                            {post.title}
+                                            {card.link[1].title}
                                         </Card.Text>
                                     </Card.Body>
                                 </Card>

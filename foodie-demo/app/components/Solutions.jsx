@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 
-function Solutions() {
+function Solutions(recipeContent) {
+    const recipeGroups = recipeContent.props.recipe_section; 
+
     return (
         <div>
             <div class="container-fluid bg-gray-100 py-5">
