@@ -59,7 +59,8 @@ function Navigation() {
             </div>
 
             {/* whole navbar */}
-            <Navbar bg="light" expand="lg" sticky="top" width="100%" className="top-navbar-container grid grid-flow-col justify-between">
+            <div className='fixed top-0' style={{width:"100%", zIndex:"100"}}>
+            <Navbar bg="light" expand="lg" sticky="top" width="100%" className="top-navbar-container grid grid-flow-col justify-between" style={{}}>
                 <div className="navbar-hamburger-menu-icon flex flex-row">
                     {/* hamburger menu */}
                     <FaBars className='d-inline-block mt-3 ml-4 mr-3 text-gray-500' />
@@ -109,7 +110,7 @@ function Navigation() {
                 </div>
             </Navbar>
 
-            <Navbar bg="light" expand="lg" className="border-top navbar-bottom ">
+            <Navbar bg="light" expand="lg" className="border-top navbar-bottom " style={{}}>
                 <Navbar.Collapse id="basic-navbar-nav ">
                     <Nav className="mx-auto space-x-2">
 
@@ -286,7 +287,7 @@ function Navigation() {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-
+            </div>
 
         </>
     )
