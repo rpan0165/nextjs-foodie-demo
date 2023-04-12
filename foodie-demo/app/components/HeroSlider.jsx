@@ -32,7 +32,7 @@ function HeroSlider() {
           <SwiperSlide>
             <div className="swiper-slide-container bg-white">
               <div className="text-container">
-                <h2 className='text-3xl font-extrabold font-serif'>Mother's Day <br/> Menu Ideas</h2>
+                <h2 className='text-4xl font-extrabold font-serif'>Mother's Day <br/> Menu Ideas</h2>
                 <button className='learn-btn'>Learn More</button>
               </div>
               <div className="image-container">
@@ -43,11 +43,11 @@ function HeroSlider() {
           <SwiperSlide>
             <div className="swiper-slide-container">
               <div className="text-container">
-                <h2 className='text-3xl font-extrabold'>Plant Based <br/> Menu Ideas</h2>
+                <h2 className='text-4xl font-extrabold'>Spice Up <br/> Your Cinco De Mayo <br/> With Our Easy-to Use Toolkits</h2>
                 <button>Learn More</button>
               </div>
               <div className="image-container">
-                <img src="https://foodie.sysco.com/wp-content/uploads/2023/01/MicrosoftTeams-image-147.jpg" alt="Slide 2 Image" />
+                <img src="https://foodie.sysco.com/wp-content/uploads/2023/04/MicrosoftTeams-image-200.png" alt="Slide 2 Image" />
               </div>
             </div>
           </SwiperSlide>
