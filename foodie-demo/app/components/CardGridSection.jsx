@@ -39,7 +39,10 @@ const Card = ({ id, url }) => {
     );
 };
 
-const CardGridSection = () => {
+const CardGridSection = (cardGridContent) => {
+
+    const photos = cardGridContent.props.insta_section.insta_photos;
+
     const [numRows, setNumRows] = useState(4);
 
     return (
