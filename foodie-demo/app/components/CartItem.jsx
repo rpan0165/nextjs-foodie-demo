@@ -8,26 +8,28 @@ const CartItem = (cartItemContent) => {
 
   const contentPath = cartItemContent.props;
 
-  
-  
+
+
   const handleProductClick = (product) => {
   };
-  
+
   return (
-      <>
-          <div class="card">
-	        <div class="card-img">
-                <Image src={contentPath.image} alt="still searching" width={150} height={150} />
-	        </div>
-	        <div class="card-body">
-                  <h5 class="card-title">{contentPath.name}</h5>
-	            <p class="card-text">{contentPath.price}</p>
-          <button class="btn-remove" onClick={() => {
-              dispatch(removeProduct(contentPath.id))
-              }}>Remove Item</button>
-	        </div>
-	      </div>   
-      </>
+    <>
+
+      <div class="card">
+        <div class="card-img">
+          <Image src={contentPath.image} alt="still searching" width={100} height={100} className='border border-2 rounded-lg m-2 w-20 h-20' />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title font-bold text-md">{contentPath.name}</h5>
+          <h5 class="text-left mb-3">{contentPath.price}</h5>
+          <button class="btn-remove text-sky-600 text-right" onClick={() => {
+            dispatch(removeProduct(contentPath.id))
+          }}>Remove Item</button>
+        </div>
+      </div>
+
+    </>
   )
 }
 
