@@ -29,15 +29,15 @@ const sliceStrings = (str) => {
 }
 
 
-function HeroSlider(props) {
-  // const slides = heroSliderContent.props.hero_slider.slides;
+function HeroSlider(heroSliderContent) {
+  const slides = heroSliderContent.props.hero_slider.slides;
 
-  // shortend path for slides data
-  var slides = null;
-  if (props.hardCoded) { slides = props.sliderContent }
+  // // shortend path for slides data
+  // var slides = null;
+  // if (props.hardCoded) { slides = props.sliderContent }
 
 
-  return props.hardCoded ? (
+  return (
       <>
         <Swiper
           spaceBetween={50}
@@ -63,7 +63,7 @@ function HeroSlider(props) {
           }
       </Swiper>
       </>
-      ):(<div></div>)
+      )
 }
 
 export default HeroSlider
