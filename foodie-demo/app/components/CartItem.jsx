@@ -11,12 +11,6 @@ const CartItem = (cartItemContent) => {
   
   
   const handleProductClick = (product) => {
-    // dispatch(addProduct({
-    //   "name": product.title,
-    //   "price": product.description,
-    //   "image": product.image.url,
-    //   "id": product._metadata.id
-    // }))
   };
   
   return (

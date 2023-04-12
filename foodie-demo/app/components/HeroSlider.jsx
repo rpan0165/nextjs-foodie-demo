@@ -20,39 +20,50 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Navigation, Pagination]);
 
+const sliceStrings = (str) => {
+  // Split the title into two lines
+  const splitStr = str.split(" ");
+  const firstStr = splitStr.slice(0, 2).join(" ");
+  const secondStr = splitStr.slice(2).join(" ");
+  return [firstStr, secondStr];
+}
 
-function HeroSlider() {
-    return (
+
+function HeroSlider(props) {
+  // const slides = heroSliderContent.props.hero_slider.slides;
+
+  // shortend path for slides data
+  var slides = null;
+  if (props.hardCoded) { slides = props.sliderContent }
+
+
+  return props.hardCoded ? (
+      <>
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
         >
-          <SwiperSlide>
-            <div className="swiper-slide-container bg-white">
-              <div className="text-container">
-                <h2 className='text-3xl font-extrabold font-serif'>Mother's Day <br/> Menu Ideas</h2>
-                <button className='learn-btn'>Learn More</button>
-              </div>
-              <div className="image-container">
-                <img src="https://foodie.sysco.com/wp-content/uploads/2023/03/Mothers-Day-2023-Banners-3989559-Corporate-v2.jpg" alt="Slide 1 Image" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="swiper-slide-container">
-              <div className="text-container">
-                <h2 className='text-3xl font-extrabold'>Plant Based <br/> Menu Ideas</h2>
-                <button>Learn More</button>
-              </div>
-              <div className="image-container">
-                <img src="https://foodie.sysco.com/wp-content/uploads/2023/01/MicrosoftTeams-image-147.jpg" alt="Slide 2 Image" />
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      );
+          {
+          slides.map((slide, index) => {
+            return(
+              <SwiperSlide key={index}>
+                <div className="swiper-slide-container bg-white">
+                  <div className="text-container">
+                    <h2 className='text-3xl font-extrabold font-serif'>{sliceStrings(slide.header)[0]}<br />{sliceStrings(slide.header)[1]}</h2>
+                    <button className='learn-btn'>{slide.cta.title}</button>
+                  </div>
+                  <div className="image-container">
+                    <img src={slide.background_image.url} alt="Slide 1 Image" />
+                  </div>
+                </div>
+              </SwiperSlide>
+          )})
+          }
+      </Swiper>
+      </>
+      ):(<div></div>)
 }
 
 export default HeroSlider

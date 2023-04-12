@@ -9,12 +9,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import TopNav from './components/TopNav'
 
-import CircularSection from './components/CircularSections'
+import CircularSection from './components/CircularSection'
 import Updates from './components/Updates'
 import Community from './components/Community'
 
 import CardGridSection from './components/CardgridSection'
 import Solutions from './components/Solutions'
+import MagazineSection from './components/MagazineSection';
 import axios from 'axios';
 import dynamic from 'next/dynamic';
 
@@ -41,7 +42,7 @@ const [componentArray, setComponentArray] = useState([]);
   
 // custom constants to match components due to naming limitations in CS 
 const matchingComponents = ['hero_slider', 'tile_section', 'card_section', 'recipe_section', 'community_section', 'magazine_section','insta_section', 'footer_spotlight_section']
-const realComponents = ['HeroSlider', 'CircularSection', 'Updates', 'Solutions','Community','CardGridSection']
+const realComponents = ['HeroSlider', 'CircularSection', 'Updates', 'Solutions','Community','MagazineSection','CardGridSection','BottomCards']
 
   // required arrays to filter the list
   var titleArray; //grab the titles list from the incoming data object
@@ -51,7 +52,7 @@ const realComponents = ['HeroSlider', 'CircularSection', 'Updates', 'Solutions',
 
   const fetchData = async () => {
     setLoading(true)
-    let res = await axios.get('https://cdn.contentstack.io/v3/content_types/homepage_test/entries?environment=development',
+    let res = await axios.get('https://cdn.contentstack.io/v3/content_types/foodie_homepage/entries?environment=development',
       {
         headers: {
           'api_key': 'blt16b29db83ad01635',
@@ -60,6 +61,7 @@ const realComponents = ['HeroSlider', 'CircularSection', 'Updates', 'Solutions',
         }
       }
     );
+    console.log(res.data);
     setData(res.data);
 
   //logic to grab the component details from response
@@ -91,33 +93,45 @@ useEffect(() => {
 }, [])
   
   
-  return (
-    <>
-      
-      <HeroSlider />
+  return isLoading && componentData.length < 1 && componentList.length < 1 && componentArray.length < 1 ? (
+    <div className="spinner-UI">
+        <div className="spinner-container">
+          <div className="loading-spinner">
+          </div>
+        </div>
+      </div>
+
+    ) : (
+      <>
+        {/* <HeroSlider sliderContent={componentData[0].hero_slider.slides} hardCoded={true} />
+        <div>
+          <ComponentList componentNames={componentList} compData={componentData} />
+        </div> */}
+        <HeroSlider props={data.entries[0].modular_blocks[0]} />
+         <br />
+         <br />
+       <CircularSection props={data.entries[0].modular_blocks[1]}/>
+         <br />
+         <br />
+       <Updates props={data.entries[0].modular_blocks[2]}/>
+         <br />
+         <br />
+       <Solutions props={data.entries[0].modular_blocks[3]}/>
+         <br/>
+         <br/>
+       <Community props={data.entries[0].modular_blocks[4]}/>
         <br />
-        <br />
-      <CircularSection/>
-        <br />
-        <br />
-      <Updates />
-        <br />
-        <br />
-      <Solutions/>
-        <br/>
-        <br/>
-      <Community/>
-        <br/>
-        <br/>
-      <CardGridSection/>
-        <br/>
-        <br/>
-        <br/>
-      <BottomCards/>
-        <br/>
-        <br/>
-        <br/>
-      
-    </>
+        <MagazineSection props={data.entries[0].modular_blocks[5]}/>
+         <br/>
+       <CardGridSection props={data.entries[0].modular_blocks[6]}/>
+         <br/>
+         <br/>
+         <br/>
+       <BottomCards props={data.entries[0].modular_blocks[7]}/>
+         <br/>
+         <br/>
+         <br/>
+
+     </>
   )
 }
