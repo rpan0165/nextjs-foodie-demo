@@ -83,7 +83,7 @@ function Navigation() {
                     )}
                 </Navbar.Toggle> */}
 
-                <div id="basic-navbar-nav" className="navbar-searchbar col-span-4" style={{}}>
+                <div id="basic-navbar-nav" className="navbar-searchbar col-span-3" style={{}}>
                     {/* search bar */}
                     <SearchBar />
                 </div>
