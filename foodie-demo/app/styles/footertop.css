@@ -1,0 +1,33 @@
+.social-icon {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid grey;
+    padding: 12px;
+    font-size: 3.2rem;
+    color: grey;
+  }
+
+  .social-icon:hover{
+    color: white;
+    background-image: linear-gradient(to left,
+    transparent,
+    transparent 50%,
+    #008cd2 50%,
+    #008cd2);
+    background-position: 0% 50%;
+    background-size: 200% 100%;
+    transition: all .25s ease-in;
+    border: 2px solid #045cc1;
+  }
+
+  .row-element{
+    color: gray;
+    text-decoration: none;
+    font-size: medium;
+  }
+
+  .row-element:hover{
+    color: #008cd2;
+    text-decoration: none;
+    font-size: medium;
+  }

@@ -4,7 +4,7 @@ import React from 'react'
 function BottomCards(spotlightContent) {
 
   const cards = spotlightContent.props.footer_spotlight_section.spotlight_container;
-
+  console.log("spotlight: ",spotlightContent)
 
   return (
     <div>
