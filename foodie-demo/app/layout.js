@@ -5,6 +5,8 @@ import Head from 'next/head'
 import TopNav from './components/TopNav'
 import { Providers } from './redux/provider'
 import Navigation from './components/Navigation'
+import FooterTop from './components/FooterTop'
+
 
 export const metadata = {
   title: 'Sysco-Foodie',
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Navigation/>
             {children}
+            <FooterTop/>
           <Footer/>
         </Providers>
         </body>
