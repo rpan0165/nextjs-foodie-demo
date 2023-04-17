@@ -12,7 +12,7 @@ function FooterTop() {
             <Image src={MyImage} alt="footer-top-logo" width={400} height={250} className='mx-auto mt-4' />
             <div className='SocialButtons flex flex-row justify-center mt-3'>
                 <Link href="https://syys.co/3xu9rwf">
-                    <FaTwitter className='social-icon border mx-2' />
+                    <FaTwitter className='social-icon mx-2' />
                 </Link>
                 <Link href="https://syys.co/36xtdv4">
                     <FaFacebookF className='social-icon mx-2' />

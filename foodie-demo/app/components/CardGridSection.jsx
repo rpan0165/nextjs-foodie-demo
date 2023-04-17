@@ -20,6 +20,10 @@ const images = [
     { id: 10, url: 'https://via.placeholder.com/150' },
     { id: 11, url: 'https://via.placeholder.com/150' },
     { id: 12, url: 'https://via.placeholder.com/150' },
+    { id: 13, url: 'https://via.placeholder.com/150' },
+    { id: 14, url: 'https://via.placeholder.com/150' },
+    { id: 15, url: 'https://via.placeholder.com/150' },
+    { id: 16, url: 'https://via.placeholder.com/150' },
 ];
 
 const Card = ({ id, url }) => {
