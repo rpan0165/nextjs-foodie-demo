@@ -50,7 +50,14 @@
   #backdrop-img{
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://foodie.sysco.com/wp-content/uploads/2019/06/Recipe_header_1400x460-1400x460.jpg');
     background-size: 100%;
+    /* transition: transform .5s ease;
+    overflow: hidden;  */
   }
+  
+/* 
+  #backdrop-img:hover{
+    transform: scale(1.1);
+  } */
 
   /* style={{ backgroundImage: "url('https://foodie.sysco.com/wp-content/uploads/2019/06/Recipe_header_1400x460-1400x460.jpg')", backgroundSize:"100%", backgroundBlendMode:"darken"}} */
 
