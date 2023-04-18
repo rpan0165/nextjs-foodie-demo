@@ -79,7 +79,7 @@ function RecipesHome() {
 
   return (
     <div className='bg-slate-100'>
-      <div className='bg-blend-darken' id="backdrop-img" >
+      <div className='bg-blend-darken' id="backdrop-img" style={{marginTop:"7.5rem"}}>
         <br /><br /><br /><br />
         <h1 className="text-center font-bold text-5xl text-white" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Professional Chef Recipes & Dishes</h1>
         <h3 className="text-center text-2xl text-white mt-3" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Restaurant-ready dishes created by our chefs</h3>
@@ -225,7 +225,7 @@ function RecipesHome() {
           </div>
           <div className='ml-2'>
 
-            <img src='https://foodie.sysco.com/wp-content/uploads/2021/02/Surf-Turf-Burger-572x440.png' alt='grid-image-recipes' width="100%" />
+            <img src='https://foodie.sysco.com/wp-content/uploads/2021/02/Surf-Turf-Burger-572x440.png' alt='grid-image-recipes' width="100%"/>
 
           </div>
 
@@ -339,14 +339,14 @@ function RecipesHome() {
       </div>
       <br />
       <p className="text-center pb-1 text-md font-bold" >SEE MORE RECIPES</p>
-      <div class="h_line mb-3 pt-0 " style={{
+      <div class="h_line mb-5 pt-0 " style={{
         color: "#", borderBottom: "3px solid #56B146",
         width: "9%",
         margin: "auto",
       }}></div>
 
       <div className='' style={{backgroundColor:"#2A2F33", backgroundSize:""}}>
-        <BottomCards />
+        {/* <BottomCards /> */}
       </div>
     </div>
   )

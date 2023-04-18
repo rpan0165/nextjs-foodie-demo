@@ -2,7 +2,7 @@
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid grey;
-    padding: 12px;
+    padding: 13px;
     font-size: 3.2rem;
     color: grey;
   }
@@ -30,4 +30,8 @@
     color: #008cd2;
     text-decoration: none;
     font-size: medium;
+  }
+
+  Link{
+    text-decoration: none;
   }

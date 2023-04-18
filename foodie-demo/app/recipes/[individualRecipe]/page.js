@@ -50,8 +50,11 @@ function IndividualRecipe(params) {
 
   return (
     <div>
-      <h1>Recipe  Details</h1>
+      <div style={{marginTop:"9rem"}}>
 
+  
+      <h1>Recipe  Details</h1>
+      </div>
     </div>
   )
 }

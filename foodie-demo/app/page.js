@@ -20,6 +20,7 @@ import axios from 'axios';
 import dynamic from 'next/dynamic';
 
 import BottomCards from './components/BottomCards'
+import ExploreFoodie from './components/ExploreFoodie';
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -110,7 +111,8 @@ export default function Home() {
       <HeroSlider props={data.entries[0].modular_blocks[0]} />
       <br />
       <br />
-      <CircularSection props={data.entries[0].modular_blocks[1]} />
+      <ExploreFoodie/>
+      {/* <CircularSection props={data.entries[0].modular_blocks[1]} /> */}
       <br />
       <br />
       <Updates props={data.entries[0].modular_blocks[2]} />
