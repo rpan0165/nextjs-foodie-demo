@@ -12,7 +12,7 @@ function page({params}) {
 
 
     return (
-        <div>
+        <div style={{marginTop:"9.5rem"}}>
             <div className='mx-auto mt-5 mb-5 py-5 border-5 border-gray-400 border-spacing-4 max-w-5xl'>
                 <h2 className='text-3xl text-center mb-4'>Sysco Product Item - {replaced}</h2>
                 <ul role="list" className="marker:text-sky-600 list-disc pl-5 space-y-3 text-slate-500  text-center">

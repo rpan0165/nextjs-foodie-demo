@@ -1,7 +1,5 @@
 .footer {
-    background-color: #2A2F33;
-    color: #fff;
-    padding: 50px 0;
+    padding: 3rem 0;
   }
   
   .column {
@@ -10,12 +8,12 @@
     padding: 3rem;
   }
   
-  .overlap {
+  /* .overlap {
     position: relative;
     z-index: 1;
     margin-left: -20px;
   }
-  
+   */
   .socialButtons {
     float: right;
     /* Add styles for social buttons */
@@ -29,9 +27,10 @@
   }
 
   .divider-line{
-    color: whitesmoke;
-    width: 100%;
+    color: rgb(90, 88, 88);
+    width: 94%;
     height: 2px;
+    margin: 0 auto;
   }
   
   .bottomLine a {
@@ -39,18 +38,53 @@
     margin-right: 20px;
   }
   
-  ul li{
-    margin: 0.5rem 0rem;
-    font-size: small;
-    line-height: 20px;
-
+  .footer-column-item{
+    padding: 1rem 2rem;
+    text-align: justify;
   }
 
-.links{
-    color: rgb(162, 160, 160);
+  .footer-column-item ul li{
+    margin: 0.5rem 0rem;
+    font-size: small;
+    line-height: 18px;
+    text-decoration: none;
+    color: #008cd2;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .footer-column-item ul li:hover{
+    margin: 0.5rem 0rem;
+    font-size: small;
+    line-height: 18px;
+    text-decoration: underline;
+    color: #008cd2;
+    font-weight: 500;
+  }
+
+Link {
+    color: #008cd2;
     text-decoration:none;
 }
 
-p{
-    padding: 20px;
+.social-icon-footer {
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid grey;
+  padding: 5px;
+  font-size: 2.3rem;
+  color: grey;
+}
+
+.social-icon-footer:hover{
+  color: white;
+  background-image: linear-gradient(to left,
+  transparent,
+  transparent 50%,
+  #008cd2 50%,
+  #008cd2);
+  background-position: 0% 50%;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;
+  border: 2px solid #045cc1;
 }
