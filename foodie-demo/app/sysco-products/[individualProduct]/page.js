@@ -1,11 +1,8 @@
 'use client'
 import React from 'react';
-import { useRouter } from 'next/navigation';
 
 function page({params}) {
     
-  const router = useRouter();
-
     // Check whether router.query is empty {} or not
     const str = params.individualProduct;
     const replaced = str.replace(/%20|%2C|%22/gi,' ');

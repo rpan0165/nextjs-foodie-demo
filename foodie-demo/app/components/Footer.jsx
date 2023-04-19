@@ -6,7 +6,7 @@ import { FaFacebookF, FaPinterestP, FaInstagram, FaYoutube, FaTwitter, FaLinkedi
 function Footer() {
     return (
         <footer className="footer">
-            <div className='grid grid-flow-row-dense lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 mx-auto px-5'>
+            <div className='grid grid-flow-row-dense lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 mx-auto px-5'>
                 <div className='col-span-1'>
                     {/* Column 1 content */}
                     <img className='' src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Sysco-Logo.svg/2560px-Sysco-Logo.svg.png' width={"25%"}></img>
@@ -15,7 +15,7 @@ function Footer() {
                     <br></br>
                 </div>
                 <div className='col-span-3'>
-                    <div className='flex flex-row justify-between ml-5 px-5 mb-3'>
+                    <div className='flex flex-row justify-between ml-5 px-5 mb-3 sm:flex sm:flex-col'>
                         <div className='footer-column-item'>
                             <h5 className='text-sm font-bold'>About Us</h5>
                             <ul>

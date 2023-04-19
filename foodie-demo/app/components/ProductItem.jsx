@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { addProduct, removeProduct } from '../redux/cartSlice'
+import Image from 'next/image'
 
 const ProductItem = () => {
     // const contentPath = productContent.props;
