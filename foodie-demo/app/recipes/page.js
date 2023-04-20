@@ -111,7 +111,7 @@ function RecipesMain() {
                 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
 
             imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
+                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-300x415.jpg',
         },
         {
             id: 10,
@@ -123,7 +123,7 @@ function RecipesMain() {
                 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
 
             imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
+                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shredded-Chicken-300x415.png',
         },
         {
             id: 11,
@@ -135,7 +135,7 @@ function RecipesMain() {
                 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
 
             imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
+                'https://foodie.sysco.com/wp-content/uploads/2021/02/Truck-Stop-Breakfast-300x415.png',
         },
         {
             id: 12,
@@ -171,7 +171,7 @@ function RecipesMain() {
                 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
 
             imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
+                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shredded-Chicken-300x415.png',
         },
         {
             id: 15,
@@ -183,7 +183,7 @@ function RecipesMain() {
                 'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
 
             imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
+                'https://foodie.sysco.com/wp-content/uploads/2021/02/Truck-Stop-Breakfast-300x415.png',
         },
         {
             id: 16,
@@ -255,7 +255,7 @@ function RecipesMain() {
                                             <h3 className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{post.title}</h3>
                                             <p className='font-bold text-black my-2' style={{ fontSize: "12px" }}>{post.subtitle}</p>
                                         </div>
-                                        <div style={{ width: "100%", borderRadius: "0 0 10px 10px", height: "18rem", backgroundColor: "yellow", backgroundImage: "url(https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-300x415.jpg)" }}>
+                                        <div style={{ width: "100%", borderRadius: "0 0 10px 10px", height: "18rem", backgroundColor: "yellow", backgroundImage: `url(${post.imageUrl})` }}>
                                         </div>
                                     </div>
                                 </Link>
