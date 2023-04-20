@@ -1,7 +1,6 @@
 {
     "recipes": [
         {
-            "recipeTitle": 1,
             "id": 1,
             "title": "Sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
             "subtitle": "Sysco Culinary Team, Houston, TX",
@@ -9,7 +8,6 @@
             "imgUrl": "#"
         },
         {
-            "recipeId": 2,
             "id": 2,
             "title": "Squi est esse",
             "subtitle": "Sysco Culinary Team, Houston, TX",
@@ -18,7 +16,6 @@
             "imgUrl": "#"
         },
         {
-            "recipeId": 3,
             "id": 3,
             "title": "Ea molestias quasi exercitationem repellat qui ipsa sit aut",
             "subtitle": "Sysco Culinary Team, Houston, TX",
@@ -27,7 +24,6 @@
             "imgUrl": "#"
         },
         {
-            "recipeId": 3,
             "id": 4,
             "title": "Nesciunt quas odio",
             "subtitle": "Sysco Culinary Team, Houston, TX",

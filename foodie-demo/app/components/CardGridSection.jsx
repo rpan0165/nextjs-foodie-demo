@@ -24,6 +24,8 @@ const images = [
     { id: 14, url: 'https://via.placeholder.com/150' },
     { id: 15, url: 'https://via.placeholder.com/150' },
     { id: 16, url: 'https://via.placeholder.com/150' },
+    { id: 17, url: 'https://via.placeholder.com/150' },
+    { id: 18, url: 'https://via.placeholder.com/150' },
 ];
 
 const Card = ({ id, url }) => {
@@ -51,13 +53,13 @@ const CardGridSection = (cardGridContent) => {
 
     return (
         <>
-            <h2 className="text-center font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Connect With @SyscoFoodie</h2>
-            <p className="text-center pb-2" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif", fontSize: "1.3rem" }}>Follow us on Instagram to see the relevant information regarding Sysco's latest resources for restaurant operators.</p>
-            <div class="h_line mt-0 mb-4 pt-0 " style={{
+            <h2 className="text-center font-bold text-4xl py-2 mt-3" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Connect With @SyscoFoodie</h2>
+            <p className="text-center py-3" style={{ fontSize: "1.3rem" }}>Follow us on Instagram to see the relevant information regarding Sysco's latest resources for restaurant operators.</p>
+            {/* <div class="h_line mt-0 mb-4 pt-0 " style={{
                 color: "red", borderBottom: "5px solid #56B146",
                 width: "10rem",
                 margin: "auto",
-            }}></div>
+            }}></div> */}
             <span>
                 <p className="text-center text-lg"> 
                 <span>
@@ -67,13 +69,13 @@ const CardGridSection = (cardGridContent) => {
                     #syscofoodie
                     </p>
             </span>
-            <div className="card-grid">
+            <div className="card-grid mt-3">
 
                 {images.slice(0, numRows * 3).map((image) => (
                     <Card key={image.id} id={image.id} url={image.url} />
                 ))}
                 {numRows * 3 < images.length && (
-                    <button onClick={() => setNumRows(numRows + 4)}>Load More</button>
+                    <button onClick={() => setNumRows(numRows + 4)} className='mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500' style={{textAlign:"center", margin:"0 auto", }}>Load More</button>
                 )}
             </div>
         </>
