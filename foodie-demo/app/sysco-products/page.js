@@ -44,7 +44,7 @@ const Cheese = () => {
     </div>
   ) : (
     <>
-      <div className="bg-gray-100">
+      <div className="bg-gray-100" style={{marginTop:"7.7rem"}}>
         {/* header cover */}
         {/* <div className='bg-blend-darken' id="backdrop-img" >
           <br /><br /><br /><br />
@@ -87,7 +87,7 @@ const Cheese = () => {
                     <h5 class="font-bold text-xl mt-3 ml-2" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{product.title}</h5>
                     <p class="text-md">{product.sub_header}</p>
 
-                    <div className="flex flex-row justify-between align-bottom ml-2">
+                    <div className="flex flex-row justify-between align-bottom ml-2 mt-3">
                       <a className="font-bold text-lg text-sky-600 underline mt-1" href={`/sysco-products/${product.title}`}>See Details</a>
                       <a class="bg-sky-600  text-white font-bold rounded-3xl px-4 py-2 hover:bg-sky-500 cursor-pointer" style={{ textDecoration: "none" }} onClick={() => {
                         dispatch(addProduct({
