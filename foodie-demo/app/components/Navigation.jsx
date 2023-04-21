@@ -162,7 +162,7 @@ function Navigation() {
                         </Link>
 
                         <Link href="/category3" className="pr-4">
-                            <NavDropdown title="Operations & Resources" id="basic-nav-dropdown" class="container">
+                            <NavDropdown title="Operations & Resources" id="basic-nav-dropdown" class="">
 
                                 <Link href="/category1">
                                     <NavDropdown.Item>American Restaurant Recipe & Resources</NavDropdown.Item>

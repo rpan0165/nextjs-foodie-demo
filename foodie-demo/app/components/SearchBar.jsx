@@ -57,7 +57,7 @@ const SearchBar = () => {
 
   return (
     <div>
-      <Form inline >
+      <Form inline className="">
         {/* <FormControl type="text" placeholder="Search for recipes, ingredients and more" className="mr-sm-2 " /> */}
         {/* <Button variant="outline-success">Search</Button> */}
         <div class="form-group has-search">
