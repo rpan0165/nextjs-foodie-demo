@@ -23,7 +23,7 @@ function Updates(cardContent) {
                     {
                         cards.map(card => (
                             <div class="col">
-                                <Card style={{ }}>
+                                <Card style={{ backgroundColor: "#FFF9F0"}}>
                                     <Card.Img variant="top" src={card.image.url} />
                                     <Card.Body>
                                         <Card.Title className="text-sm text-center text-sky-500">{card.link[0].title}</Card.Title>

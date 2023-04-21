@@ -4,8 +4,12 @@ import { useRouter } from 'next/navigation';
 import 'bootstrap/dist/css/bootstrap.css';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Link from 'next/link';
+import BottomCards from '@component/app/components/BottomCards';
+import {RiBookmarkLine} from 'react-icons/ri';
 
-function IndividualRecipe(params) {
+function IndividualRecipe({params}) {
+
+  const pageName = params.individualRecipe;
 
   const posts = [
     {
@@ -117,13 +121,171 @@ function IndividualRecipe(params) {
               Recipes
             </Breadcrumb.Item>
             <Breadcrumb.Item active>
-              Vegan Thai Massaman Curry
+             {pageName}
             </Breadcrumb.Item>
           </Breadcrumb>
         </div>
 
+        <div className="grid grid-cols-12 mx-auto" style={{ width: "85%" }}>
+          <div className="col-span-6 m-2 rounded-2xl" style={{backgroundImage:"url('https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg')"}}>
+            {/* <img className='rounded-3xl' src="https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg" alt="recipe-main-image" /> */}
+            <div className='flex flex-row justify-between m-3'>
+              <div className='flex flex-row'>
+                <button className='bg-white border-1 px-3 pt-1 pb-2 text-sm font-bold text-sky-600 rounded-lg mr-1'>Email article</button>
+                <button className='bg-white border-1 px-3 pt-1 pb-2 text-sm font-bold text-sky-600 rounded-lg ml-1'>Print article</button>
+              </div>
+              <div className='bg-white border-1 px-2 pt-2 text-md font-semibold text-sky-600 rounded-full'><RiBookmarkLine className='text-sky-600'/></div>
+            </div>
+          </div>
+          <div className="col-span-6 m-2 p-3">
+            <h5 className='font-bold text-sky-600 text-sm'>MEAL TYPE</h5>
+            <h2 className='font-bold text-3xl py-2' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Vegan Thai Massaman Curry</h2>
+            <h4 className='font-bold text-gray-500 py-2'>Plant based protein stars in this tasty Thai curry.</h4>
+            <p className='font-bold text-sm text-gray-500 mb-4'>Sysco Culinary Team | Houston, TX</p>
+            <p className='leading-relaxed text-sm mb-4'>Suitable for any customer from vegans to meat lovers, Sysco Simply Plant Based Protein (Pulled Oats) is made of a flavorful superfood blend of oats, beans, and peas. In this dish, it blends with Thai Massaman curry and fresh vegetables to create a satisfying main dish.</p>
+            <div className='flex flex-row justify-between border-2 rounded-xl p-4'>
+              <div>
+                <p className='font-bold text-sm text-gray-500 mb-2'>Servings</p>
+                <span className='text-sm'>4</span>
+              </div>
+              <div>
+                <p className='font-bold text-sm text-gray-500 mb-2'>Prep Time</p>
+                <p className='text-sm'>Not Available</p>
+              </div>
+              <div>
+                <p className='font-bold text-sm text-gray-500 mb-2'>Cook Time</p>
+                <p className='text-sm'>Not Available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-12 mx-auto" style={{ width: "85%" }}>
+          <div className='col-span-6 m-2 rounded-xl' style={{ backgroundColor: "#F7F9FB" }}>
+            <div className='flex flex-row justify-between m-5'>
+              <h2 className='font-bold text-xl' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Ingredients</h2>
+              <button className='bg-sky-600 rounded-3xl px-3 py-2 text-sm font-bold text-white'>Add to Basket</button>
+            </div>
+            <div className='flex flex-row justify-between mx-5 mb-2'>
+              <p className='font-bold '>Thai Massaman Curry</p>
+              <Link className='' href="#"><p className='font-bold text-sky-600 text-sm'>Select All</p></Link>
+            </div>
+
+            <div className='leading-8 text-sm'>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 2 Tbsp. coconut oil</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 3 Imperial Fresh garlic cloves, minced</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1 large Imperial Fresh red onion, diced</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 2 tsp. Imperial Fresh minced ginger</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1 large Imperial Fresh russet potato, diced</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1 large Imperial Fresh sweet potato, diced</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 3 cups Jade Mountain coconut milk</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1⁄4 cup massaman and/or yellow curry paste</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1⁄2 tsp. Sysco Classic kosher salt</p>
+              </div>
+            </div>
+
+            <br />
+            <div className='flex flex-row justify-between mx-5 mb-2'>
+              <p className='font-bold '>For Serving</p>
+              <Link className='' href="#"><p className='font-bold text-sky-600 text-sm'>Select All</p></Link>
+            </div>
+            <div className='leading-8 text-sm mb-3 mt-2'>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1⁄4 cup coconut oil</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 2 cups chopped green beans</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 2 cups Sysco Simply Plant Based Protein (Pulled Oats)</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1 cup coarsely chopped Imperial Fresh carrots</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1 cup coarsely chopped Imperial Fresh red bell pepper</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1⁄2 cup loosely packed Imperial Fresh cilantro</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; 1⁄4 cup Sysco Classic chopped roasted peanuts</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; Imperial Fresh lime wedges</p>
+              </div>
+              <div className='flex flex-row justify-start mx-5'>
+                <input type="checkbox" class=" checked:bg-sky-600 text-xl" />
+                <p> &nbsp; Steamed Jade Mountain Imperial jasmine rice</p>
+              </div>
+            </div>
+            <br />
+
+          </div>
+
+
+          <div className='col-span-6 m-2 rounded-xl' style={{ backgroundColor: "#F7F9FB" }}>
+            <div className='flex flex-row justify-between m-5'>
+              <h2 className='font-bold text-xl' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Directions</h2>
+            </div>
+            <div className='m-5'>
+              <p className='font-bold '>For the Thai Massaman Curry</p>
+              <br />
+              <ol className='list-decimal leading-loose text-sm ml-3'>
+                <li>Heat oil in a saucepan over medium heat. Add garlic, onion, and ginger; cook until garlic starts to brown, about 5 minutes, stirring frequently.</li>
+                <li>Add potatoes, coconut milk, curry paste, and salt; reduce heat to medium-low. Cover and cook until potatoes are very tender and sauce is slightly thickened, about 45 minutes, stirring occasionally; cool.</li>
+                <li>Refrigerate in an airtight container up to 6 days. Makes about 6 cups.</li>
+              </ol>
+              <br />
+              <p className='font-bold'>For Serving</p>
+              <br />
+              <ol className='list-decimal leading-loose text-sm ml-3'>
+                <li>Heat a portion of oil in a sauté pan over medium-high heat. Add a portion each of beans, plant based protein, and carrots; cook until golden brown and starting to char, about 6 minutes.</li>
+                <li>Add a portion of Thai Massaman Curry; heat to a simmer, stirring occasionally. Stir in a portion of peppers; remove from heat.</li>
+                <li>Serve curry sprinkled with a portion of cilantro and peanuts, garnished with lime wedges, along with rice.</li>
+              </ol>
+              <br />
+              <p className='text-sm'>Ingredient availability varies by location*</p>
+            </div>
+          </div>
+        </div>
+        <br /><br />
         <hr />
-        <h2 className="text-center font-bold text-4xl py-2 mt-4" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Related Recipes</h2>
+        <h2 className="text-center font-semibold text-4xl py-2 mt-4" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Related Recipes</h2>
         <p className='text-center font-bold mb-4'>Find more innovative dishes for your menu.</p>
         <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
           {
@@ -148,7 +310,7 @@ function IndividualRecipe(params) {
         <hr />
 
         <div>
-          <h1>Bottom Cards</h1>
+          <BottomCards />
         </div>
 
       </div>

@@ -1,25 +1,35 @@
 import React from 'react'
 
+function BottomCards() {
+    return (
+        <div className="grid grid-cols-12 grid-flow-row sm:grid-flow-col justify-center mt-5" style={{width:"85%", margin:"0 auto", marginBottom:"5rem"}}>
+            <div className=' col-span-6 flex flex-row border-2 border-orange-200 rounded-xl' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
+                
+                <div style={{ width: "50%", borderRadius: "10px 0 0 10px", height: "21rem", backgroundColor: "yellow", backgroundImage: "url('https://foodie.sysco.com/wp-content/uploads/2023/02/Plant-Based-Campaign-Banner-Foodie-3907536-Corporate.jpg')" }}>
+                </div>
+                <div className='p-3 text-center overflow-auto' style={{width:"50%", height: "21rem", }}>
 
-function BottomCards(spotlightContent) {
+                    <h3 className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif", marginTop:"45%"}}>Opportunities with Plant-based Options</h3>
 
-  const cards = spotlightContent.props.footer_spotlight_section.spotlight_container;
-  console.log("spotlight: ",spotlightContent)
+                </div>
 
-  return (
-    <div>
-      <div className='flex flex-row justify-center py-5 mx-auto max-w-7xl'>
-        <section className='flex flex-col flex-wrap mx-3 basis-1/2 bg-gray-100'>
-            <img src={cards[0].image.url} alt="" />
-          <h1 className=' text-3xl font-bold py-4 px-4 mx-2 text-center' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{cards[0].link.title}</h1>
-        </section>
-        <section className='flex flex-col flex-wrap mx-3 basis-1/2 bg-gray-100'>
-            <img src={cards[1].image.url} alt="" />
-            <h1 className=' text-3xl font-bold py-4 px-4 mx-2 text-center ' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{cards[1].link.title}</h1>
-        </section>
-      </div>
-    </div>
-  )
+
+            </div>
+
+            <div className='col-span-6 flex flex-row border-2 border-orange-200 rounded-xl' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
+              
+                <div style={{ width: "50%", borderRadius: "10px 0 0 10px", height: "21rem", backgroundColor: "yellow", backgroundImage: "url('https://foodie.sysco.com/wp-content/uploads/2023/04/MicrosoftTeams-image-197.jpg')" }}>
+                </div>
+                <div className='p-3 text-center overflow-auto' style={{width:"50%", height: "21rem" }}>
+
+                    <h3 className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif", marginTop:"45%" }}>Mother's Day Menu Ideas</h3>
+
+                </div>
+
+
+            </div>
+        </div>
+    )
 }
 
 export default BottomCards
