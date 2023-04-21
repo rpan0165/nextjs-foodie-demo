@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Link from 'next/link';
 import BottomCardsNew from '@component/app/components/BottomCardsNew';
+import {RiBookmarkLine} from 'react-icons/ri';
 
 function IndividualRecipe(params) {
 
@@ -123,9 +124,42 @@ function IndividualRecipe(params) {
           </Breadcrumb>
         </div>
 
+        <div className="grid grid-cols-12 mx-auto" style={{ width: "85%" }}>
+          <div className="col-span-6 m-2 rounded-2xl" style={{backgroundImage:"url('https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg')"}}>
+            {/* <img className='rounded-3xl' src="https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg" alt="recipe-main-image" /> */}
+            <div className='flex flex-row justify-between m-3'>
+              <div className='flex flex-row'>
+                <button className='bg-white border-1 px-3 pt-1 pb-2 text-sm font-bold text-sky-600 rounded-lg mr-1'>Email article</button>
+                <button className='bg-white border-1 px-3 pt-1 pb-2 text-sm font-bold text-sky-600 rounded-lg ml-1'>Print article</button>
+              </div>
+              <div className='bg-white border-1 px-2 pt-2 text-md font-semibold text-sky-600 rounded-full'><RiBookmarkLine className='text-sky-600'/></div>
+            </div>
+          </div>
+          <div className="col-span-6 m-2 p-3">
+            <h5 className='font-bold text-sky-600 text-sm'>MEAL TYPE</h5>
+            <h2 className='font-bold text-3xl py-2' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Vegan Thai Massaman Curry</h2>
+            <h4 className='font-bold text-gray-500 py-2'>Plant based protein stars in this tasty Thai curry.</h4>
+            <p className='font-bold text-sm text-gray-500 mb-4'>Sysco Culinary Team | Houston, TX</p>
+            <p className='leading-relaxed text-sm mb-4'>Suitable for any customer from vegans to meat lovers, Sysco Simply Plant Based Protein (Pulled Oats) is made of a flavorful superfood blend of oats, beans, and peas. In this dish, it blends with Thai Massaman curry and fresh vegetables to create a satisfying main dish.</p>
+            <div className='flex flex-row justify-between border-2 rounded-xl p-4'>
+              <div>
+                <p className='font-bold text-sm text-gray-500 mb-2'>Servings</p>
+                <span className='text-sm'>4</span>
+              </div>
+              <div>
+                <p className='font-bold text-sm text-gray-500 mb-2'>Prep Time</p>
+                <p className='text-sm'>Not Available</p>
+              </div>
+              <div>
+                <p className='font-bold text-sm text-gray-500 mb-2'>Cook Time</p>
+                <p className='text-sm'>Not Available</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="grid grid-cols-12 mx-auto" style={{ width: "85%" }}>
-          <div className='col-span-6 m-2 rounded-xl' style={{backgroundColor:"#F7F9FB"}}>
+          <div className='col-span-6 m-2 rounded-xl' style={{ backgroundColor: "#F7F9FB" }}>
             <div className='flex flex-row justify-between m-5'>
               <h2 className='font-bold text-xl' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Ingredients</h2>
               <button className='bg-sky-600 rounded-3xl px-3 py-2 text-sm font-bold text-white'>Add to Basket</button>
@@ -173,7 +207,7 @@ function IndividualRecipe(params) {
                 <p> &nbsp; 1⁄2 tsp. Sysco Classic kosher salt</p>
               </div>
             </div>
-           
+
             <br />
             <div className='flex flex-row justify-between mx-5 mb-2'>
               <p className='font-bold '>For Serving</p>
@@ -222,7 +256,7 @@ function IndividualRecipe(params) {
           </div>
 
 
-          <div className='col-span-6 m-2 rounded-xl' style={{backgroundColor:"#F7F9FB"}}>
+          <div className='col-span-6 m-2 rounded-xl' style={{ backgroundColor: "#F7F9FB" }}>
             <div className='flex flex-row justify-between m-5'>
               <h2 className='font-bold text-xl' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Directions</h2>
             </div>
