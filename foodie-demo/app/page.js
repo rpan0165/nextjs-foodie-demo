@@ -43,7 +43,7 @@ export default function Home() {
 
   // custom constants to match components due to naming limitations in CS 
   const matchingComponents = ['hero_slider', 'tile_section', 'card_section', 'recipe_section', 'community_section', 'magazine_section', 'insta_section', 'footer_spotlight_section']
-  const realComponents = ['HeroSlider', 'CircularSection', 'Updates', 'Solutions', 'Community', 'MagazineSection', 'CardGridSection', 'BottomCards']
+  const realComponents = ['HeroSlider', 'CircularSection', 'Updates', 'Solution', 'Community', 'MagazineSection', 'CardGridSection', 'BottomCards']
 
   // required arrays to filter the list
   var titleArray; //grab the titles list from the incoming data object
