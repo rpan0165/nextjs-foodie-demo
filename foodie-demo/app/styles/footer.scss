@@ -1,0 +1,92 @@
+.footer {
+  padding: 3rem 0;
+}
+
+.column {
+  width: 16.666%;
+  float: left;
+  padding: 3rem;
+}
+
+/* .overlap {
+    position: relative;
+    z-index: 1;
+    margin-left: -20px;
+  }
+   */
+.socialButtons {
+  float: right;
+  /* Add styles for social buttons */
+}
+
+.bottomLine {
+  clear: both;
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.divider-line {
+  color: rgb(90, 88, 88);
+  width: 94%;
+  height: 2px;
+  margin: 0 auto;
+}
+
+.bottomLine a {
+  color: theme("colors.white");
+  margin-right: 20px;
+}
+
+.footer-column-item {
+  padding: 1rem 2rem;
+  text-align: justify;
+}
+
+.footer-column-item ul li {
+  margin: 0.5rem 0rem;
+  font-size: small;
+  line-height: 18px;
+  text-decoration: none;
+  color: theme("colors.sysco-blue.100");
+  text-align: left;
+  font-weight: 500;
+}
+
+.footer-column-item ul li:hover {
+  margin: 0.5rem 0rem;
+  font-size: small;
+  line-height: 18px;
+  text-decoration: underline;
+  color: theme("colors.sysco-blue.100");
+  font-weight: 500;
+}
+
+Link {
+  color: theme("colors.sysco-blue.100");
+  text-decoration: none;
+}
+
+.social-icon-footer {
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid grey;
+  padding: 5px;
+  font-size: 2.3rem;
+  color: grey;
+}
+
+.social-icon-footer:hover {
+  color: theme("colors.white");
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 50%,
+    theme("colors.sysco-blue.100") 50%,
+    theme("colors.sysco-blue.100")
+  );
+  background-position: 0% 50%;
+  background-size: 200% 100%;
+  transition: all 0.25s ease-in;
+  border: 2px solid #045cc1;
+}

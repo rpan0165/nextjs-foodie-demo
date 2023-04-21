@@ -29,6 +29,8 @@ function Header() {
 
         {/* Load fonts style after rendering the layout styles */}
         <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+        {/* Load Custom fonts: Calluna, Myriad-Pro, Ministry from typekit */}
+        <link rel="stylesheet" href="https://use.typekit.net/cfk2ycp.css" />
         <Link rel="stylesheet" href="../styles/css/fontawesome.min.css" />
 
 
