@@ -7,7 +7,9 @@ import Link from 'next/link';
 import BottomCardsNew from '@component/app/components/BottomCardsNew';
 import {RiBookmarkLine} from 'react-icons/ri';
 
-function IndividualRecipe(params) {
+function IndividualRecipe({params}) {
+
+  const pageName = params.individualRecipe;
 
   const posts = [
     {
@@ -119,7 +121,7 @@ function IndividualRecipe(params) {
               Recipes
             </Breadcrumb.Item>
             <Breadcrumb.Item active>
-              Vegan Thai Massaman Curry
+             {pageName}
             </Breadcrumb.Item>
           </Breadcrumb>
         </div>
