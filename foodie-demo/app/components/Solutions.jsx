@@ -22,7 +22,7 @@ function Solutions(recipeContent) {
                         <h4 className='text-black font-bold my-2 text-lg'>{recipe.header}</h4>
                         <h3 className='text-sm text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipe.subheader}</h3>
                       </div>
-                      <div style={{ width: "100%", borderRadius: "0 0 10px 10px", height: "17.5rem", backgroundColor: "yellow", backgroundImage: `url(${recipe.background_image.url})` }}>
+                      <div style={{ width: "100%", borderRadius: "0 0 7px 7px", height: "17.5rem", backgroundColor: "yellow", backgroundImage: `url(${recipe.background_image.url})` }}>
                       </div>
                     </div>
                   ))
