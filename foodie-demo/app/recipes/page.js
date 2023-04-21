@@ -255,7 +255,7 @@ function RecipesMain() {
                                             <h3 className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{post.title}</h3>
                                             <p className='font-bold text-black my-2' style={{ fontSize: "12px" }}>{post.subtitle}</p>
                                         </div>
-                                        <div style={{ width: "100%", borderRadius: "0 0 10px 10px", height: "18rem", backgroundColor: "yellow", backgroundImage: `url(${post.imageUrl})` }}>
+                                        <div style={{ width: "100%", borderRadius: "0 0 7px 7px", height: "18rem", backgroundColor: "yellow", backgroundImage: `url(${post.imageUrl})` }}>
                                         </div>
                                     </div>
                                 </Link>

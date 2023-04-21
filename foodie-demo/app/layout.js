@@ -16,15 +16,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
       <Header />
-        <body>
+      <body>
         <Providers>
-          <Navigation/>
-            {children}
-            <FooterTop/>
-          <Footer/>
+          <Navigation />
+          {children}
+          <FooterTop />
+          <Footer />
         </Providers>
-        </body>
+      </body>
     </html>
   )
 }
