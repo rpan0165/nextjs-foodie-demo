@@ -89,10 +89,10 @@ function Updates(communityContent) {
                                 <Card style={{ }}>
                                     <Card.Img variant="top" src={communityCard.image.url} />
                                     <Card.Body>
-                                        <Card.Title className="text-sm text-center text-sky-500">{communityCard.link[0].title}</Card.Title>
+                                        <Card.Title className="text-sm text-center text-sky-500">{communityCard.title}</Card.Title>
                                         {communityCard.link.length == 2 ? (
                                                 <Card.Text className="text-center pt-0 font-bold">
-                                                    {communityCard.link[1].title}
+                                                    {communityCard.subtitle}
                                                 </Card.Text>
                                         ) : (
                                                 <div></div>

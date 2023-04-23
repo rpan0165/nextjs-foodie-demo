@@ -129,7 +129,7 @@ export default function Home() {
       <br />
       <br />
       <br />
-      <BottomCards props={data.entries[0].modular_blocks[7]} />
+      {/* <BottomCards props={data.entries[0].modular_blocks[7]} /> */}
       <br />
       <br />
       <br />
