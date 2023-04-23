@@ -37,7 +37,7 @@ function Community(communityContent) {
                       <div style={{ width: "100%", height: "17.5rem", backgroundColor: "yellow", backgroundImage: `url(${card.image.url})` }}></div>
                       <div className='p-3' style={{ height: "8rem" }}>
                         <h4 className='text-sm text-sky-500'>{card.link.title}</h4>
-                        <h3 className='text-md pt-0 font-bold'>{card.link2.title}</h3>
+                        <h3 className='pt-0 font-bold'>{card.link2.title}</h3>
                       </div>                                         
                     </div>
                   ))
