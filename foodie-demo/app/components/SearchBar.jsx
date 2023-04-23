@@ -68,7 +68,7 @@ const SearchBar = () => {
             placeholder="Search for recipes, ingredients and more"
             width=""
             onChange={handleSearchInput}
-            style={{width: "820px" }}
+            style={{width: "51rem" }}
           />
           {visible && searchQuery !== '' && (
             <div className="search-popup ml-5" style={{ width: "32%", marginLeft: "12rem" }}>

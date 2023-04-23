@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Navigation/>
             {children}
-            <FooterTop/>
+            {/* <FooterTop/> */}
           <Footer/>
         </Providers>
         </body>

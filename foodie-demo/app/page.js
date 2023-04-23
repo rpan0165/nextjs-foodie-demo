@@ -130,10 +130,6 @@ export default function Home() {
       <br />
       <br />
       <BottomCards />
-      <br />
-      <br />
-      <br />
-
     </>
   )
 }
