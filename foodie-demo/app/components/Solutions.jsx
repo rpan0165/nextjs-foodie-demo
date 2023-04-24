@@ -9,8 +9,8 @@ function Solutions(recipeContent) {
         <div>
             <div class="container-fluid">
               <div class="flex justify-between mx-auto" style={{ width: "84%" }}>
-                <h2 className="text-center font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipeContent.props.recipe_section.header}</h2>
-                <a href="#" class="text-lg text-sky-500 text-center">Explore Recipes</a>
+                <h2 className="text-left font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipeContent.props.recipe_section.header}</h2>
+                <a href="#" class="text-sky-600 font-bold text-sm">Explore Recipes</a>
               </div> 
               <br></br>
               <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
