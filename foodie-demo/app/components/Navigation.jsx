@@ -120,7 +120,7 @@ function Navigation() {
 
                 <Navbar bg="light" expand="lg" className="border-top navbar-bottom " style={{}}>
                     <Navbar.Collapse id="basic-navbar-nav ">
-                        <Nav className="mx-auto space-x-2">
+                        <Nav className="space-x-2">
 
                             <Link href="/category1" className=''>
                                 <NavDropdown title="Publications" id="basic-nav-dropdown">

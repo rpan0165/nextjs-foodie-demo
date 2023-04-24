@@ -36,3 +36,33 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Initializing steps
+
+1. clone the repo and checkout to Demo branch
+2. cd into foodie-demo directory `cd foodie-demo`
+3. npm install
+4. npm run dev
+
+## Accessible URLs
+
+Homepage (http://localhost:3000/)
+Recipes page (http://localhost:3000/recipes)
+Recipe details page (http://localhost:3000/recipes/recipeone)
+Products page (http://localhost:3000/sysco-products)
+
+## Available functionalities
+
+Search products
+Add/remove products in cart
+
+## Known Issues
+
+The hot reloading functionality in Next.js exhibits a one issue, wherein upon the initial page load, certain stylings fail to apply. However, this can be easily fix by saving any file within the project (ctrl+s in anywhere in the project that trigger the hot-reload).
+
+
+
+
+
+

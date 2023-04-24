@@ -63,7 +63,6 @@ const CardGridSection = (cardGridContent) => {
             <span>
                 <p className="text-center text-lg"> 
                 <span>
-                #syscofoodie
                 </span> LIVE
                     Real-time updates and fresh content |<span>  </span> 
                     #syscofoodie
@@ -74,9 +73,9 @@ const CardGridSection = (cardGridContent) => {
                 {photos.slice(0, numRows * 3).map((photo) => (
                     <Card key={photo.id} id={photo.id} url={photo.images.url}  />
                 ))}
-                {numRows * 3 < photos.length && (
+                {/* {numRows * 3 < photos.length && (
                     <button onClick={() => setNumRows(numRows + 4)} className='block mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500'>Load More</button>
-                )}
+                )} */}
             </div>
         </>
     );
