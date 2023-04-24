@@ -47,10 +47,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Accessible URLs
 
-Homepage (http://localhost:3000/)
-Recipes page (http://localhost:3000/recipes)
-Recipe details page (http://localhost:3000/recipes/recipeone)
-Products page (http://localhost:3000/sysco-products)
+1. Homepage (http://localhost:3000/)
+2. Recipes page (http://localhost:3000/recipes)
+3. Recipe details page (http://localhost:3000/recipes/recipeone)
+4. Products page (http://localhost:3000/sysco-products)
 
 ## Available functionalities
 
