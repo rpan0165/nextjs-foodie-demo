@@ -103,35 +103,35 @@ function Footer() {
                     <hr className='mb-4' style={{ marginLeft: "4rem" }} />
                     <div className='grid grid-cols-2 ml-5 px-5 mb-4' style={{marginLeft:"3rem"}}>
                         <div>
-                            <h5>Follow Sysco</h5>
+                            <h5 className='font-bold'>Follow Sysco</h5>
 
                             <div className='SocialButtons flex flex-row mt-3'>
                                 <Link href="https://syys.co/36xtdv4">
-                                    <FaFacebookF className='social-icon-footer mr-2' />
+                                    <FaFacebookF className='social-icon-footer mr-2' style={{ backgroundColor: '#008CD2', color: 'white' }} />
                                 </Link>
                                 <Link href="https://syys.co/2UAYASy">
-                                    <FaInstagram className='social-icon-footer mx-2' />
+                                    <FaInstagram className='social-icon-footer mx-2' style={{ backgroundColor: '#008CD2', color: 'white' }}/>
                                 </Link>
-                                <Link href="https://www.pinterest.com/syscofoodie/">
-                                    <FaLinkedin className='social-icon-footer mx-2' />
+                                <Link href="https://www.pinterest.com/syscofoodie/"> 
+                                    <FaLinkedin className='social-icon-footer mx-2' style={{ backgroundColor: '#008CD2', color: 'white' }}/>
                                 </Link>
                                 <Link href="https://syys.co/3xu9rwf">
-                                    <FaTwitter className='social-icon-footer mx-2' />
+                                    <FaTwitter className='social-icon-footer mx-2' style={{ backgroundColor: '#008CD2', color: 'white' }}/>
                                 </Link>
                             </div>
 
                         </div>
                         <div>
-                            <h5>Follow Sysco Foodie</h5>
+                            <h5 className='font-bold'>Follow Sysco Foodie</h5>
                             <div className='SocialButtons flex flex-row mt-3'>
                                 <Link href="https://syys.co/36xtdv4">
-                                    <FaFacebookF className='social-icon-footer mr-2' />
+                                    <FaFacebookF className='social-icon-footer mr-2' style={{ backgroundColor: '#008CD2', color: 'white' }}/>
                                 </Link>
                                 <Link href="https://syys.co/2UAYASy">
-                                    <FaInstagram className='social-icon-footer mx-2' />
+                                    <FaInstagram className='social-icon-footer mx-2' style={{ backgroundColor: '#008CD2', color: 'white' }} />
                                 </Link>
                                 <Link href="https://syys.co/3xu9rwf">
-                                    <FaTwitter className='social-icon-footer mx-2' />
+                                    <FaTwitter className='social-icon-footer mx-2' style={{ backgroundColor: '#008CD2', color: 'white' }}/>
                                 </Link>
                             </div>
                         </div>

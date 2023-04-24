@@ -7,33 +7,33 @@ import '../styles/cardgridsection.css';
 // import { AiOutlineInstagram } from 'react-icons/io5';
 
 
-const images = [
-    { id: 1, url: 'https://via.placeholder.com/150' },
-    { id: 2, url: 'https://via.placeholder.com/150' },
-    { id: 3, url: 'https://via.placeholder.com/150' },
-    { id: 4, url: 'https://via.placeholder.com/150' },
-    { id: 5, url: 'https://via.placeholder.com/150' },
-    { id: 6, url: 'https://via.placeholder.com/150' },
-    { id: 7, url: 'https://via.placeholder.com/150' },
-    { id: 8, url: 'https://via.placeholder.com/150' },
-    { id: 9, url: 'https://via.placeholder.com/150' },
-    { id: 10, url: 'https://via.placeholder.com/150' },
-    { id: 11, url: 'https://via.placeholder.com/150' },
-    { id: 12, url: 'https://via.placeholder.com/150' },
-    { id: 13, url: 'https://via.placeholder.com/150' },
-    { id: 14, url: 'https://via.placeholder.com/150' },
-    { id: 15, url: 'https://via.placeholder.com/150' },
-    { id: 16, url: 'https://via.placeholder.com/150' },
-    { id: 17, url: 'https://via.placeholder.com/150' },
-    { id: 18, url: 'https://via.placeholder.com/150' },
-];
+// const images = [
+//     { id: 1, url: 'https://via.placeholder.com/150' },
+//     { id: 2, url: 'https://via.placeholder.com/150' },
+//     { id: 3, url: 'https://via.placeholder.com/150' },
+//     { id: 4, url: 'https://via.placeholder.com/150' },
+//     { id: 5, url: 'https://via.placeholder.com/150' },
+//     { id: 6, url: 'https://via.placeholder.com/150' },
+//     { id: 7, url: 'https://via.placeholder.com/150' },
+//     { id: 8, url: 'https://via.placeholder.com/150' },
+//     { id: 9, url: 'https://via.placeholder.com/150' },
+//     { id: 10, url: 'https://via.placeholder.com/150' },
+//     { id: 11, url: 'https://via.placeholder.com/150' },
+//     { id: 12, url: 'https://via.placeholder.com/150' },
+//     { id: 13, url: 'https://via.placeholder.com/150' },
+//     { id: 14, url: 'https://via.placeholder.com/150' },
+//     { id: 15, url: 'https://via.placeholder.com/150' },
+//     { id: 16, url: 'https://via.placeholder.com/150' },
+//     { id: 17, url: 'https://via.placeholder.com/150' },
+//     { id: 18, url: 'https://via.placeholder.com/150' },
+// ];
 
 const Card = ({ id, url }) => {
     const [hovered, setHovered] = useState(false);
 
     return (
         <div
-            className="card"
+            className="card" style={{ width: '400px', height: '400px', objectFit: 'cover' }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
@@ -48,8 +48,8 @@ const Card = ({ id, url }) => {
 const CardGridSection = (cardGridContent) => {
 
     const photos = cardGridContent.props.insta_section.insta_photos;
-
-    const [numRows, setNumRows] = useState(4);
+    console.log("photos: ", photos)
+    const [numRows, setNumRows] = useState(2);
 
     return (
         <>
@@ -69,13 +69,13 @@ const CardGridSection = (cardGridContent) => {
                     #syscofoodie
                     </p>
             </span>
-            <div className="card-grid mt-3">
+            <div className="card-grid mt-3" style={{ margin: "1rem 21rem"}}>
 
-                {images.slice(0, numRows * 3).map((image) => (
-                    <Card key={image.id} id={image.id} url={image.url} />
+                {photos.slice(0, numRows * 3).map((photo) => (
+                    <Card key={photo.id} id={photo.id} url={photo.images.url}  />
                 ))}
-                {numRows * 3 < images.length && (
-                    <button onClick={() => setNumRows(numRows + 4)} className='mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500' style={{textAlign:"center", margin:"0 auto", }}>Load More</button>
+                {numRows * 3 < photos.length && (
+                    <button onClick={() => setNumRows(numRows + 4)} className='block mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500'>Load More</button>
                 )}
             </div>
         </>

@@ -1,206 +1,42 @@
+'use client';
 import React from 'react'
 import Link from 'next/link';
 import { RiArrowDropDownLine } from 'react-icons/ri'
+import { useState, useEffect } from 'react'
+import axios from "axios";
 
-function RecipesMain() {
-
-    const posts = [
-        {
-            id: 1,
-            category: 'MEAL TYPE',
-            title: 'Shrimp Tostadas',
-            subtitle: 'Recipe by Sysco Culinary Team',
-            href: '/recipes/recipeone',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-300x415.jpg',
-        },
-        {
-            id: 2,
-            category: 'MEAL TYPE',
-            title: 'Shredded Chicken Lemon Orzo Soup',
-            subtitle: 'Recipe by Sysco Culinary Team',
-            href: '/recipes/recipetwo',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shredded-Chicken-300x415.png',
-        },
-        {
-            id: 3,
-            category: 'MEAL TYPE',
-            title: 'Shredded Chicken Lemon Orzo Soup',
-            subtitle: 'Recipe by Sysco Culinary Team',
-            href: '/recipes/recipethree',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Truck-Stop-Breakfast-300x415.png',
-        },
-        {
-            id: 4,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipefour',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
-        },
-        {
-            id: 5,
-            category: 'MEAL TYPE',
-            title: 'Shrimp Tostadas',
-            subtitle: 'Recipe by Sysco Culinary Team',
-            href: '/recipes/recipefive',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-300x415.jpg',
-        },
-        {
-            id: 6,
-            category: 'MEAL TYPE',
-            title: 'Shredded Chicken Lemon Orzo Soup',
-            subtitle: 'Recipe by Sysco Culinary Team',
-            href: '/recipes/recipesix',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shredded-Chicken-300x415.png',
-        },
-        {
-            id: 7,
-            category: 'MEAL TYPE',
-            title: 'Shredded Chicken Lemon Orzo Soup',
-            subtitle: 'Recipe by Sysco Culinary Team',
-            href: '/recipes/recipeseven',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Truck-Stop-Breakfast-300x415.png',
-        },
-        {
-            id: 8,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipeeight',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
-        },
-        {
-            id: 9,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipenine',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-300x415.jpg',
-        },
-        {
-            id: 10,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipeten',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shredded-Chicken-300x415.png',
-        },
-        {
-            id: 11,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipeeleven',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Truck-Stop-Breakfast-300x415.png',
-        },
-        {
-            id: 12,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipetwelve',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
-        },
-        {
-            id: 13,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipethirteen',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
-        },
-        {
-            id: 14,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipefourteen',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Shredded-Chicken-300x415.png',
-        },
-        {
-            id: 15,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipefifteen',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/02/Truck-Stop-Breakfast-300x415.png',
-        },
-        {
-            id: 16,
-            category: 'MEAL TYPE',
-            title: 'Apple Caramel Basque Cheesecake',
-            subtitle: 'Recipe by GSC Culinary Team',
-            href: '/recipes/recipesixteen',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2022/03/7188544-Basque-cheesecake-1-300x415.jpg',
-        },
-        // More posts...
-    ];
-
-    return (
+const recipeMain = () => {
+    const [recipes, setRecipes] = useState([]);
+    const [loading, setLoading] = useState(true);
+  
+    useEffect(() => {
+  
+      const fetchRecipes = async () => {
+        setLoading(true);
+        const res = await axios.get('https://cdn.contentstack.io/v3/content_types/foodie_recipe_main_page/entries?environment=development',
+          {
+            headers: {
+              'api_key': 'blt16b29db83ad01635',
+              'access_token': 'cse3066d807437d70a5cc6bee6',
+              'Content-Type': 'application/json',
+            }
+          }
+        );
+  
+        setRecipes(res.data.entries[0].recipe_cards);
+        setLoading(false);
+      };
+  
+      fetchRecipes();
+      console.log("fetched")
+  
+    }, []);
+  
+    return loading && recipes.length == 0 ? (
+      <div className="spinner-UI">
+        <p>loading</p>
+      </div>
+    ) : (
         <div style={{ marginTop: "10rem" }}>
             <h2 className="text-center font-bold text-4xl py-2 mt-4" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Recipes</h2>
             <div className='grid grid-cols-12 grid-flow-col-dense mt-4 mb-5'>
@@ -247,18 +83,18 @@ function RecipesMain() {
                 <div className='col-span-10'>
                     <div className='grid grid-cols-4 mr-5'>
                         {
-                            posts.map((post) => (
-                                <Link href={post.href} style={{textDecoration:"none"}}>
+                            recipes.map((recipe) => (
+                                // <Link href={product.href} style={{textDecoration:"none"}}>
                                     <div className='flex flex-col border-2 border-orange-200 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
                                         <div className='p-3' style={{ height: "10rem" }}>
-                                            <h4 className='text-sky-600 text-sm font-bold my-2'>{post.category}</h4>
-                                            <h3 className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{post.title}</h3>
-                                            <p className='font-bold text-black my-2' style={{ fontSize: "12px" }}>{post.subtitle}</p>
+                                            <h4 className='text-sky-600 text-sm font-bold my-2'>{recipe.meal_type}</h4>
+                                            <h3 className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipe.main_title}</h3>
+                                            <p className='font-bold text-black my-2' style={{ fontSize: "12px" }}>{recipe.sub_title}</p>
                                         </div>
-                                        <div style={{ width: "100%", borderRadius: "0 0 10px 10px", height: "18rem", backgroundColor: "yellow", backgroundImage: `url(${post.imageUrl})` }}>
+                                        <div style={{ width: "100%", borderRadius: "0 0 7px 7px", height: "18rem", backgroundColor: "yellow", backgroundImage: `url(${recipe.image.url})` }}>
                                         </div>
                                     </div>
-                                </Link>
+                                // </Link>
 
                             ))
 
@@ -269,7 +105,7 @@ function RecipesMain() {
 
             </div>
         </div>
-    )
+   )
 }
+export default recipeMain
 
-export default RecipesMain

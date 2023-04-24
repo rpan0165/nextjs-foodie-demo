@@ -4,10 +4,12 @@ import { useRouter } from 'next/navigation';
 import 'bootstrap/dist/css/bootstrap.css';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Link from 'next/link';
-import BottomCardsNew from '@component/app/components/BottomCardsNew';
+import BottomCards from '@component/app/components/BottomCards';
 import {RiBookmarkLine} from 'react-icons/ri';
 
-function IndividualRecipe(params) {
+function IndividualRecipe({params}) {
+
+  const pageName = params.individualRecipe;
 
   const posts = [
     {
@@ -119,7 +121,7 @@ function IndividualRecipe(params) {
               Recipes
             </Breadcrumb.Item>
             <Breadcrumb.Item active>
-              Vegan Thai Massaman Curry
+             {pageName}
             </Breadcrumb.Item>
           </Breadcrumb>
         </div>
@@ -308,7 +310,7 @@ function IndividualRecipe(params) {
         <hr />
 
         <div>
-          <BottomCardsNew />
+          <BottomCards />
         </div>
 
       </div>
