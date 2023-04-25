@@ -28,7 +28,7 @@ function Updates(cardContent) {
                                     <Card.Img variant="top" src={card.image.url} />
                                     <Card.Body>
                                         <Card.Title className="text-sm text-center text-sky-500">{card.link[0].title}</Card.Title>
-                                        <Card.Text className="text-center pt-0 font-bold">
+                                        <Card.Text className=" text-lg text-center pt-0 font-bold" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>
                                             {card.link[1].title}
                                         </Card.Text>
                                     </Card.Body>
