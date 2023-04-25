@@ -75,7 +75,7 @@ function Navigation() {
                                     alt="Foodie-Logo"
                                 />
                             </Link>
-                            <div id="basic-navbar-nav" className="col-span-6" style={{}}>
+                            <div id="" className="" style={{}}>
                                 {/* search bar */}
                                 <SearchBar />
                             </div>
@@ -93,7 +93,7 @@ function Navigation() {
 
                     <div className="">
                         {/* bookmark and cart icons, BAC button */}
-                        <Nav className="">
+                        <Nav className="flex flex-row ">
                             {/* User options */}
                             <section className='flex flex-row justify-center px-2 rounded-md' style={{ backgroundColor: "#D9EEF9" }}>
                                 <p className='pt-1 mt-1 ml-1 text-sm font-bold text-sky-800'>Hi, Anna  &nbsp;</p>
