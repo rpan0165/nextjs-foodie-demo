@@ -114,10 +114,10 @@ function IndividualRecipe({params}) {
           width: 700, padding: 30
         }}>
           <Breadcrumb>
-            <Breadcrumb.Item href="#">
+            <Breadcrumb.Item href="/">
               Home
             </Breadcrumb.Item>
-            <Breadcrumb.Item href="#">
+            <Breadcrumb.Item href="/recipes">
               Recipes
             </Breadcrumb.Item>
             <Breadcrumb.Item active>
