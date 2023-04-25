@@ -49,7 +49,7 @@ function HeroSlider(heroSliderContent) {
           slides.map((slide, index) => {
             return(
               <SwiperSlide key={index}>
-                <div className="swiper-slide-container" style={{marginTop:"7.7rem"}}>
+                <div className="swiper-slide-container" style={{marginTop:"7.2rem"}}>
                   <div className="half-width-container">
                     <div className="text-container">
                       <h2 className='text-4xl font-extrabold font-serif'>{slide.header}</h2>
