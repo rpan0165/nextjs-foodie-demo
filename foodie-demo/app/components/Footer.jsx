@@ -6,6 +6,7 @@ import { FaFacebookF, FaPinterestP, FaInstagram, FaYoutube, FaTwitter, FaLinkedi
 function Footer() {
     return (
         <footer className="footer">
+            <hr className='mb-5'/>
             <div className='grid grid-flow-row-dense lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 mx-auto px-5'>
                 <div className='col-span-1'>
                     {/* Column 1 content */}
