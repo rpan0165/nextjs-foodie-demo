@@ -85,7 +85,7 @@ const recipeMain = () => {
                         {
                             recipes.map((recipe) => (
                                 // <Link href={product.href} style={{textDecoration:"none"}}>
-                                    <Link href={recipe.main_title} style={{textDecoration:"none"}}>
+                                    <Link href={`/recipes/${recipe.link.href}`} style={{textDecoration:"none"}}>
                                         <div className='flex flex-col justify-end border-2 border-orange-200 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
                                             <div className='p-3 pb-2 my-auto' style={{ height: "12rem", alignItems:"center" }}>
                                                 <h4 className='text-sky-600 text-sm font-bold my-2'>{recipe.meal_type}</h4>
