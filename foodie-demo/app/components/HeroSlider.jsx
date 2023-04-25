@@ -49,16 +49,20 @@ function HeroSlider(heroSliderContent) {
           slides.map((slide, index) => {
             return(
               <SwiperSlide key={index}>
-                <div className="swiper-slide-container bg-white" style={{marginTop:"7.7rem"}}>
-                  <div className="text-container">
-                    <h2 className='text-4xl font-extrabold font-serif'>{sliceStrings(slide.header)[0]}<br />{sliceStrings(slide.header)[1]}</h2>
-                    <button className='learn-btn'>{slide.cta.title}</button>
+                <div className="swiper-slide-container" style={{marginTop:"7.7rem"}}>
+                  <div className="half-width-container">
+                    <div className="text-container">
+                      <h2 className='text-4xl font-extrabold font-serif'>{slide.header}</h2>
+                      <button className='learn-btn'>{slide.cta.title}</button>
+                    </div>
                   </div>
-                  <div className="image-container">
-                    <img src={slide.background_image.url} alt="Slide 1 Image" />
+                  <div className="half-width-container">
+                    <div className="image-container">
+                      <img src={slide.background_image.url} alt="Slide 1 Image" />
+                    </div>
                   </div>
                 </div>
-              </SwiperSlide>
+            </SwiperSlide>
           )})
           }
       </Swiper>

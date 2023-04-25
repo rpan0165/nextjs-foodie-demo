@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    background-color: #FCDADA;
   }
   
   .text-container {
@@ -15,6 +16,12 @@
     align-items: flex-start;
     padding-left: 50px;
     width: 50%;
+  }
+
+  .half-width-container {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
   }
   
   .text-container h2 {
@@ -33,7 +40,7 @@
     border-radius: 5px;
     font-weight: 600;
     margin-left: 5rem;
-    width: 27%;
+    width: 37%;
     text-align: center;
     display: block;
     background-image: linear-gradient(to left,
