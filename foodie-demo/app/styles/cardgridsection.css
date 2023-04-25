@@ -33,3 +33,7 @@
     opacity: 1;
   }
   
+  .no-hover-effect:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+}

@@ -15,6 +15,10 @@
     color: #aaa;
 }
 
+.navbar-collapse{
+  padding-left: 2.5%;
+}
+
 #basic-nav-dropdown{
   font-weight: 400;
   color: rgb(86, 85, 85);
