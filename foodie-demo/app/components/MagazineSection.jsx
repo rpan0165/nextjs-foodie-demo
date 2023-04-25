@@ -7,7 +7,7 @@ const MagazineSection = (magazineContent) => {
   const magazines = magazineContent.props.magazine_section.category;
 
   return (
-    <div >
+    <section className="section-magazine" >
       <hr className='text-gray-300' />
       <div className='mx-auto mb-5' style={{ width: "80%" }}>
 
@@ -66,7 +66,7 @@ const MagazineSection = (magazineContent) => {
 
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

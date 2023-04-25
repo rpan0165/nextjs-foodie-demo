@@ -109,26 +109,13 @@ export default function Home() {
           <ComponentList componentNames={componentList} compData={componentData} />
         </div> */}
       <HeroSlider props={data.entries[0].modular_blocks[0]} />
-      <br />
-      <br />
       <ExploreFoodie/>
       {/* <CircularSection props={data.entries[0].modular_blocks[1]} /> */}
-      <br />
-      <br />
       <Updates props={data.entries[0].modular_blocks[2]} />
-      <br />
-      <br />
       <Solutions props={data.entries[0].modular_blocks[3]} />
-      <br />
-      <br />
       <Community props={data.entries[0].modular_blocks[4]} />
-      <br />
       <MagazineSection props={data.entries[0].modular_blocks[5]} />
-      <br />
       <CardGridSection props={data.entries[0].modular_blocks[6]} />
-      <br />
-      <br />
-      <br />
       <BottomCards />
     </>
   )

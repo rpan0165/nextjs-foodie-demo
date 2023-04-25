@@ -38,7 +38,7 @@ function HeroSlider(heroSliderContent) {
 
 
   return (
-      <>
+      <section className="section-hero-slider">
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
@@ -62,7 +62,7 @@ function HeroSlider(heroSliderContent) {
           )})
           }
       </Swiper>
-      </>
+      </section>
       )
 }
 

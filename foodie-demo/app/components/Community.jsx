@@ -21,7 +21,7 @@ function Community(communityContent) {
 
     const communityCards = communityContent.props.community_section.slides;
     return (
-        <div>
+        <section className="section-community">
             <div class="container-fluid">
                 <h2 className="text-center font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{communityContent.props.community_section.header}</h2>
                 <div class="h_line mt-0 mb-4 pt-0 " style={{
@@ -43,12 +43,8 @@ function Community(communityContent) {
                   ))
                 }
               </div>
-                
-
             </div>
-            <br></br>
-            <br></br>
-        </div >
+        </section >
     );
 }
     

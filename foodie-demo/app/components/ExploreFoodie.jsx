@@ -13,7 +13,7 @@ import Image from 'next/image';
 
 function ExploreFoodie() {
     return (
-        <div>
+        <section className="section-explore-foodie">
             <h2 className="heading-circles text-4xl font-bold" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Great Ways To Explore Sysco Foodie</h2>
             <br />
             <br />
@@ -63,7 +63,7 @@ function ExploreFoodie() {
             <br /><br />
             <hr />
             <br />
-        </div>
+        </section>
     )
 }
 

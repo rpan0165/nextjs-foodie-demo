@@ -56,19 +56,17 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
-      <Form inline className="">
+    <div className="w-[600px]">
+      <Form inline>
         {/* <FormControl type="text" placeholder="Search for recipes, ingredients and more" className="mr-sm-2 " /> */}
         {/* <Button variant="outline-success">Search</Button> */}
-        <div class="form-group has-search">
-          <span className="fa fa-search form-control-feedback py-2 pl-3 ml-2 text-xl"> <IoSearch className="font-bold font-gray-700" /></span>
+        <div class="form-group has-search align-middle">
+          <span className="fa fa-search form-control-feedback py-2.5 pl-3 ml-2 text-xl align-middle"><IoSearch className="font-bold font-gray-700" /></span>
           <input
             type="text"
-            className="search-input form-control mt-2 ml-2 rounded-3xl"
+            className="search-input form-control ml-2 rounded-3xl h-11"
             placeholder="Search for recipes, ingredients and more"
-            width=""
             onChange={handleSearchInput}
-            style={{width: "51rem" }}
           />
           {visible && searchQuery !== '' && (
             <div className="search-popup ml-5" style={{ width: "32%", marginLeft: "12rem" }}>
