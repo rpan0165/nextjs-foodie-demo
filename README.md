@@ -9,7 +9,7 @@
 
 1. Homepage (http://localhost:3000/)
 2. Recipes page (http://localhost:3000/recipes)
-3. Recipe details page (http://localhost:3000/recipes/recipeone)
+3. Recipe details page (http://localhost:3000/recipes/[recipename])
 4. Products page (http://localhost:3000/sysco-products)
 
 ## Available functionalities
