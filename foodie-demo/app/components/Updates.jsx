@@ -10,13 +10,14 @@ function Updates(cardContent) {
     return (
         <div>
             <div class="container-fluid">
+                {/* title + subtitle */}
                 <h2 className="text-center font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Foodservice Update</h2>
-                <p className="text-center pb-2" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif", fontSize: "1.3rem" }}>Stay informed of current supply and demand changes in the market</p>
-                <div class="h_line mt-0 mb-4 pt-0 " style={{
+                <p className="text-center py-3 font-bold text-lg" style={{}}>Stay informed of current supply and demand changes in the market</p>
+                {/* <div class="h_line mt-0 mb-4 pt-0 " style={{
                     color: "red", borderBottom: "5px solid #56B146",
                     width: "10rem",
                     margin: "auto",
-                }}></div>
+                }}></div> */}
                 {/* <div className='green-line text-center pb-3 content-center text-green-500'><hr width="20%" ></hr></div> */}
 
                 <div class="row mx-auto pr-8 pl-8 pt-4 max-w-7xl">
