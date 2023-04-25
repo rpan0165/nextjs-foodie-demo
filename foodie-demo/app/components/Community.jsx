@@ -34,11 +34,11 @@ function Community(communityContent) {
                 <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
                 {
                   communityCards.map(card => (
-                    <div className='flex flex-col border-2' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
-                      <div style={{ width: "100%", height: "17.5rem", backgroundColor: "yellow", backgroundImage: `url(${card.image.url})` }}></div>
-                      <div className='p-3 py-auto mt-2' style={{ height: "8rem" }}>
-                        <h4 className='text-sm text-sky-500 font-bold mb-2'>{card.link.title}</h4>
-                        <h3 className='pt-0 font-bold text-lg'>{card.link2.title}</h3>
+                    <div className='flex flex-col border-2 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
+                      <div className="bg-cover" style={{ width: "100%", height: "17.5rem", backgroundColor: "yellow", backgroundImage: `url(${card.image.url})` }}></div>
+                      <div className='p-3' style={{ height: "6rem" }}>
+                        <h4 className='text-sm text-sky-500'>{card.link.title}</h4>
+                        <h3 className='pt-0 font-bold'>{card.link2.title}</h3>
                       </div>                                         
                     </div>
                   ))
