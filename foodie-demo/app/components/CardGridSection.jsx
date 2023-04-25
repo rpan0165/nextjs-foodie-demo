@@ -68,7 +68,7 @@ const CardGridSection = (cardGridContent) => {
                     #syscofoodie
                     </p>
             </span>
-            <div className="card-grid mt-3" style={{ margin: "1rem 21rem"}}>
+            <div className="card-grid mx-auto mt-5" style={{margin:"0 auto"}}>
 
                 {photos.slice(0, numRows * 3).map((photo) => (
                     <Card key={photo.id} id={photo.id} url={photo.images.url}  />

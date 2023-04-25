@@ -81,19 +81,21 @@ const recipeMain = () => {
                 </div>
 
                 <div className='col-span-10'>
-                    <div className='grid grid-cols-4 mr-5'>
+                    <div className='grid mr-5 lg:grid-cols-4 md:grid-cols-4  sm:grid-cols-1'>
                         {
                             recipes.map((recipe) => (
                                 // <Link href={product.href} style={{textDecoration:"none"}}>
-                                    <div className='flex flex-col border-2 border-orange-200 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
-                                        <div className='p-3' style={{ height: "10rem" }}>
-                                            <h4 className='text-sky-600 text-sm font-bold my-2'>{recipe.meal_type}</h4>
-                                            <h3 className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipe.main_title}</h3>
-                                            <p className='font-bold text-black my-2' style={{ fontSize: "12px" }}>{recipe.sub_title}</p>
+                                    <Link href={`/recipes/${recipe.link.href}`} style={{textDecoration:"none"}}>
+                                        <div className='flex flex-col justify-end border-2 border-orange-200 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
+                                            <div className='p-3 pb-2 my-auto' style={{ height: "12rem", alignItems:"center" }}>
+                                                <h4 className='text-sky-600 text-sm font-bold my-2'>{recipe.meal_type}</h4>
+                                                <h3 className='font-bold lg:text-xl text-black sm:text-sm' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipe.main_title}</h3>
+                                                <p className='font-bold text-black my-2 pb-2' style={{ fontSize: "12px" }}>{recipe.sub_title}</p>
+                                            </div>
+                                            <div className="" style={{ width: "100%", borderRadius: "0 0 7px 7px", height:"15rem", backgroundColor: "yellow", backgroundImage: `url(${recipe.image.url})`, backgroundRepeat:"no-repeat", backgroundSize:"100%"}}>
+                                            </div>
                                         </div>
-                                        <div style={{ width: "100%", borderRadius: "0 0 7px 7px", height: "18rem", backgroundColor: "yellow", backgroundImage: `url(${recipe.image.url})` }}>
-                                        </div>
-                                    </div>
+                                    </Link>
                                 // </Link>
 
                             ))

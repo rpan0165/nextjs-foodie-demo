@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 import '../styles/footer.css';
-import { FaFacebookF, FaPinterestP, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa'
+import { FaFacebookF, FaPinterestP, FaInstagram, FaYoutube, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 
 function Footer() {
     return (
         <footer className="footer">
+            <hr className='mb-5'/>
             <div className='grid grid-flow-row-dense lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-1 mx-auto px-5'>
                 <div className='col-span-1'>
                     {/* Column 1 content */}
@@ -113,7 +114,7 @@ function Footer() {
                                     <FaInstagram className='social-icon-footer mx-2' style={{ backgroundColor: '#008CD2', color: 'white' }}/>
                                 </Link>
                                 <Link href="https://www.pinterest.com/syscofoodie/"> 
-                                    <FaLinkedin className='social-icon-footer mx-2' style={{ backgroundColor: '#008CD2', color: 'white' }}/>
+                                    <FaLinkedinIn className='social-icon-footer mx-2' style={{ backgroundColor: '#008CD2', color: 'white' }}/>
                                 </Link>
                                 <Link href="https://syys.co/3xu9rwf">
                                     <FaTwitter className='social-icon-footer mx-2' style={{ backgroundColor: '#008CD2', color: 'white' }}/>

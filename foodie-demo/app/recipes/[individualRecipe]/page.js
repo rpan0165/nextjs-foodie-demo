@@ -114,10 +114,10 @@ function IndividualRecipe({params}) {
           width: 700, padding: 30
         }}>
           <Breadcrumb>
-            <Breadcrumb.Item href="#">
+            <Breadcrumb.Item href="/">
               Home
             </Breadcrumb.Item>
-            <Breadcrumb.Item href="#">
+            <Breadcrumb.Item href="/recipes">
               Recipes
             </Breadcrumb.Item>
             <Breadcrumb.Item active>
@@ -127,7 +127,7 @@ function IndividualRecipe({params}) {
         </div>
 
         <div className="grid grid-cols-12 mx-auto" style={{ width: "85%" }}>
-          <div className="col-span-6 m-2 rounded-2xl" style={{backgroundImage:"url('https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg')"}}>
+          <div className="col-span-6 m-2 rounded-2xl bg-cover" style={{backgroundImage:"url('https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg')"}}>
             {/* <img className='rounded-3xl' src="https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg" alt="recipe-main-image" /> */}
             <div className='flex flex-row justify-between m-3'>
               <div className='flex flex-row'>
@@ -297,7 +297,7 @@ function IndividualRecipe({params}) {
                     <h3 className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{post.title}</h3>
                     <p className='font-bold text-black my-2' style={{ fontSize: "12px" }}>{post.subtitle}</p>
                   </div>
-                  <div style={{ width: "100%", borderRadius: "0 0 10px 10px", height: "18rem", backgroundColor: "yellow", backgroundImage: "url(https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-300x415.jpg)" }}>
+                  <div className='bg-cover' style={{ width: "100%", borderRadius: "0 0 10px 10px", height: "18rem", backgroundColor: "yellow", backgroundImage: "url(https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-300x415.jpg)" }}>
                   </div>
                 </div>
               </Link>

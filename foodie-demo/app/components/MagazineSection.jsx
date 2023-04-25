@@ -33,18 +33,18 @@ const MagazineSection = (magazineContent) => {
             <h3 className='font-bold'>IN THIS EDITION:</h3>
             <div className='flex flex-col '>
               <div className='flex flex-row'>
-                <div className='basis-1/4 '>
-                  <Image className='p-3 rounded-xl' src={magazines[0].image.url} width={150} height={150} />
+                <div className='basis-1/4 p-2 m-2'>
+                  <Image className='rounded-lg' src={magazines[0].image.url} width={150} height={150} />
                 </div>
-                <div className='basis-3/4 p-3'>
+                <div className='basis-3/4 p-2'>
                   <h4 className='font-bold text-lg mt-2' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Catering Craze</h4>
                   <p className='mt-2 text-sm'>Find inspiration from these key catering foods to prepare for larger events this summer.</p>
                 </div>
               </div>
               <div className='flex flex-row'>
-                <div className='basis-1/4'>
+                <div className='basis-1/4 p-2 m-2'>
         
-                  <Image className='p-3' src={magazines[1].image.url} width={150} height={150} />
+                  <Image className='rounded-lg' src={magazines[1].image.url} width={150} height={150} />
                 </div>
                 <div className='basis-3/4 p-2'>
                   <h4 className='font-bold text-lg mt-2' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Wings and a Paper</h4>
@@ -52,11 +52,11 @@ const MagazineSection = (magazineContent) => {
                 </div>
               </div>
               <div className='flex flex-row'>
-                <div className='basis-1/4'>
+                <div className='basis-1/4 p-2 m-2'>
     
-                  <Image className='p-3' src={magazines[2].image.url} width={150} height={150} />
+                  <Image className='rounded-lg' src={magazines[2].image.url} width={150} height={150} />
                 </div>
-                <div className='basis-3/4 p-3'>
+                <div className='basis-3/4 p-2'>
                   <h4 className='font-bold text-lg mt-2' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Bridging the Digital Divide</h4> 
                   <p className='mt-2 text-sm'>In the rapidly growing era of digital marketing, learn how to create a cohesive image between physical and digital presence for your restaurant.</p>
                 </div>

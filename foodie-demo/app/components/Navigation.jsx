@@ -75,7 +75,7 @@ function Navigation() {
                                     alt="Foodie-Logo"
                                 />
                             </Link>
-                            <div id="basic-navbar-nav" className="col-span-6" style={{}}>
+                            <div id="" className="" style={{}}>
                                 {/* search bar */}
                                 <SearchBar />
                             </div>
@@ -93,7 +93,7 @@ function Navigation() {
 
                     <div className="">
                         {/* bookmark and cart icons, BAC button */}
-                        <Nav className="">
+                        <Nav className="flex flex-row ">
                             {/* User options */}
                             <section className='flex flex-row justify-center px-2 rounded-md' style={{ backgroundColor: "#D9EEF9" }}>
                                 <p className='pt-1 mt-1 ml-1 text-sm font-bold text-sky-800'>Hi, Anna  &nbsp;</p>
@@ -123,7 +123,7 @@ function Navigation() {
                         <Nav className="space-x-2">
 
                             <Link href="/category1" className=''>
-                                <NavDropdown title="Publications" id="basic-nav-dropdown">
+                                <NavDropdown title="Publications" id="basic-nav-dropdown" className='sm:text-sm sm:flex-col'>
                                     <Link href="/category1">
                                         <NavDropdown.Item>Latest Foodie Magazine</NavDropdown.Item>
                                     </Link>
@@ -161,16 +161,16 @@ function Navigation() {
                             </Link>
 
                             <Link href="/recipes" className="pl-4 pr-4">
-                                <Nav.Link id='basic-nav-dropdown' href='/recipes'>Recipes</Nav.Link>
+                                <Nav.Link id='basic-nav-dropdown' href='/recipes' className='sm:text-sm'>Recipes</Nav.Link>
                             </Link>
 
 
                             <Link href="/recipes" className="pr-4">
-                                <Nav.Link id='basic-nav-dropdown'>Tips & Trends</Nav.Link>
+                                <Nav.Link id='basic-nav-dropdown' className='sm:text-sm'>Tips & Trends</Nav.Link>
                             </Link>
 
                             <Link href="/category3" className="pr-4">
-                                <NavDropdown title="Operations & Resources" id="basic-nav-dropdown" class="">
+                                <NavDropdown title="Operations & Resources" id="basic-nav-dropdown" className='sm:text-sm'>
 
                                     <Link href="/category1">
                                         <NavDropdown.Item>American Restaurant Recipe & Resources</NavDropdown.Item>
@@ -206,7 +206,7 @@ function Navigation() {
                             </Link>
 
                             <Link href="/category4" className='pr-4'>
-                                <NavDropdown title="Sysco Brands" id="basic-nav-dropdown">
+                                <NavDropdown title="Sysco Brands" id="basic-nav-dropdown" className='sm:text-sm'>
                                     <Link href="/category1">
                                         <NavDropdown.Item>Arezzio</NavDropdown.Item>
                                     </Link>
@@ -239,7 +239,7 @@ function Navigation() {
                             </Link>
 
                             <Link href="/category3" className='pr-4'>
-                                <NavDropdown title="Services" id="basic-nav-dropdown">
+                                <NavDropdown title="Services" id="basic-nav-dropdown" className='sm:text-sm'>
                                     <Link href="/category1">
                                         <NavDropdown.Item>Webinars</NavDropdown.Item>
                                     </Link>
@@ -270,7 +270,7 @@ function Navigation() {
                             </Link>
 
                             <Link href="/category3" className='pr-4'>
-                                <NavDropdown title="Community Impact" id="basic-nav-dropdown">
+                                <NavDropdown title="Community Impact" id="basic-nav-dropdown" className='sm:text-sm'>
                                     <Link href="/category1">
                                         <NavDropdown.Item>Nourishing Neighbours</NavDropdown.Item>
                                     </Link>
