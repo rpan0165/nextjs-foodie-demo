@@ -5,21 +5,22 @@ import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { RiBookmarkLine, RiArrowDropDownLine } from 'react-icons/ri';
 import { RxHamburgerMenu, RxBell, RxCross1 } from 'react-icons/rx';
 import SearchBar from './SearchBar';
+import MainNav from './MainNav';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function HeaderNavBar() {
   return (
     <Disclosure as="nav" className="bg-[#FCFDFE]">
       {({ open }) => (
         <>
-          <div className="mx-auto px-6 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center">
+          <div className="mx-auto px-6 sm:px-6 lg:px-8 flex-column sm:flex-row">
+            <div className="relative flex h-24 sm:h-16 items-center">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hidden hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <RxCross1 className="block h-6 w-6" aria-hidden="true" />
@@ -28,7 +29,7 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-initial items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-initial items-center justify-center  sm:ml-0 sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-12 w-auto lg:hidden"
@@ -44,10 +45,10 @@ export default function Example() {
                   />
                 </div>
               </div>
-              <div className="flex flex-1 items-stretch justify-start pl-5">
+              <div className="flex flex-1 items-stretch justify-start sm:pl-5">
                 <SearchBar className="w-50" />
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 hidden sm:flex sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3 text-[#1B4F72] hover:text-sky-600">
                   <div>
@@ -117,7 +118,7 @@ export default function Example() {
               </div>
             </div>
           </div>
-
+          <MainNav />
           <Disclosure.Panel className="sm:hidden">
             
           </Disclosure.Panel>

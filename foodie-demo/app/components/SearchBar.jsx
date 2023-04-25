@@ -56,7 +56,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="w-[600px]">
+    <div className="w-[350px] sm:w-[180px] md:w-[300px] lg:w-[500px] xl:w-[600px]">
       <Form inline>
         {/* <FormControl type="text" placeholder="Search for recipes, ingredients and more" className="mr-sm-2 " /> */}
         {/* <Button variant="outline-success">Search</Button> */}

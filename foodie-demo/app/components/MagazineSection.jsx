@@ -34,7 +34,7 @@ const MagazineSection = (magazineContent) => {
             <div className='flex flex-col '>
               <div className='flex flex-row'>
                 <div className='basis-1/4 '>
-                  <Image className='p-3' src={magazines[0].image.url} width={150} height={150} />
+                  <Image className='p-3 rounded-xl' src={magazines[0].image.url} width={150} height={150} />
                 </div>
                 <div className='basis-3/4 p-3'>
                   <h4 className='font-bold text-lg mt-2' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Catering Craze</h4>
