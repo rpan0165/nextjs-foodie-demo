@@ -1,10 +1,10 @@
 'use client'
 import { Fragment, useState } from 'react';
+import Link from 'next/link';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { RiBookmarkLine, RiArrowDropDownLine } from 'react-icons/ri';
 import { RxHamburgerMenu, RxBell, RxCross1 } from 'react-icons/rx';
-import Link from "next/link";
 import { GrClose } from "react-icons/gr";
 import SearchBar from './SearchBar';
 import MainNav from './MainNav';
@@ -68,14 +68,16 @@ export default function HeaderNavBar() {
               </div>
               <div className="flex flex-initial items-center justify-center  sm:ml-0 sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
+                  <Link href="/">
+                    <img
+                      className="block h-12 w-auto lg:hidden"
+                      src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
+                      alt="Sysco Foodie"
+                      height="40"
+                    />
+                  </Link>
                   <img
-                    className="block h-12 w-auto lg:hidden"
-                    src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
-                    alt="Sysco Foodie"
-                    height="40"
-                  />
-                  <img
-                    className="hidden h-12 w-auto lg:block"
+                    className="hidden h-12 w-auto lg:block" 
                     src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
                     alt="Sysco Foodie"
                     height="40"
@@ -118,7 +120,7 @@ export default function HeaderNavBar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/recipes"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 hover:text-gray-600')}
                           >
                             Settings
