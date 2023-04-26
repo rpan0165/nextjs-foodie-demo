@@ -6,10 +6,10 @@ function Solutions(recipeContent) {
     const recipes = recipeContent.props.recipe_section.group4;
 
     return (
-        <section className="section-solutions">
+        <section className="section-solutions mt-5">
             <div class="container-fluid">
               <div class="flex justify-between mx-auto" style={{ width: "84%" }}>
-                <h2 className="text-left font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipeContent.props.recipe_section.header}</h2>
+                <h2 className="text-left font-bold text-4xl mb-4" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipeContent.props.recipe_section.header}</h2>
                 <a href="#" class="text-sky-600 font-bold text-sm">Explore Recipes</a>
               </div> 
               <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
