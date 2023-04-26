@@ -35,7 +35,7 @@ const CardGridSection = (cardGridContent) => {
                 <span className="text-red-600 text-2xl mr-2">&#9673;</span>
                 <span className='font-bold text-sm'>LIVE</span>
                 <span className="ml-2">Real-time updates and fresh content | 
-                <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect"><FaInstagram className='inline-block mx-2' /></a>
+                <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect text-2xl"><FaInstagram className='inline-block mx-2' /></a>
                 <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect">#syscofoodie</a>
                 </span>
             </span>
@@ -49,7 +49,7 @@ const CardGridSection = (cardGridContent) => {
                 {numRows * 3 < photos.length && (
                     <button 
                         onClick={() => setNumRows(numRows + 4)} 
-                        className='block mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500'>Load More
+                        className='block mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500 mt-5'>Load More
                     </button>
                 )}
             </div>
