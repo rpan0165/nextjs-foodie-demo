@@ -68,18 +68,20 @@ export default function HeaderNavBar() {
               </div>
               <div className="flex flex-initial items-center justify-center  sm:ml-0 sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-12 w-auto lg:hidden"
-                    src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
-                    alt="Sysco Foodie"
-                    height="40"
-                  />
-                  <img
-                    className="hidden h-12 w-auto lg:block"
-                    src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
-                    alt="Sysco Foodie"
-                    height="40"
-                  />
+                  <a href='/'>
+                    <img
+                      className="block h-12 w-auto lg:hidden"
+                      src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
+                      alt="Sysco Foodie"
+                      height="40"
+                    />
+                    <img
+                      className="hidden h-12 w-auto lg:block"
+                      src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
+                      alt="Sysco Foodie"
+                      height="40"
+                    />
+                  </a>
                 </div>
               </div>
               <div className="flex flex-1 items-stretch justify-start sm:pl-5">
@@ -118,7 +120,7 @@ export default function HeaderNavBar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/recipes"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 hover:text-gray-600')}
                           >
                             Settings
