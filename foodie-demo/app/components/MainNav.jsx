@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { RxHamburgerMenu, RxBell, RxCross1 } from 'react-icons/rx';
 import { RiArrowDropDownLine } from 'react-icons/ri';
+import Link from 'next/link';
 
 
 const navigation = [
@@ -71,17 +72,20 @@ export default function MainNav() {
                       <Menu as="li"
                         key={item.name}
                       >
-                        <Menu.Button
-                          href={item.href}
-                          className={classNames(
-                            item.current ? 'bg-[#D9EEF9] text-[#008CD2]' : 'text-[#2A2F33] hover:bg-[#D9EEF9] hover:text-[#008CD2]',
-                            'rounded-md px-3 py-2 text-sm font-medium flex'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}
-                        >
+                      
+                          <Menu.Button
+                            as="a"
+                            href={item.href}
+                            className={classNames(
+                              item.current ? 'bg-[#D9EEF9] text-[#008CD2]' : 'text-[#2A2F33] hover:bg-[#D9EEF9] hover:text-[#008CD2]',
+                              'rounded-md px-3 py-2 text-sm font-medium flex'
+                            )}
+                            aria-current={item.current ? 'page' : undefined}
+                          >
+                    
                           {item.name}
                           {item.submenu ? <RiArrowDropDownLine className="text-2xl cursor-pointer text-[#3EAFE8]" /> : null}
-                        </Menu.Button>
+                        </Menu.Button>    
                         {item.submenu && 
                           <Transition
                             as={Fragment}
