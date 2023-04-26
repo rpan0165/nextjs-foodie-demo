@@ -6,13 +6,13 @@ function Solutions(recipeContent) {
     const recipes = recipeContent.props.recipe_section.group4;
 
     return (
-        <section className="section-solutions">
-            <div class="container-fluid">
-              <div class="flex justify-between mx-auto" style={{ width: "84%" }}>
-                <h2 className="text-left font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipeContent.props.recipe_section.header}</h2>
-                <a href="#" class="text-sky-600 font-bold text-sm">Explore Recipes</a>
+        <section className="section-solutions mt-14 mb-16">
+            <div class="container">
+              <div class="flex justify-between mx-auto" >
+                <h2 className="text-left font-bold font-serif text-4xl mb-12">{recipeContent.props.recipe_section.header}</h2>
+                <a href="#" class="text-sky-600 font-bold text-lg pt-2">Explore Recipes</a>
               </div> 
-              <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
+              <div className="grid grid-cols-4 mr-5 mb-5 mx-auto">
                 {
                   recipes.map(recipe => (
                     <div className='flex flex-col border-2 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
@@ -27,6 +27,7 @@ function Solutions(recipeContent) {
                   ))
                 }
               </div>
+              <hr />
             </div>
         </section >
     );

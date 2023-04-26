@@ -29,29 +29,31 @@ const CardGridSection = (cardGridContent) => {
 
     return (
         <section className="section-card-grid">
-            <h2 className="text-center font-bold text-4xl py-2 mt-3" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Connect With @SyscoFoodie</h2>
-            <p className="text-center py-3" style={{ fontSize: "1.3rem" }}>Follow us on Instagram to see the relevant information regarding Sysco's latest resources for restaurant operators.</p>
-            <span className="flex items-center justify-center text-center text-lg">
-                <span className="text-red-600 text-2xl mr-2">&#9673;</span>
-                <span className='font-bold text-sm'>LIVE</span>
-                <span className="ml-2">Real-time updates and fresh content | 
-                <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect"><FaInstagram className='inline-block mx-2' /></a>
-                <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect">#syscofoodie</a>
+            <div className="container">
+                <h2 className="text-center font-bold font-serif text-4xl py-2 mt-3 ">Connect With @SyscoFoodie</h2>
+                <p className="text-center py-3 text-lg font-semibold">Follow us on Instagram to see the relevant information regarding <br />Sysco's latest resources for restaurant operators.</p>
+                <span className="flex items-center justify-center text-center text-lg mb-4">
+                    <span className="text-red-600 text-2xl mr-2">&#9673;</span>
+                    <span className='font-bold text-lg'>LIVE</span>
+                    <span className="ml-2">Real-time updates and fresh content | 
+                    <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect"><FaInstagram className='inline-block mx-2' /></a>
+                    <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect">#syscofoodie</a>
+                    </span>
                 </span>
-            </span>
-            <br></br>
-            <div className='flex flex-col items-center'>
-                <div className="card-grid mt-3" >
-                {photos.slice(0, numRows * 3).map((photo) => (
-                    <Card key={photo.id} id={photo.id} url={photo.images.url}  />
-                ))}
+                <div className='flex flex-col items-center'>
+                    <div className="card-grid mt-3" >
+                    {photos.slice(0, numRows * 3).map((photo) => (
+                        <Card key={photo.id} id={photo.id} url={photo.images.url}  />
+                    ))}
+                    </div>
+                    {numRows * 3 < photos.length && (
+                        <button 
+                            onClick={() => setNumRows(numRows + 4)} 
+                            className='block mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500'>Load More
+                        </button>
+                    )}
                 </div>
-                {numRows * 3 < photos.length && (
-                    <button 
-                        onClick={() => setNumRows(numRows + 4)} 
-                        className='block mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500'>Load More
-                    </button>
-                )}
+                <hr />
             </div>
         </section>
     );

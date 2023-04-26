@@ -6,13 +6,12 @@ function Updates(cardContent) {
     const cards = cardContent.props.card_section.card_section;
 
     return (
-        <section className="section-update">
-            <div class="container-fluid">
+        <section className="section-update mt-14 mb-24">
+            <div class="container">
                 {/* title + subtitle */}
-                <h2 className="text-center font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Foodservice Update</h2>
-                <p className="text-center pb-2" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif", fontSize: "1.3rem" }}>Stay informed of current supply and demand changes in the market</p>
-                <br></br>
-                <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
+                <h2 className="text-center font-bold text-4xl font-serif mb-3">Foodservice Update</h2>
+                <p className="text-center pb-2 font-sans font-semibold text-lg mb-8">Stay informed of current supply and demand changes in the market</p>
+                <div className='grid grid-cols-4 mr-5 mb-5 mx-auto'>
                 {
                   cards.map(card => (
                     <div className='flex flex-col border-2 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
@@ -25,6 +24,7 @@ function Updates(cardContent) {
                   ))
                 }
                 </div>
+                <hr />
             </div>
         </section >
     );
