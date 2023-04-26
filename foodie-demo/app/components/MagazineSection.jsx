@@ -9,6 +9,7 @@ const MagazineSection = (magazineContent) => {
   return (
     <section className="section-magazine" >
       <hr className='text-gray-300' />
+      <br />
       <div className='mx-auto mb-5' style={{ width: "80%" }}>
 
         <div className="flex flex-row justify-between mt-5 mb-2">

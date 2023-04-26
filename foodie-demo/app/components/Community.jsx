@@ -22,7 +22,9 @@ function Community(communityContent) {
     const communityCards = communityContent.props.community_section.slides;
     return (
         <section className="section-community">
-            <div class="container-fluid">
+          <br />
+          <hr className='text-gray-300'/>
+            <div class="container-fluid mt-5 pt-4">
               {/* main title of the section */}
                 <h2 className="text-center font-bold text-4xl mb-5" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{communityContent.props.community_section.header}</h2>
                 {/* <div class="h_line mt-0 mb-4 pt-0 " style={{
