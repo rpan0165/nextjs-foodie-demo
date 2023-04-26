@@ -69,7 +69,7 @@ const SearchBar = () => {
             onChange={handleSearchInput}
           />
           {visible && searchQuery !== '' && (
-            <div className="search-popup ml-5" style={{ width: "32%", marginLeft: "12rem" }}>
+            <div className="search-popup" style={{ width: "38%", marginLeft: "10rem", position:"absolute", maxWidth:"45rem" }}>
               {loading && filteredProducts.length === 0 && (
                 <div className="searching-gif">
                   <Image src="/cooking.gif" alt="still searching" width={100} height={100} />
