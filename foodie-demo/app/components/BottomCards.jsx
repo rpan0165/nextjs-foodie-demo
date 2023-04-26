@@ -40,7 +40,7 @@ function BottomCards() {
         <div className="container">
           <div className="grid grid-cols-12 grid-flow-row sm:grid-flow-col justify-center mt-5 mx-auto mb-12">
             <div className="col-span-6 flex flex-row border-1 border-[#EDE0CC] rounded-xl m-3 h-80 bg-[#FFF9F0] overflow-clip">
-                <div className="w-1/2 h-full bg-[#FFF9F0]" style={{backgroundImage: `url(${cards[0].image.url})`}}>
+                <div className="w-1/2 h-full bg-[#FFF9F0] bg-cover" style={{backgroundImage: `url(${cards[0].image.url})`}}>
                 </div>
                 <div className='p-3 overflow-auto w-1/2 h-full flex items-center'>
                     <h3 href={cards[0].link.href} className="font-bold text-lg text-black font-serif">{cards[0].link.title}</h3>
@@ -48,7 +48,7 @@ function BottomCards() {
               </div>
               
             <div className="col-span-6 flex flex-row border-1 border-[#EDE0CC] rounded-xl m-3 bg-[#FFF9F0] overflow-clip">
-              <div className="w-1/2 h-full bg-[#FFF9F0]" style={{backgroundImage: `url(${cards[1].image.url})`}}>
+              <div className="w-1/2 h-full bg-[#FFF9F0] bg-cover" style={{backgroundImage: `url(${cards[1].image.url})`}}>
               </div>
               <div className='p-3 overflow-auto w-1/2 h-full flex items-center'>
                   <h3 href={cards[1].link.href} className="font-bold text-lg text-black font-serif">{cards[1].link.title}</h3>
