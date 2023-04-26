@@ -8,6 +8,7 @@ import { GrClose } from "react-icons/gr";
 import SearchBar from './SearchBar';
 import MainNav from './MainNav';
 import CartItem from './CartItem';
+import Link from 'next/link';
 
 import { useSelector, useDispatch } from 'react-redux'
 

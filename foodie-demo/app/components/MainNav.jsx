@@ -74,6 +74,7 @@ export default function MainNav() {
                       >
                       
                           <Menu.Button
+                            as="a"
                             href={item.href}
                             className={classNames(
                               item.current ? 'bg-[#D9EEF9] text-[#008CD2]' : 'text-[#2A2F33] hover:bg-[#D9EEF9] hover:text-[#008CD2]',
