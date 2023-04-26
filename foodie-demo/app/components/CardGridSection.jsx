@@ -53,7 +53,7 @@ const CardGridSection = (cardGridContent) => {
                         </button>
                     )}
                 </div>
-                <hr />
+                <hr className='text-gray-300' />
             </div>
         </section>
     );

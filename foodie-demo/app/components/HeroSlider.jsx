@@ -53,7 +53,7 @@ function HeroSlider(heroSliderContent) {
                 <div className="swiper-slide-container">
                   <div className="half-width-container">
                     <div className="text-container">
-                      <h2 className='text-4xl font-extrabold font-serif'>{slide.header}</h2>
+                      <h2 className='text-4xl font-extrabold font-serif mb-4'>{slide.header}</h2>
                       <button className='learn-btn bg-white border-0 rounded-3xl'>{slide.cta.title}</button>
                     </div>
                   </div>

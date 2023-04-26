@@ -58,7 +58,7 @@ function ExploreFoodie() {
                 </div>
             </div>
             <div className="container mb-16 mt-12">
-                <hr />
+                <hr className='text-gray-300'/>
             </div>
         </section>
     )

@@ -284,8 +284,8 @@ function IndividualRecipe({params}) {
           </div>
         </div>
         <br /><br />
-        <hr />
-        <h2 className="text-center font-semibold text-4xl py-2 mt-4" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Related Recipes</h2>
+        <hr className='text-gray-400'/>
+        <h2 className="text-center font-semibold text-4xl py-2 mt-5" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Related Recipes</h2>
         <p className='text-center font-bold mb-4'>Find more innovative dishes for your menu.</p>
         <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
           {

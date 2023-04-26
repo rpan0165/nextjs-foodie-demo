@@ -27,7 +27,7 @@ function Solutions(recipeContent) {
                   ))
                 }
               </div>
-              <hr />
+              <hr className='text-gray-300' />
             </div>
         </section >
     );

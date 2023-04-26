@@ -36,7 +36,7 @@ function BottomCards() {
         <p>loading</p>
       </div>
     ) : (
-      <section className="section-bottom-cards" >
+      <section className="section-bottom-cards mt-5" >
         <div className="container">
           <div className="grid grid-cols-12 grid-flow-row sm:grid-flow-col justify-center mt-5 mx-auto mb-12">
             <div className="col-span-6 flex flex-row border-1 border-[#EDE0CC] rounded-xl m-3 h-80 bg-[#FFF9F0] overflow-clip">

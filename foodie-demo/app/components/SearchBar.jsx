@@ -69,16 +69,16 @@ const SearchBar = () => {
             onChange={handleSearchInput}
           />
           {visible && searchQuery !== '' && (
-            <div className="search-popup ml-5" style={{ width: "32%", marginLeft: "12rem" }}>
+            <div className="search-popup" style={{ width: "38%", marginLeft: "10rem", position:"absolute", maxWidth:"45rem" }}>
               {loading && filteredProducts.length === 0 && (
                 <div className="searching-gif">
-                  <Image src="/cooking.gif" alt="still searching" width={100} height={100} />
+                  <Image src="/cooking.gif" alt="still searching" width={100} height={100} className="ml-5"/>
                   <h2 className="product-title">Finding Recipes and Posts</h2>
                 </div>
               )}
               {filteredProducts.length === 0 && loading == false ? (
                 <div className="searching-gif">
-                  <Image src="/no-content.png" alt="still searching" width={100} height={100} />
+                  <Image src="/no-content.png" alt="still searching" width={100} height={100} className="ml-5"/>
                   <h2 className="product-title">No Results Found</h2>
                 </div>
               ) : (
