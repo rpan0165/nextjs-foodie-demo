@@ -61,7 +61,7 @@ function ExploreFoodie() {
                 
             </div>
             <br /><br />
-            <hr />
+            <hr className='text-gray-300'/>
             <br />
         </section>
     )
