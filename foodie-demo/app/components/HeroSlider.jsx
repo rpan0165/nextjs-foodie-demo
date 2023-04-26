@@ -38,7 +38,7 @@ function HeroSlider(heroSliderContent) {
 
 
   return (
-      <>
+      <section className="section-hero-slider">
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
@@ -49,11 +49,11 @@ function HeroSlider(heroSliderContent) {
           slides.map((slide, index) => {
             return(
               <SwiperSlide key={index}>
-                <div className="swiper-slide-container" style={{marginTop:"7.2rem"}}>
+                <div className="swiper-slide-container">
                   <div className="half-width-container">
                     <div className="text-container">
                       <h2 className='text-4xl font-extrabold font-serif'>{slide.header}</h2>
-                      <button className='learn-btn'>{slide.cta.title}</button>
+                      <button className='learn-btn bg-white border-0 rounded-3xl'>{slide.cta.title}</button>
                     </div>
                   </div>
                   <div className="half-width-container">
@@ -66,7 +66,7 @@ function HeroSlider(heroSliderContent) {
           )})
           }
       </Swiper>
-      </>
+      </section>
       )
 }
 

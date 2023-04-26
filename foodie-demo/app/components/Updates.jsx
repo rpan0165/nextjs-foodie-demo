@@ -6,7 +6,7 @@ function Updates(cardContent) {
     const cards = cardContent.props.card_section.card_section;
 
     return (
-        <div>
+        <section className="section-update">
             <div class="container-fluid">
                 {/* title + subtitle */}
                 <h2 className="text-center font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Foodservice Update</h2>
@@ -26,8 +26,7 @@ function Updates(cardContent) {
                 }
                 </div>
             </div>
-            <br></br>
-        </div>
+        </section >
     );
 }
 

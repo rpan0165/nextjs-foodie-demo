@@ -5,6 +5,7 @@ import Head from 'next/head'
 import TopNav from './components/TopNav'
 import { Providers } from './redux/provider'
 import Navigation from './components/Navigation'
+import HeaderNavBar from './components/HeaderNavBar'
 import FooterTop from './components/FooterTop'
 
 
@@ -18,12 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Header />
         <body>
-        <Providers>
-          <Navigation/>
-            {children}
-            {/* <FooterTop/> */}
-          <Footer/>
-        </Providers>
+          <Providers>
+            <HeaderNavBar />
+              {children}
+              {/* <FooterTop/> */}
+            <Footer/>
+          </Providers>
         </body>
     </html>
   )
