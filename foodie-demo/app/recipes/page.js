@@ -37,7 +37,7 @@ const recipeMain = () => {
         <p>loading</p>
       </div>
     ) : (
-        <div style={{ marginTop: "10rem" }}>
+        <div style={{ marginTop: "1rem" }}>
             <h2 className="text-center font-bold text-4xl py-2 mt-4" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Recipes</h2>
             <div className='grid grid-cols-12 grid-flow-col-dense mt-4 mb-5'>
                 <div className='col-span-2 flex flex-col mx-3 px-3' style={{ color: "#1B4F72" }}>

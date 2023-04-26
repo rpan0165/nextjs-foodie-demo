@@ -1,5 +1,6 @@
 'use client'
 import { Fragment } from 'react';
+import Link from 'next/link';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { RiBookmarkLine, RiArrowDropDownLine } from 'react-icons/ri';
@@ -31,14 +32,16 @@ export default function HeaderNavBar() {
               </div>
               <div className="flex flex-initial items-center justify-center  sm:ml-0 sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
+                  <Link href="/">
+                    <img
+                      className="block h-12 w-auto lg:hidden"
+                      src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
+                      alt="Sysco Foodie"
+                      height="40"
+                    />
+                  </Link>
                   <img
-                    className="block h-12 w-auto lg:hidden"
-                    src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
-                    alt="Sysco Foodie"
-                    height="40"
-                  />
-                  <img
-                    className="hidden h-12 w-auto lg:block"
+                    className="hidden h-12 w-auto lg:block" 
                     src="https://foodie.sysco.com/wp-content/themes/sysco-2022/assets/static/img/Sysco_Foodie_Web_Logo.svg"
                     alt="Sysco Foodie"
                     height="40"

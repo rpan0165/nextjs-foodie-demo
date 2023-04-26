@@ -108,7 +108,7 @@ function IndividualRecipe({params}) {
 
   return (
     <div>
-      <div style={{ marginTop: "8rem" }}>
+      <div style={{ marginTop: "1rem" }}>
         <div style={{
           display: 'block',
           width: 700, padding: 30
