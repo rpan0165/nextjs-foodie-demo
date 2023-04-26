@@ -5,7 +5,6 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { RiBookmarkLine, RiArrowDropDownLine } from 'react-icons/ri';
 import { RxHamburgerMenu, RxBell, RxCross1 } from 'react-icons/rx';
-import Link from "next/link";
 import { GrClose } from "react-icons/gr";
 import SearchBar from './SearchBar';
 import MainNav from './MainNav';
