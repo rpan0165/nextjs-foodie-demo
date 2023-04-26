@@ -28,7 +28,7 @@ const CardGridSection = (cardGridContent) => {
     const [numRows, setNumRows] = useState(2);
 
     return (
-        <>
+        <section className="section-card-grid">
             <h2 className="text-center font-bold text-4xl py-2 mt-3" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Connect With @SyscoFoodie</h2>
             <p className="text-center py-3" style={{ fontSize: "1.3rem" }}>Follow us on Instagram to see the relevant information regarding Sysco's latest resources for restaurant operators.</p>
             <span className="flex items-center justify-center text-center text-lg">
@@ -53,7 +53,7 @@ const CardGridSection = (cardGridContent) => {
                     </button>
                 )}
             </div>
-        </>
+        </section>
     );
 };
 export default CardGridSection;
