@@ -1,21 +1,58 @@
 'use client'
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { RiBookmarkLine, RiArrowDropDownLine } from 'react-icons/ri';
 import { RxHamburgerMenu, RxBell, RxCross1 } from 'react-icons/rx';
+import Link from "next/link";
+import { GrClose } from "react-icons/gr";
 import SearchBar from './SearchBar';
 import MainNav from './MainNav';
+import CartItem from './CartItem';
+
+import { useSelector, useDispatch } from 'react-redux'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function HeaderNavBar() {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleSidebar = () => setShowSidebar(!showSidebar);
+
+  const handleCartToggle = () => {
+      setIsCartOpen(!isCartOpen);
+      console.log(isCartOpen)
+  };
+
+  const itemsInCart = useSelector((state) => state.cart.itemsInCart)
+  
   return (
     <Disclosure as="nav" className="bg-[#FCFDFE]">
       {({ open }) => (
         <>
+          {/* cart */}
+          <div className={`cart-popup ${isCartOpen ? "open" : ""}`}>
+              <div className='flex flex-row justify-between py-2'>
+                  <h3 className='mt-2 ml-1 pt-2 pb-3 font-bold text-xl'>My Basket</h3>
+                  <span className=''>
+                      {/* <Image className="close-button" onClick={handleCartToggle} src="/close.png" alt="still searching" width={30} height={30} /> */}
+                      <GrClose onClick={handleCartToggle} className='mt-3 mr-3 text-2xl text-sky-600 hover:text-sky-500' />
+                  </span>
+              </div>
+              <div className="cart-items">
+                  {itemsInCart.map(product => (
+                      <CartItem props={product} />
+                  ))}
+              </div>
+              <div className='mx-auto text-center mt-3  align-bottom'>
+                  <button className='border border-2 rounded-3xl py-2 px-4 text-sky-600 font-bold'>Review Shopping List</button>
+                  <p>or</p>
+                  <button className='border border-2 rounded-3xl py-2 px-4 bg-sky-600 text-white font-bold'>Proceed to Sysco Shop</button>
+              </div>
+          </div>
           <div className="mx-auto px-6 sm:px-6 lg:px-8 flex-column sm:flex-row">
             <div className="relative flex h-24 sm:h-16 items-center">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -112,8 +149,11 @@ export default function HeaderNavBar() {
                   type="button"
                   className="rounded-full bg-[#D9EEF9] p-1 text-[#1B4F72] hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  <span className="sr-only">Favorites</span>
-                  <HiOutlineShoppingCart className="h-8 w-8 p-1.5" aria-hidden="true" />
+                  <span className="sr-only">Cart</span>
+                  <HiOutlineShoppingCart onClick={handleCartToggle} className="h-8 w-8 p-1.5" aria-hidden="true" />
+                  <button href="#" onClick={handleCartToggle} className="absolute rounded-full p-1 w-6 h-6 bg-red-600 -right-2 top-1 font-bold text-white text-xs">
+                    {itemsInCart.length}
+                  </button>
                 </button>
               </div>
             </div>
