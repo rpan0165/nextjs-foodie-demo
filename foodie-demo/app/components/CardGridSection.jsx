@@ -35,7 +35,7 @@ const CardGridSection = (cardGridContent) => {
                 <span className="text-red-600 text-2xl mr-2">&#9673;</span>
                 <span className='font-bold text-sm'>LIVE</span>
                 <span className="ml-2">Real-time updates and fresh content | 
-                <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect text-4xl"><FaInstagram className='inline-block mx-2' /></a>
+                <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect text-2xl"><FaInstagram className='inline-block mx-2' /></a>
                 <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect">#syscofoodie</a>
                 </span>
             </span>
