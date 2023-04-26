@@ -13,7 +13,7 @@ function Solutions(recipeContent) {
                 <h2 className="text-left font-bold text-4xl mb-5" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipeContent.props.recipe_section.header}</h2>
                 <a href="#" class="text-sky-600 font-bold text-sm">Explore Recipes</a>
               </div> 
-              <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
+              <div className='grid grid-cols-4 mr-5 mb-5 mx-auto mt-3' style={{ width: "85%" }}>
                 {
                   recipes.map(recipe => (
                     <div className='flex flex-col border-2 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>

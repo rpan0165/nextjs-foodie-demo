@@ -12,10 +12,10 @@ const MagazineSection = (magazineContent) => {
       <br />
       <div className='mx-auto mb-5' style={{ width: "80%" }}>
 
-        <div className="flex flex-row justify-between mt-5 mb-2">
-          <h3 className="text-left font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>The Latest Edition of Foodie Magazine</h3>
-          <Link href="#" className=''>
-            <h4 className='text-sky-600 font-bold text-sm'>More From This Issue</h4>
+        <div className="flex flex-row justify-between mt-5 mb-5">
+          <h3 className="text-left font-bold text-3xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>The Latest Edition of Foodie Magazine</h3>
+          <Link href="https://foodie.sysco.com/foodie_magazines/edition-30/" className=''>
+            <h4 className='text-sky-600 font-bold text-sm pt-1'>More From This Issue</h4>
           </Link>
         </div>
 
