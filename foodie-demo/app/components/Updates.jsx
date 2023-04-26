@@ -6,10 +6,10 @@ function Updates(cardContent) {
     const cards = cardContent.props.card_section.card_section;
 
     return (
-        <section className="section-update">
+        <section className="section-update mb-5">
             <div class="container-fluid">
                 {/* title + subtitle */}
-                <h2 className="text-center font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Foodservice Update</h2>
+                <h2 className="text-center font-bold text-4xl mt-5" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Foodservice Update</h2>
                 <p className="text-center pb-2" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif", fontSize: "1.3rem" }}>Stay informed of current supply and demand changes in the market</p>
                 <br></br>
                 <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>

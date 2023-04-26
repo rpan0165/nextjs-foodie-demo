@@ -14,7 +14,7 @@ import Image from 'next/image';
 function ExploreFoodie() {
     return (
         <section className="section-explore-foodie">
-            <h2 className="heading-circles text-4xl font-bold" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Great Ways To Explore Sysco Foodie</h2>
+            <h2 className="heading-circles text-4xl font-bold mt-5" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Great Ways To Explore Sysco Foodie</h2>
             <br />
             <br />
             <div className='grid grid-flow-row-dense lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-2 mx-auto px-5 text-center font-bold'>

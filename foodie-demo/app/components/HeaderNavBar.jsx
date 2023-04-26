@@ -93,8 +93,8 @@ export default function HeaderNavBar() {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3 text-[#1B4F72] hover:text-sky-600">
                   <div>
-                    <Menu.Button className="bg-[#D9EEF9] flex p-2 mx-2 rounded-lg">
-                      <span className="sr-only">Open user menu</span>
+                    <Menu.Button className="bg-[#D9EEF9] flex py-2 mx-2 pl-4 font-bold text-sm rounded-lg">
+                      <span className="sr-only ">Open user menu</span>
                       Hi, Anna
                       <RiArrowDropDownLine className="text-2xl cursor-pointer" />
                     </Menu.Button>
@@ -108,7 +108,7 @@ export default function HeaderNavBar() {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <a

@@ -36,7 +36,7 @@ function BottomCards() {
         <p>loading</p>
       </div>
     ) : (
-      <section className="section-bottom-cards" >
+      <section className="section-bottom-cards mt-5" >
         <div className="grid grid-cols-12 grid-flow-row sm:grid-flow-col justify-center mt-5" style={{width:"85%", margin:"0 auto", marginBottom:"5rem"}}>
             <div className=' col-span-6 flex flex-row border-2 border-orange-200 rounded-xl' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
                 <div className='bg-cover' style={{ width: "50%", borderRadius: "10px 0 0 10px", height: "21rem", backgroundColor: "yellow", backgroundImage: `url(${cards[0].image.url})`}}>
