@@ -33,9 +33,12 @@ const recipeMain = () => {
     }, []);
   
     return loading && recipes.length == 0 ? (
-      <div className="spinner-UI">
-        <p>loading</p>
-      </div>
+        <div className="spinner-UI">
+            <div className="spinner-container">
+                <div className="loading-spinner">
+                </div>
+            </div>
+        </div>
     ) : (
         <div style={{ marginTop: "1rem" }}>
             <h2 className="text-center font-bold text-4xl py-2 mt-4" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Recipes</h2>

@@ -20,13 +20,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Navigation, Pagination]);
 
-const sliceStrings = (str) => {
-  // Split the title into two lines
-  const splitStr = str.split(" ");
-  const firstStr = splitStr.slice(0, 2).join(" ");
-  const secondStr = splitStr.slice(2).join(" ");
-  return [firstStr, secondStr];
-}
+// const sliceStrings = (str) => {
+//   // Split the title into two lines
+//   const splitStr = str.split(" ");
+//   const firstStr = splitStr.slice(0, 2).join(" ");
+//   const secondStr = splitStr.slice(2).join(" ");
+//   return [firstStr, secondStr];
+// }
 
 
 function HeroSlider(heroSliderContent) {
@@ -44,6 +44,7 @@ function HeroSlider(heroSliderContent) {
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
+          loop={true}
         >
           {
           slides.map((slide, index) => {

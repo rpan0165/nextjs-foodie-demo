@@ -4,7 +4,6 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { RiBookmarkLine, RiArrowDropDownLine } from 'react-icons/ri';
 import { RxHamburgerMenu, RxBell, RxCross1 } from 'react-icons/rx';
-import Link from "next/link";
 import { GrClose } from "react-icons/gr";
 import SearchBar from './SearchBar';
 import MainNav from './MainNav';
@@ -122,7 +121,7 @@ export default function HeaderNavBar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/recipes"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 hover:text-gray-600')}
                           >
                             Settings
