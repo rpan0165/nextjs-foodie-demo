@@ -1,4 +1,3 @@
-import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Head from 'next/head'
@@ -7,6 +6,7 @@ import { Providers } from './redux/provider'
 import Navigation from './components/Navigation'
 import HeaderNavBar from './components/HeaderNavBar'
 import FooterTop from './components/FooterTop'
+import './globals.css'
 
 
 export const metadata = {
