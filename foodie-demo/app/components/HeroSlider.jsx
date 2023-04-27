@@ -20,13 +20,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Navigation, Pagination]);
 
-const sliceStrings = (str) => {
-  // Split the title into two lines
-  const splitStr = str.split(" ");
-  const firstStr = splitStr.slice(0, 2).join(" ");
-  const secondStr = splitStr.slice(2).join(" ");
-  return [firstStr, secondStr];
-}
+// const sliceStrings = (str) => {
+//   // Split the title into two lines
+//   const splitStr = str.split(" ");
+//   const firstStr = splitStr.slice(0, 2).join(" ");
+//   const secondStr = splitStr.slice(2).join(" ");
+//   return [firstStr, secondStr];
+// }
 
 
 function HeroSlider(heroSliderContent) {
@@ -38,31 +38,36 @@ function HeroSlider(heroSliderContent) {
 
 
   return (
-      <>
+      <section className="section-hero-slider">
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
+          loop={true}
         >
           {
           slides.map((slide, index) => {
             return(
               <SwiperSlide key={index}>
-                <div className="swiper-slide-container bg-white" style={{marginTop:"7.7rem"}}>
-                  <div className="text-container">
-                    <h2 className='text-4xl font-extrabold font-serif'>{sliceStrings(slide.header)[0]}<br />{sliceStrings(slide.header)[1]}</h2>
-                    <button className='learn-btn'>{slide.cta.title}</button>
+                <div className="swiper-slide-container">
+                  <div className="half-width-container">
+                    <div className="text-container">
+                      <h2 className='text-4xl font-extrabold font-serif mb-4'>{slide.header}</h2>
+                      <button className='learn-btn bg-white border-0 rounded-3xl'>{slide.cta.title}</button>
+                    </div>
                   </div>
-                  <div className="image-container">
-                    <img src={slide.background_image.url} alt="Slide 1 Image" />
+                  <div className="half-width-container">
+                    <div className="image-container">
+                      <img src={slide.background_image.url} alt="Slide 1 Image" />
+                    </div>
                   </div>
                 </div>
-              </SwiperSlide>
+            </SwiperSlide>
           )})
           }
       </Swiper>
-      </>
+      </section>
       )
 }
 

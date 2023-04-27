@@ -56,30 +56,29 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
-      <Form inline className="">
+    <div className="w-[350px] sm:w-[180px] md:w-[300px] lg:w-[500px] xl:w-[600px]">
+      <Form inline>
         {/* <FormControl type="text" placeholder="Search for recipes, ingredients and more" className="mr-sm-2 " /> */}
         {/* <Button variant="outline-success">Search</Button> */}
-        <div class="form-group has-search">
-          <span className="fa fa-search form-control-feedback py-2 pl-3 ml-2 text-xl"> <IoSearch className="font-bold font-gray-700" /></span>
+        <div class="form-group has-search align-middle">
+          <span className="fa fa-search form-control-feedback py-2.5 pl-3 ml-2 text-xl align-middle"><IoSearch className="font-bold font-gray-700" /></span>
           <input
             type="text"
-            className="search-input form-control mt-2 ml-2 rounded-3xl"
+            className="search-input form-control ml-2 rounded-3xl h-11"
             placeholder="Search for recipes, ingredients and more"
-            width=""
             onChange={handleSearchInput}
           />
           {visible && searchQuery !== '' && (
-            <div className="search-popup ml-5" style={{ width: "32%", marginLeft: "12rem" }}>
+            <div className="search-popup" style={{ width: "38%", marginLeft: "10rem", position:"absolute", maxWidth:"45rem" }}>
               {loading && filteredProducts.length === 0 && (
                 <div className="searching-gif">
-                  <Image src="/cooking.gif" alt="still searching" width={100} height={100} />
+                  <Image src="/cooking.gif" alt="still searching" width={100} height={100} className="ml-5"/>
                   <h2 className="product-title">Finding Recipes and Posts</h2>
                 </div>
               )}
               {filteredProducts.length === 0 && loading == false ? (
                 <div className="searching-gif">
-                  <Image src="/no-content.png" alt="still searching" width={100} height={100} />
+                  <Image src="/no-content.png" alt="still searching" width={100} height={100} className="ml-5"/>
                   <h2 className="product-title">No Results Found</h2>
                 </div>
               ) : (

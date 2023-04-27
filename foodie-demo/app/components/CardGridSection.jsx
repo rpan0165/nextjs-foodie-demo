@@ -2,38 +2,14 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import '../styles/cardgridsection.css';
-// import { GoSearch } from 'react-icons/go';
-// import { FaRegDotCircle } from 'react-icons/fa';
-// import { AiOutlineInstagram } from 'react-icons/io5';
-
-
-const images = [
-    { id: 1, url: 'https://via.placeholder.com/150' },
-    { id: 2, url: 'https://via.placeholder.com/150' },
-    { id: 3, url: 'https://via.placeholder.com/150' },
-    { id: 4, url: 'https://via.placeholder.com/150' },
-    { id: 5, url: 'https://via.placeholder.com/150' },
-    { id: 6, url: 'https://via.placeholder.com/150' },
-    { id: 7, url: 'https://via.placeholder.com/150' },
-    { id: 8, url: 'https://via.placeholder.com/150' },
-    { id: 9, url: 'https://via.placeholder.com/150' },
-    { id: 10, url: 'https://via.placeholder.com/150' },
-    { id: 11, url: 'https://via.placeholder.com/150' },
-    { id: 12, url: 'https://via.placeholder.com/150' },
-    { id: 13, url: 'https://via.placeholder.com/150' },
-    { id: 14, url: 'https://via.placeholder.com/150' },
-    { id: 15, url: 'https://via.placeholder.com/150' },
-    { id: 16, url: 'https://via.placeholder.com/150' },
-    { id: 17, url: 'https://via.placeholder.com/150' },
-    { id: 18, url: 'https://via.placeholder.com/150' },
-];
+import { FaInstagram } from 'react-icons/fa';
 
 const Card = ({ id, url }) => {
     const [hovered, setHovered] = useState(false);
 
     return (
         <div
-            className="card"
+            className="card" style={{ width: '400px', height: '400px', objectFit: 'cover' }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
@@ -48,37 +24,38 @@ const Card = ({ id, url }) => {
 const CardGridSection = (cardGridContent) => {
 
     const photos = cardGridContent.props.insta_section.insta_photos;
-
-    const [numRows, setNumRows] = useState(4);
+    console.log("photos: ", photos)
+    const [numRows, setNumRows] = useState(2);
 
     return (
-        <>
-            <h2 className="text-center font-bold text-4xl py-2 mt-3" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Connect With @SyscoFoodie</h2>
-            <p className="text-center py-3" style={{ fontSize: "1.3rem" }}>Follow us on Instagram to see the relevant information regarding Sysco's latest resources for restaurant operators.</p>
-            {/* <div class="h_line mt-0 mb-4 pt-0 " style={{
-                color: "red", borderBottom: "5px solid #56B146",
-                width: "10rem",
-                margin: "auto",
-            }}></div> */}
-            <span>
-                <p className="text-center text-lg"> 
-                <span>
-                #syscofoodie
-                </span> LIVE
-                    Real-time updates and fresh content |<span>  </span> 
-                    #syscofoodie
-                    </p>
-            </span>
-            <div className="card-grid mt-3">
-
-                {images.slice(0, numRows * 3).map((image) => (
-                    <Card key={image.id} id={image.id} url={image.url} />
-                ))}
-                {numRows * 3 < images.length && (
-                    <button onClick={() => setNumRows(numRows + 4)} className='mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500' style={{textAlign:"center", margin:"0 auto", }}>Load More</button>
-                )}
+        <section className="section-card-grid">
+            <div className="container">
+                <h2 className="text-center font-bold font-serif text-4xl py-2 mt-3 ">Connect With @SyscoFoodie</h2>
+                <p className="text-center py-3 text-lg font-semibold">Follow us on Instagram to see the relevant information regarding <br />Sysco's latest resources for restaurant operators.</p>
+                <span className="flex items-center justify-center text-center text-lg mb-4">
+                    <span className="text-red-600 text-2xl mr-2">&#9673;</span>
+                    <span className='font-bold text-lg'>LIVE</span>
+                    <span className="ml-2">Real-time updates and fresh content | 
+                    <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect"><FaInstagram className='inline-block mx-2' /></a>
+                    <a href="https://www.instagram.com/syscofoodie/" className="no-hover-effect">#syscofoodie</a>
+                    </span>
+                </span>
+                <div className='flex flex-col items-center'>
+                    <div className="card-grid mt-3" >
+                    {photos.slice(0, numRows * 3).map((photo) => (
+                        <Card key={photo.id} id={photo.id} url={photo.images.url}  />
+                    ))}
+                    </div>
+                    {numRows * 3 < photos.length && (
+                        <button 
+                            onClick={() => setNumRows(numRows + 4)} 
+                            className='block mx-auto btn-grad px-3 py-3 font-bold rounded-md mb-5 mt-5' style={{marginTop:'2rem', width: '25rem'}}>Load More
+                        </button>
+                    )}
+                </div>
+                <hr className='text-gray-300' />
             </div>
-        </>
+        </section>
     );
 };
 export default CardGridSection;

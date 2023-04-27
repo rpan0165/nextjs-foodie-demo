@@ -1,38 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Initializing steps
 
-## Getting Started
+1. clone the repo and checkout to Demo branch
+2. cd into foodie-demo directory `cd foodie-demo`
+3. npm install
+4. npm run dev
 
-First, run the development server:
+## Accessible URLs
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. Homepage (http://localhost:3000/)
+2. Recipes page (http://localhost:3000/recipes)
+3. Recipe details page (http://localhost:3000/recipes/recipeone)
+4. Products page (http://localhost:3000/sysco-products)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Available functionalities
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Search products
+Add/remove products in cart
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Known Issues
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The hot reloading functionality in Next.js exhibits a one issue, wherein upon the initial page load, certain stylings fail to apply. However, this can be easily fix by saving any file within the project (ctrl+s in anywhere in the project that trigger the hot-reload).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

@@ -13,10 +13,8 @@ import Image from 'next/image';
 
 function ExploreFoodie() {
     return (
-        <div>
-            <h2 className="heading-circles text-4xl font-bold" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Great Ways To Explore Sysco Foodie</h2>
-            <br />
-            <br />
+        <section className="section-explore-foodie mt-16 mb-14">
+            <h2 className="heading-circles text-4xl font-bold font-serif">Great Ways To Explore Sysco Foodie</h2>
             <div className='grid grid-flow-row-dense lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-2 mx-auto px-5 text-center font-bold'>
                 <div className='my-4'>
                     <Image src={Tips} width={200} height={200} className='mx-auto' />
@@ -58,12 +56,11 @@ function ExploreFoodie() {
                     <Image src={Star} width={200} height={200} className='mx-auto my-3 py-1' />
                     <h5 className='my-3'>Become a Customer</h5>
                 </div>
-                
             </div>
-            <br /><br />
-            <hr />
-            <br />
-        </div>
+            <div className="container mb-16 mt-12">
+                <hr className='text-gray-300'/>
+            </div>
+        </section>
     )
 }
 

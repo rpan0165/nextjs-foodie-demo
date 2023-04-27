@@ -17,97 +17,38 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 SwiperCore.use([Navigation, Pagination]);
 
 
-function Updates(communityContent) {
+function Community(communityContent) {
 
     const communityCards = communityContent.props.community_section.slides;
-
-    const posts = [
-        {
-            id: 1,
-            title: 'Mochilero Kitchen',
-            subtitle: 'OPERATIONS & RESOURCES',
-            href: '#',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/09/MochileroKitchenStaff-9-300x415.jpg',
-        },
-        {
-            id: 1,
-            title: 'Inflation Buster',
-            subtitle: 'FOOD SERVICE UPDATE',
-            href: '#',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/07/chefpic2-300x415.jpg',
-        },
-        {
-            id: 1,
-            title: 'Recipes and Resources',
-            subtitle: 'AMERICAN RESTAURANT',
-            href: '#',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/09/Nourishing-Neighbors-Thumbnail-300x415-1-300x415.png',
-        },
-        {
-            id: 1,
-            title: 'Hinded Foam Containers',
-            subtitle: 'FOOD SERVICE UPDATE',
-            href: '#',
-            description:
-                'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-
-            imageUrl:
-                'https://foodie.sysco.com/wp-content/uploads/2021/09/Sustaianble-Agriculture-Thumbnail-300x415.png',
-        },
-        // More posts...
-    ];
-
-
     return (
-
-        <div>
-            <div class="container-fluid">
-                <h2 className="text-center font-bold text-4xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Our Community</h2>
-                <div class="h_line mt-0 mb-4 pt-2 " style={{
+        <section className="section-community">
+            <div class="container">
+              {/* main title of the section */}
+                <h2 className="text-center font-bold font-serif text-4xl mb-5">{communityContent.props.community_section.header}</h2>
+                {/* <div class="h_line mt-0 mb-4 pt-0 " style={{
                     color: "red", borderBottom: "5px solid #56B146",
-                    width: "10rem", margin: "auto",
-                }}></div>
-                 <br></br>
+                    width: "10rem",
+                    margin: "auto",
+                }}></div> */}
 
-
-                <div class="row mx-auto pr-8 pl-8 pt-3 max-w-7xl">
-                    {
-                        communityCards.map(communityCard => (
-                            <div class="col">
-                                <Card style={{ }}>
-                                    <Card.Img variant="top" src={communityCard.image.url} />
-                                    <Card.Body>
-                                        <Card.Title className="text-sm text-center text-sky-500">{communityCard.link[0].title}</Card.Title>
-                                        {communityCard.link.length == 2 ? (
-                                                <Card.Text className="text-center pt-0 font-bold">
-                                                    {communityCard.link[1].title}
-                                                </Card.Text>
-                                        ) : (
-                                                <div></div>
-                                            )
-                                        }                                        
-                                    </Card.Body>
-                                </Card>
-                            </div>
-                        ))
-                    }
-                </div>
+                <div className='grid grid-cols-4 mr-5 mb-5 mx-auto'>
+                {
+                  communityCards.map(card => (
+                    <div className='flex flex-col border-2 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
+                      <div className="bg-cover" style={{ width: "100%", height: "17.5rem", backgroundColor: "yellow", backgroundImage: `url(${card.image.url})` }}></div>
+                      <div className='p-3' style={{ height: "6rem" }}>
+                        <h4 className='text-sm text-sky-500 font-bold mb-2'>{card.link.title}</h4>
+                        <h3 className='pt-0 font-bold text-lg' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{card.link2.title}</h3>
+                      </div>                                         
+                    </div>
+                  ))
+                }
+              </div>
+              <hr className='text-gray-300'/>
             </div>
-            <br></br> <br></br>
-        </div >
+        </section >
     );
 }
-
-export default Updates
+    
+export default Community
+    

@@ -5,6 +5,7 @@ import Head from 'next/head'
 import TopNav from './components/TopNav'
 import { Providers } from './redux/provider'
 import Navigation from './components/Navigation'
+import HeaderNavBar from './components/HeaderNavBar'
 import FooterTop from './components/FooterTop'
 
 
@@ -21,14 +22,14 @@ export default function RootLayout({ children }) {
         <meta title='Sysco-Foodie' description='Foodie on contentstack'/>
       </Head>
       <Header />
-      <body>
-        <Providers>
-          <Navigation />
-          {children}
-          <FooterTop />
-          <Footer />
-        </Providers>
-      </body>
+        <body>
+          <Providers>
+            <HeaderNavBar />
+              {children}
+              {/* <FooterTop/> */}
+            <Footer/>
+          </Providers>
+        </body>
     </html>
   )
 }
