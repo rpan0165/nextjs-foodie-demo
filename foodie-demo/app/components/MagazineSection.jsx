@@ -11,14 +11,14 @@ const MagazineSection = (magazineContent) => {
       <hr className='text-gray-300' />
       <div className='mx-auto mb-5' style={{ width: "80%" }}>
 
-        <div className="flex flex-row justify-between mt-5 mb-5">
-          <h3 className="text-left font-bold text-3xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>The Latest Edition of Foodie Magazine</h3>
+        <div className="flex lg:flex-row justify-between mt-5 mb-5 sm:flex-col">
+          <h3 className="text-left font-bold lg:text-3xl sm:text-xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>The Latest Edition of Foodie Magazine</h3>
           <Link href="https://foodie.sysco.com/foodie_magazines/edition-30/" className=''>
             <h4 className='text-sky-600 font-bold text-sm pt-1'>More From This Issue</h4>
           </Link>
         </div>
 
-        <div className='grid grid-cols-2 grid-flow-col mx-auto sm:grid-flow-row mt-4' style={{}}>
+        <div className='grid grid-cols-2 lg:grid-flow-col mx-auto sm:grid-flow-row mt-4' style={{}}>
           <div className='col-span-1 '>
             <div className="parent relative">
               <Image className='image1 absolute top-16 left-28' src={magazineContent.props.magazine_section.main_image.url} width={300} height={300} style={{transform:"rotate(-20deg)"}}/>
