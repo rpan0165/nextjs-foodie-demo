@@ -9,14 +9,18 @@ import HeaderNavBar from './components/HeaderNavBar'
 import FooterTop from './components/FooterTop'
 
 
-export const metadata = {
-  title: 'Sysco-Foodie',
-  description: 'Foodie on contentstack',
-}
+// export const metadata = {
+//   title: 'Sysco-Foodie',
+//   description: 'Foodie on contentstack',
+// }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <meta title='Sysco-Foodie' description='Foodie on contentstack'/>
+      </Head>
       <Header />
         <body>
           <Providers>
