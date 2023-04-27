@@ -37,23 +37,25 @@ function BottomCards() {
       </div>
     ) : (
       <section className="section-bottom-cards mt-5" >
-        <div className="grid grid-cols-12 grid-flow-row sm:grid-flow-col justify-center mt-5" style={{width:"85%", margin:"0 auto", marginBottom:"5rem"}}>
-            <div className=' col-span-6 flex flex-row border-2 border-orange-200 rounded-xl' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
-                <div className='bg-cover' style={{ width: "50%", borderRadius: "10px 0 0 10px", height: "21rem", backgroundColor: "yellow", backgroundImage: `url(${cards[0].image.url})`}}>
+        <div className="container">
+          <div className="grid grid-cols-12 grid-flow-row sm:grid-flow-col justify-center mt-5 mx-auto mb-12">
+            <div className="col-span-6 flex flex-row border-1 border-[#EDE0CC] rounded-xl m-3 h-80 bg-[#FFF9F0] overflow-clip">
+                <div className="w-1/2 h-full bg-[#FFF9F0] bg-cover" style={{backgroundImage: `url(${cards[0].image.url})`}}>
                 </div>
-                <div className='p-3 overflow-auto' style={{width:"50%", height: "21rem", }}>
-                    <h3 href={cards[0].link.href} className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif", marginTop:"45%"}}>{cards[0].link.title}</h3>
+                <div className='p-3 overflow-auto w-1/2 h-full flex items-center'>
+                    <h3 href={cards[0].link.href} className="font-bold text-lg text-black font-serif">{cards[0].link.title}</h3>
                 </div>
-            </div>
-
-            <div className='col-span-6 flex flex-row border-2 border-orange-200 rounded-xl' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
-                <div className='bg-cover' style={{ width: "50%", borderRadius: "10px 0 0 10px", height: "21rem", backgroundColor: "yellow", backgroundImage: `url(${cards[1].image.url})` }}>
-                </div>
-                <div className='p-3 overflow-auto' style={{width:"50%", height: "21rem" }}>
-                    <h3 href={cards[1].link.href} className='font-bold text-lg text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif", marginTop:"45%" }}>{cards[1].link.title}</h3>
-                </div>
+              </div>
+              
+            <div className="col-span-6 flex flex-row border-1 border-[#EDE0CC] rounded-xl m-3 bg-[#FFF9F0] overflow-clip">
+              <div className="w-1/2 h-full bg-[#FFF9F0] bg-cover" style={{backgroundImage: `url(${cards[1].image.url})`}}>
+              </div>
+              <div className='p-3 overflow-auto w-1/2 h-full flex items-center'>
+                  <h3 href={cards[1].link.href} className="font-bold text-lg text-black font-serif">{cards[1].link.title}</h3>
+              </div>
             </div>
           </div>
+        </div>
       </section>
     )
 }
