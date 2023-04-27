@@ -22,18 +22,16 @@ function Community(communityContent) {
     const communityCards = communityContent.props.community_section.slides;
     return (
         <section className="section-community">
-          <br />
-          <hr className='text-gray-300'/>
-            <div class="container-fluid mt-5 pt-4">
+            <div class="container">
               {/* main title of the section */}
-                <h2 className="text-center font-bold text-4xl mb-5" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{communityContent.props.community_section.header}</h2>
+                <h2 className="text-center font-bold font-serif text-4xl mb-5">{communityContent.props.community_section.header}</h2>
                 {/* <div class="h_line mt-0 mb-4 pt-0 " style={{
                     color: "red", borderBottom: "5px solid #56B146",
                     width: "10rem",
                     margin: "auto",
                 }}></div> */}
 
-                <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
+                <div className='grid grid-cols-4 mr-5 mb-5 mx-auto'>
                 {
                   communityCards.map(card => (
                     <div className='flex flex-col border-2 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
@@ -46,6 +44,7 @@ function Community(communityContent) {
                   ))
                 }
               </div>
+              <hr className='text-gray-300'/>
             </div>
         </section >
     );
