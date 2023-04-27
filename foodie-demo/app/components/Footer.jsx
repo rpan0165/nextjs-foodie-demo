@@ -143,9 +143,9 @@ function Footer() {
             </div>
 
             <hr className='divider-line'></hr>
-            <div className='flex flex-row justify-between mx-4 my-3 px-3'>
+            <div className='flex lg:flex-row justify-between mx-4 my-3 px-3 md:flex-row sm:flex-col'>
                 <div> <p className='text-sm'> &copy; 2023 All Rights Reserved. Sysco Corporation</p> </div>
-                <div className='flex flex-row text-sky-500 font-bold text-sm'>
+                <div className='flex lg:flex-row text-sky-500 font-bold text-sm md:flex-row sm:flex-col sm:mt-4'>
                     <a className='mx-2' href="https://www.sysco.com/terms" target='_blank'>Terms of use</a>
                     <a className='mx-2' href="https://sysco.com/Privacy-Notice.html"  target='_blank'>Privacy policy</a>
                     <a className='mx-2' href="https://www.sysco.com/System-Usage-Policy.html"  target='_blank'>System usage policy</a>
