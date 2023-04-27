@@ -50,7 +50,7 @@ const CardGridSection = (cardGridContent) => {
                 {numRows * 3 < photos.length && (
                     <button 
                         onClick={() => setNumRows(numRows + 4)} 
-                        className='block mx-auto bg-green-400 px-4 py-2 font-bold rounded-sm hover:bg-green-500 mb-5' style={{marginTop:'2rem', width: '25rem'}}>Load More
+                        className='block mx-auto btn-grad px-3 py-3 font-bold rounded-md mb-5 mt-5' style={{marginTop:'2rem', width: '25rem'}}>Load More
                     </button>
                 )}
             </div>
