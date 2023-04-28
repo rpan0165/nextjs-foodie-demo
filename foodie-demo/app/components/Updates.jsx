@@ -9,8 +9,8 @@ function Updates(cardContent) {
         <section className="section-update mb-5">
             <div class="container-fluid mx-auto">
                 {/* title + subtitle */}
-                <h2 className="text-center font-bold mt-5 mb-2 lg:text-4xl sm:text-2xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Foodservice Update</h2>
-                <p className="text-center font-bold pb-2 mt-3 mb-3 lg:text-lg sm:text-sm" >Stay informed of current supply and demand changes in the market</p>
+                <h2 className="text-center font-bold mt-5 mb-2 lg:text-4xl sm:text-2xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{cardContent.props.card_section.header}</h2>
+                <p className="text-center font-bold pb-2 mt-3 mb-3 lg:text-lg sm:text-sm" >{cardContent.props.card_section.sub_header}</p>
                 <br></br>
                 <div className='grid lg:grid-cols-4 gap-4 mr-5 mb-5 mx-auto md:grid-cols-2 sm:grid-cols-1' style={{ width: "85%" }}>
                 {

@@ -33,36 +33,6 @@ function Solutions(recipeContent) {
             </div>
           </div>
         </section >
-        {/* <div className='grid grid-cols-4 mr-5 mb-5 mx-auto mt-3' style={{ width: "85%" }}>
-                
-
-                    <div className='grid lg:grid-cols-4 mr-5 mb-5 mx-auto md:grid-cols-2 sm:grid-cols-1' style={{ width: "85%" }}>
-                    {
-                      recipes.map(recipe => (
-                        <div className='flex flex-col border-2 rounded-lg flex-wrap' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
-                          <div className="bg-cover rounded-t-lg" style={{ width: "100%", height: "17.5rem", backgroundColor: "yellow", backgroundImage: `url(${recipe.background_image.url})` }}></div>
-                          <div className='p-4' style={{ }}>
-                            <h5 className='text-sm text-sky-500 font-bold mb-2'>{recipe.link.title}</h5>
-                            <h3 className='pt-0 font-bold lg:text-lg md:text-sm sm:text-sm' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipe.header}</h3>
-                          </div>  
-                        </div>
-                      ))
-                    }
-                    </div>
-
-                    {/* // <div className='flex flex-col border-2 rounded-lg flex-wrap' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
-                    //   <div className='p-4' style={{}}>
-                    //     <h3 href={recipe.link.href} className="text-sm font-bold text-sky-500">{recipe.link.title} </h3>
-                    //     <h4 className='text-black font-bold my-2 text-lg' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipe.header}</h4>
-                    //     <h3 className='text-sm text-black' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipe.subheader}</h3>
-                    //   </div>
-                    //   {/* <div className="bg-cover" style={{ width: "100%", borderRadius: "0 0 7px 7px", height: "17.5rem", backgroundColor: "yellow", backgroundImage: `url(${recipe.background_image.url})` }}>
-                    //   </div> */}
-        {/* //   <div className="bg-cover rounded-b-lg" style={{ width: "100%", height: "17.5rem", backgroundColor: "yellow", backgroundImage: `url(${recipe.background_image.url})` }}></div>
-                    // </div> */}
-        {/* ))
-                } */}
-        {/* </div> */}
       </div>
     </section >
   );
