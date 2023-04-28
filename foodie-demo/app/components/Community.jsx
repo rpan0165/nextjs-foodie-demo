@@ -33,7 +33,7 @@ function Community(communityContent) {
                     margin: "auto",
                 }}></div> */}
 
-                <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
+                <div className='grid lg:grid-cols-4 mr-5 mb-5 mx-auto md:grid-cols-2 sm:grid-cols-1' style={{ width: "85%" }}>
                 {
                   communityCards.map(card => (
                     <div className='flex flex-col border-2 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
