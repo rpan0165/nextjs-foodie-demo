@@ -5,9 +5,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Link from 'next/link';
 import BottomCards from '@component/app/components/BottomCards';
-import {RiBookmarkLine} from 'react-icons/ri';
+import { RiBookmarkLine } from 'react-icons/ri';
 
-function IndividualRecipe({params}) {
+function IndividualRecipe({ params }) {
 
   const pageName = params.individualRecipe;
 
@@ -121,20 +121,20 @@ function IndividualRecipe({params}) {
               Recipes
             </Breadcrumb.Item>
             <Breadcrumb.Item active>
-             {pageName}
+              {pageName}
             </Breadcrumb.Item>
           </Breadcrumb>
         </div>
 
         <div className="grid grid-cols-12 mx-auto" style={{ width: "85%" }}>
-          <div className="col-span-6 m-2 rounded-2xl bg-cover" style={{backgroundImage:"url('https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg')"}}>
+          <div className="col-span-6 m-2 rounded-2xl bg-cover" style={{ backgroundImage: "url('https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg')" }}>
             {/* <img className='rounded-3xl' src="https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-800x664.jpg" alt="recipe-main-image" /> */}
             <div className='flex flex-row justify-between m-3'>
               <div className='flex flex-row'>
                 <button className='bg-white border-1 px-3 pt-1 pb-2 text-sm font-bold text-sky-600 rounded-lg mr-1'>Email article</button>
                 <button className='bg-white border-1 px-3 pt-1 pb-2 text-sm font-bold text-sky-600 rounded-lg ml-1'>Print article</button>
               </div>
-              <div className='bg-white border-1 px-2 pt-2 text-md font-semibold text-sky-600 rounded-full'><RiBookmarkLine className='text-sky-600'/></div>
+              <div className='bg-white border-1 px-2 pt-2 text-md font-semibold text-sky-600 rounded-full'><RiBookmarkLine className='text-sky-600' /></div>
             </div>
           </div>
           <div className="col-span-6 m-2 p-3">
@@ -284,13 +284,22 @@ function IndividualRecipe({params}) {
           </div>
         </div>
         <br /><br />
-        <hr className='text-gray-400'/>
-        <h2 className="text-center font-semibold text-4xl py-2 mt-5" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Related Recipes</h2>
+        <hr className='text-gray-400' />
+        <h2 className="text-center font-semibold lg:text-4xl py-2 mt-5 sm:text-2xl" style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>Related Recipes</h2>
         <p className='text-center font-bold mb-4'>Find more innovative dishes for your menu.</p>
-        <div className='grid grid-cols-4 mr-5 mb-5 mx-auto' style={{ width: "85%" }}>
+        <div className='grid lg:grid-cols-4 gap-4 mr-5 mb-5 mx-auto md:grid-cols-2 sm:grid-cols-1' style={{ width: "85%" }}>
           {
             posts.map((post) => (
               <Link href={post.href} style={{ textDecoration: "none" }}>
+                <div className='flex flex-col border-2 rounded-lg flex-wrap justify-end' style={{ backgroundColor: "#FFF9F0" }}>
+                  <div className='p-4' style={{ minHeight: "10rem" }}>
+                    <h5 className='text-sm text-sky-500 font-bold mb-2'>{post.category}</h5>
+                    <h3 className='font-bold lg:text-lg md:text-sm sm:text-sm' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{post.title}</h3>
+                    <h3 className='text-sm text-black font-bold mt-3'>{post.subtitle}</h3>
+                  </div>
+                  <div className="bg-cover rounded-b-lg" style={{ width: "100%", height: "17rem", backgroundColor: "yellow", backgroundImage: "url(https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-300x415.jpg)", backgroundRepeat: "none" }}></div>
+                </div>
+{/* 
                 <div className='flex flex-col border-2 border-orange-200 rounded-lg' style={{ margin: "12px", backgroundColor: "#FFF9F0" }}>
                   <div className='p-3' style={{ height: "10rem" }}>
                     <h4 className='text-sky-600 text-sm font-bold my-2'>{post.category}</h4>
@@ -299,7 +308,7 @@ function IndividualRecipe({params}) {
                   </div>
                   <div className='bg-cover' style={{ width: "100%", borderRadius: "0 0 10px 10px", height: "18rem", backgroundColor: "yellow", backgroundImage: "url(https://foodie.sysco.com/wp-content/uploads/2021/02/Shrimp-Tostadas-300x415.jpg)" }}>
                   </div>
-                </div>
+                </div> */}
               </Link>
 
             ))

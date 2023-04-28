@@ -16,20 +16,20 @@ function Header() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <Link rel="apple-touch-icon" href="../assets/images/Sysco-Logo-Color1.png" />
-        <Link rel="shortcut icon" href="../assets/images/Sysco-Logo-Color1.png" />
-        <link
+        <link rel="shortcut icon" href="/favicon.ico" />
+        {/* <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
           crossOrigin="anonymous"
-        />
+        /> */}
         <Link rel="stylesheet" href="../styles/css/bootstrap.min.css" />
         <Link rel="stylesheet" href="../assets/css/templatemo.css" />
         <Link rel="stylesheet" href="../assets/css/custom.css" />
 
         {/* Load fonts style after rendering the layout styles */}
         <Link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
-        <Link rel="stylesheet" href="../styles/css/fontawesome.min.css" />
+        {/* <Link rel="stylesheet" href="../styles/css/fontawesome.min.css" /> */}
 
 
         {/* FAVICONS */}
@@ -37,7 +37,7 @@ function Header() {
         {/* MOBILE SPECIFIC META */}
 
         {/* Icons */}
-        <script src="https://kit.fontawesome.com/5a65935042.js" crossorigin="anonymous"></script>
+        {/* <script src="https://kit.fontawesome.com/5a65935042.js" crossorigin="anonymous"></script> */}
 
         {/* Styles */}
 
