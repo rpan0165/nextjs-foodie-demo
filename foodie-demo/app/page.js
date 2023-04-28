@@ -18,7 +18,7 @@ import Solutions from './components/Solutions'
 import MagazineSection from './components/MagazineSection';
 import axios from 'axios';
 import dynamic from 'next/dynamic';
-
+import styles from './page.module.css'
 import BottomCards from './components/BottomCards'
 import ExploreFoodie from './components/ExploreFoodie';
 

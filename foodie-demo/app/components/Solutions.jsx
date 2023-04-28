@@ -20,7 +20,7 @@ function Solutions(recipeContent) {
             <div className='grid lg:grid-cols-4 gap-4 mr-5 mb-5 mx-auto md:grid-cols-2 sm:grid-cols-1' style={{ width: "85%" }}>
               {
                 recipes.map(recipe => (
-                  <div className='flex flex-col border-2 rounded-lg flex-wrap justify-end box' style={{ backgroundColor: "#FFF9F0" }}>
+                  <div className='flex flex-col border-2 rounded-lg flex-wrap justify-end' style={{ backgroundColor: "#FFF9F0" }}>
                     <div className='p-4' style={{minHeight:"10rem"}}>
                       <h5 className='text-sm text-sky-500 font-bold'>{recipe.link.title}</h5>
                       <h3 className='font-bold lg:text-lg md:text-sm sm:text-sm' style={{ fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif" }}>{recipe.header}</h3>
