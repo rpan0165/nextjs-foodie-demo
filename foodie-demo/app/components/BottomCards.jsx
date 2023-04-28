@@ -33,7 +33,10 @@ function BottomCards() {
   
     return loading && cards.length == 0 ? (
       <div className="spinner-UI">
-        <p>loading</p>
+        <div className="spinner-container">
+          <div className="loading-spinner">
+          </div>
+        </div>
       </div>
     ) : (
       <section className="section-bottom-cards mt-5" >
